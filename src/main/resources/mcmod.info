@@ -1,0 +1,16 @@
+[
+{
+  "modid": "oregen",
+  "name": "OreGen",
+  "description": "One mod for generating ores used by most Tech-Mods.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["StevenSeegal"],
+  "credits": "Hot dark liquid, loads of it...",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
