@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#ingotPlatinum"
+    }
+  ],
+  "result": {
+    "item": "oregen:nuggetPlatinum",
+    "count": 9
+  }
+}

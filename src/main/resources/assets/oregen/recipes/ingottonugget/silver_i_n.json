@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#ingotSilver"
+    }
+  ],
+  "result": {
+    "item": "oregen:nuggetSilver",
+    "count": 9
+  }
+}

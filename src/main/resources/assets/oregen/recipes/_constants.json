@@ -1,0 +1,214 @@
+[
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockCopper"
+    },
+    "name": "blockCopper"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockTin"
+    },
+    "name": "blockTin"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockSilver"
+    },
+    "name": "blockSilver"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockLead"
+    },
+    "name": "blockLead"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockAluminum"
+    },
+    "name": "blockAluminum"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockNickel"
+    },
+    "name": "blockNickel"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockBronze"
+    },
+    "name": "blockBronze"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockSteel"
+    },
+    "name": "blockSteel"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockUranium"
+    },
+    "name": "blockUranium"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockPlatinum"
+    },
+    "name": "blockPlatinum"
+  },
+
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotCopper"
+    },
+    "name": "ingotCopper"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotTin"
+    },
+    "name": "ingotTin"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotSilver"
+    },
+    "name": "ingotSilver"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotLead"
+    },
+    "name": "ingotLead"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotAluminum"
+    },
+    "name": "ingotAluminum"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotNickel"
+    },
+    "name": "ingotNickel"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotBronze"
+    },
+    "name": "ingotBronze"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotSteel"
+    },
+    "name": "ingotSteel"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotUranium"
+    },
+    "name": "ingotUranium"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotPlatinum"
+    },
+    "name": "ingotPlatinum"
+  },
+
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetCopper"
+    },
+    "name": "nuggetCopper"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetTin"
+    },
+    "name": "nuggetTin"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetSilver"
+    },
+    "name": "nuggetSilver"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetLead"
+    },
+    "name": "nuggetLead"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetAluminum"
+    },
+    "name": "nuggetAluminum"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetNickel"
+    },
+    "name": "nuggetNickel"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetBronze"
+    },
+    "name": "nuggetBronze"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetSteel"
+    },
+    "name": "nuggetSteel"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetUranium"
+    },
+    "name": "nuggetUranium"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetPlatinum"
+    },
+    "name": "nuggetPlatinum"
+  }
+]

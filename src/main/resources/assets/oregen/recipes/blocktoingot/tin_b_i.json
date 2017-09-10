@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#blockTin"
+    }
+  ],
+  "result": {
+    "item": "oregen:ingotTin",
+    "count": 9
+  }
+}

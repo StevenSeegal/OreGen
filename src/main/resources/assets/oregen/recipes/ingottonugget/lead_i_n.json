@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#ingotLead"
+    }
+  ],
+  "result": {
+    "item": "oregen:nuggetLead",
+    "count": 9
+  }
+}

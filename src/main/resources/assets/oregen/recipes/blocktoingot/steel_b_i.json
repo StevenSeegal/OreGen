@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#blockSteel"
+    }
+  ],
+  "result": {
+    "item": "oregen:ingotSteel",
+    "count": 9
+  }
+}

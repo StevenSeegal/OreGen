@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "#ingotUranium"
+    }
+  },
+  "result": {
+    "item": "oregen:blockUranium"
+  }
+}

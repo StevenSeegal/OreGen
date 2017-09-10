@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#ingotAluminum"
+    }
+  ],
+  "result": {
+    "item": "oregen:nuggetAluminum",
+    "count": 9
+  }
+}

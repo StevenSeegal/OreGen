@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#blockNickel"
+    }
+  ],
+  "result": {
+    "item": "oregen:ingotNickel",
+    "count": 9
+  }
+}

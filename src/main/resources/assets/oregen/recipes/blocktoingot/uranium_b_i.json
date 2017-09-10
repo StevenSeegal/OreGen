@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#blockUranium"
+    }
+  ],
+  "result": {
+    "item": "oregen:ingotUranium",
+    "count": 9
+  }
+}
