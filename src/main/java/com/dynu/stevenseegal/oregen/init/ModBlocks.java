@@ -4,7 +4,7 @@ import com.dynu.stevenseegal.oregen.block.BlockBase;
 import com.dynu.stevenseegal.oregen.block.BlockBlock;
 import com.dynu.stevenseegal.oregen.block.BlockOre;
 import com.dynu.stevenseegal.oregen.block.BlockOreItem;
-import com.dynu.stevenseegal.oregen.lib.Harvest;
+import com.dynu.stevenseegal.oregen.config.Config;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
@@ -32,27 +32,27 @@ import java.util.Set;
 @GameRegistry.ObjectHolder(LibMod.MOD_ID)
 public class ModBlocks
 {
-    public static BlockOre COPPER_ORE = new BlockOre(LibNames.Blocks.COPPER_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.STONE);
-    public static BlockOre TIN_ORE = new BlockOre(LibNames.Blocks.TIN_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.STONE);
-    public static BlockOre SILVER_ORE = new BlockOre(LibNames.Blocks.SILVER_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockOre LEAD_ORE = new BlockOre(LibNames.Blocks.LEAD_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockOre ALUMINUM_ORE = new BlockOre(LibNames.Blocks.ALUMINUM_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.STONE);
-    public static BlockOre NICKEL_ORE = new BlockOre(LibNames.Blocks.NICKEL_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockOre URANIUM_ORE = new BlockOre(LibNames.Blocks.URANIUM_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockOre PLATINUM_ORE = new BlockOre(LibNames.Blocks.PLATINUM_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockOreItem SULFUR_ORE = new BlockOreItem(LibNames.Blocks.SULFUR_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockOreItem SALTPETER_ORE = new BlockOreItem(LibNames.Blocks.SALTPETER_ORE, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
+    public static BlockOre COPPER_ORE = new BlockOre(LibNames.Blocks.COPPER_ORE, 3.0F, 5.0F);
+    public static BlockOre TIN_ORE = new BlockOre(LibNames.Blocks.TIN_ORE, 3.0F, 5.0F);
+    public static BlockOre SILVER_ORE = new BlockOre(LibNames.Blocks.SILVER_ORE, 3.0F, 5.0F);
+    public static BlockOre LEAD_ORE = new BlockOre(LibNames.Blocks.LEAD_ORE, 3.0F, 5.0F);
+    public static BlockOre ALUMINUM_ORE = new BlockOre(LibNames.Blocks.ALUMINUM_ORE, 3.0F, 5.0F);
+    public static BlockOre NICKEL_ORE = new BlockOre(LibNames.Blocks.NICKEL_ORE, 3.0F, 5.0F);
+    public static BlockOre URANIUM_ORE = new BlockOre(LibNames.Blocks.URANIUM_ORE, 3.0F, 5.0F);
+    public static BlockOre PLATINUM_ORE = new BlockOre(LibNames.Blocks.PLATINUM_ORE, 3.0F, 5.0F);
+    public static BlockOreItem SULFUR_ORE = new BlockOreItem(LibNames.Blocks.SULFUR_ORE, 3.0F, 5.0F);
+    public static BlockOreItem SALTPETER_ORE = new BlockOreItem(LibNames.Blocks.SALTPETER_ORE, 3.0F, 5.0F);
 
-    public static BlockBlock COPPER_BLOCK = new BlockBlock(LibNames.Blocks.COPPER_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.STONE);
-    public static BlockBlock TIN_BLOCK = new BlockBlock(LibNames.Blocks.TIN_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.STONE);
-    public static BlockBlock SILVER_BLOCK = new BlockBlock(LibNames.Blocks.SILVER_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockBlock LEAD_BLOCK = new BlockBlock(LibNames.Blocks.LEAD_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockBlock ALUMINUM_BLOCK = new BlockBlock(LibNames.Blocks.ALUMINUM_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.STONE);
-    public static BlockBlock NICKEL_BLOCK = new BlockBlock(LibNames.Blocks.NICKEL_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockBlock BRONZE_BLOCK = new BlockBlock(LibNames.Blocks.BRONZE_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.STONE);
-    public static BlockBlock STEEL_BLOCK = new BlockBlock(LibNames.Blocks.STEEL_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockBlock URANIUM_BLOCK = new BlockBlock(LibNames.Blocks.URANIUM_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
-    public static BlockBlock PLATINUM_BLOCK = new BlockBlock(LibNames.Blocks.PLATINUM_BLOCK, 3.0F, 5.0F, Harvest.Tool.PICKAXE, Harvest.Level.IRON);
+    public static BlockBlock COPPER_BLOCK = new BlockBlock(LibNames.Blocks.COPPER_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock TIN_BLOCK = new BlockBlock(LibNames.Blocks.TIN_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock SILVER_BLOCK = new BlockBlock(LibNames.Blocks.SILVER_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock LEAD_BLOCK = new BlockBlock(LibNames.Blocks.LEAD_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock ALUMINUM_BLOCK = new BlockBlock(LibNames.Blocks.ALUMINUM_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock NICKEL_BLOCK = new BlockBlock(LibNames.Blocks.NICKEL_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock BRONZE_BLOCK = new BlockBlock(LibNames.Blocks.BRONZE_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock STEEL_BLOCK = new BlockBlock(LibNames.Blocks.STEEL_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock URANIUM_BLOCK = new BlockBlock(LibNames.Blocks.URANIUM_BLOCK, 3.0F, 5.0F);
+    public static BlockBlock PLATINUM_BLOCK = new BlockBlock(LibNames.Blocks.PLATINUM_BLOCK, 3.0F, 5.0F);
 
     @Mod.EventBusSubscriber(modid = LibMod.MOD_ID)
     public static class RegistrationHandler
@@ -119,6 +119,32 @@ public class ModBlocks
                     LogHelper.debug("MODBLOCKS: No OREDICT NAME");
                 }
             }
+            setHarvestLevel();
+        }
+
+        public static void setHarvestLevel()
+        {
+            COPPER_ORE.setHarvestLevel("pickaxe", Config.HARVEST_COPPER);
+            TIN_ORE.setHarvestLevel("pickaxe", Config.HARVEST_TIN);
+            SILVER_ORE.setHarvestLevel("pickaxe", Config.HARVEST_SILVER);
+            LEAD_ORE.setHarvestLevel("pickaxe", Config.HARVEST_LEAD);
+            ALUMINUM_ORE.setHarvestLevel("pickaxe", Config.HARVEST_ALUMINUM);
+            NICKEL_ORE.setHarvestLevel("pickaxe", Config.HARVEST_NICKEL);
+            URANIUM_ORE.setHarvestLevel("pickaxe", Config.HARVEST_URANIUM);
+            PLATINUM_ORE.setHarvestLevel("pickaxe", Config.HARVEST_PLATINUM);
+            SULFUR_ORE.setHarvestLevel("pickaxe", Config.HARVEST_SULFUR);
+            SALTPETER_ORE.setHarvestLevel("pickaxe", Config.HARVEST_SALTPETER);
+
+            COPPER_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_COPPER);
+            TIN_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_TIN);
+            SILVER_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_SILVER);
+            LEAD_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_LEAD);
+            ALUMINUM_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_ALUMINUM);
+            NICKEL_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_NICKEL);
+            BRONZE_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_BRONZE);
+            STEEL_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_STEEL);
+            URANIUM_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_URANIUM);
+            PLATINUM_BLOCK.setHarvestLevel("pickaxe", Config.HARVEST_PLATINUM);
         }
 
         @SideOnly(Side.CLIENT)

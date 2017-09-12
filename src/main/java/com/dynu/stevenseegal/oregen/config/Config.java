@@ -18,6 +18,19 @@ public class Config
     public static boolean GENERATE_AIR = false;
     public static boolean PRINT_OREDICT = false;
 
+    public static int HARVEST_COPPER = 1;
+    public static int HARVEST_TIN = 1;
+    public static int HARVEST_SILVER = 2;
+    public static int HARVEST_LEAD = 2;
+    public static int HARVEST_ALUMINUM = 1;
+    public static int HARVEST_NICKEL = 2;
+    public static int HARVEST_SULFUR = 2;
+    public static int HARVEST_SALTPETER = 2;
+    public static int HARVEST_URANIUM = 2;
+    public static int HARVEST_PLATINUM = 2;
+    public static int HARVEST_BRONZE = 1;
+    public static int HARVEST_STEEL = 2;
+
     public static void initConfigHolder(Configuration cfg)
     {
         ORE_CONFIG.add(new ConfigHolder(ModBlocks.COPPER_ORE, 7, 10, 40, 100, 60));
@@ -39,6 +52,20 @@ public class Config
         RETROGEN_LOG = cfg.getBoolean(LibNames.Config.Key.RETROGEN_LOG, LibNames.Config.Category.DEBUG, RETROGEN_LOG, LibNames.Config.Comment.RETROGEN_LOG);
         GENERATE_AIR = cfg.getBoolean(LibNames.Config.Key.GENERATE_AIR, LibNames.Config.Category.DEBUG, GENERATE_AIR, LibNames.Config.Comment.GENERATE_AIR);
         PRINT_OREDICT = cfg.getBoolean(LibNames.Config.Key.PRINT_OREDICT, LibNames.Config.Category.DEBUG, PRINT_OREDICT, LibNames.Config.Comment.PRINT_OREDICT);
+
+        HARVEST_COPPER = cfg.getInt(LibNames.Blocks.COPPER_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_COPPER, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.COPPER_ORE.substring(3)));
+        HARVEST_TIN = cfg.getInt(LibNames.Blocks.TIN_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_TIN, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.TIN_ORE.substring(3)));
+        HARVEST_SILVER = cfg.getInt(LibNames.Blocks.SILVER_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_SILVER, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.SILVER_ORE.substring(3)));
+        HARVEST_LEAD = cfg.getInt(LibNames.Blocks.LEAD_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_LEAD, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.LEAD_ORE.substring(3)));
+        HARVEST_ALUMINUM = cfg.getInt(LibNames.Blocks.ALUMINUM_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_ALUMINUM, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.ALUMINUM_ORE.substring(3)));
+        HARVEST_NICKEL = cfg.getInt(LibNames.Blocks.NICKEL_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_NICKEL, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.NICKEL_ORE.substring(3)));
+        HARVEST_SULFUR = cfg.getInt(LibNames.Blocks.SULFUR_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_SULFUR, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.SULFUR_ORE.substring(3)));
+        HARVEST_SALTPETER = cfg.getInt(LibNames.Blocks.SALTPETER_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_SALTPETER, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.SALTPETER_ORE.substring(3)));
+        HARVEST_URANIUM = cfg.getInt(LibNames.Blocks.URANIUM_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_URANIUM, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.URANIUM_ORE.substring(3)));
+        HARVEST_PLATINUM = cfg.getInt(LibNames.Blocks.PLATINUM_ORE.substring(3), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_PLATINUM, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.PLATINUM_ORE.substring(3)));
+        HARVEST_BRONZE = cfg.getInt(LibNames.Blocks.BRONZE_BLOCK.substring(5), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_BRONZE, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.BRONZE_BLOCK.substring(5)));
+        HARVEST_STEEL = cfg.getInt(LibNames.Blocks.STEEL_BLOCK.substring(5), LibNames.Config.Category.HARVEST_LEVEL, HARVEST_STEEL, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Blocks.STEEL_BLOCK.substring(5)));
+
         for (ConfigHolder holder : ORE_CONFIG)
         {
             holder.loadConfiguration(cfg);

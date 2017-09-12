@@ -82,12 +82,14 @@ public class LibNames
             public static final String GENERATION = "Generation";
             public static final String RETROGEN = "RetroGen";
             public static final String DEBUG = "Debug";
+            public static final String HARVEST_LEVEL = "HarvestLevel";
         }
 
         public static final class Comment
         {
             public static final String ORE = "Generate %s in the world";
             public static final String SETTINGS = "Need 5 numeric arguments. Format: veinSize,veinsPerChunk,minY,maxY,ratio";
+            public static final String HARVEST_LEVEL = "Set the harvest level for %s. 0=wood, 1=stone, 2=iron, 3=diamond";
 
             public static final String RETROGEN_VERSION = "RetroGen version";
             public static final String RETROGEN_ENABLED= "Enable RetroGen";

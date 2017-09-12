@@ -13,13 +13,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockBase extends Block
 {
-    public BlockBase(String name, float hardness, float resistance, String toolType, int harvestLevel)
+    public BlockBase(String name, float hardness, float resistance)
     {
         super(Material.ROCK);
 
         setHardness(hardness);
         setResistance(resistance);
-        setHarvestLevel(toolType, harvestLevel);
         setSoundType(SoundType.STONE);
 
         setUnlocalizedName(LibMod.MOD_ID + "." + name);

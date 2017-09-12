@@ -14,9 +14,9 @@ import java.util.Random;
 
 public class BlockOreItem extends BlockOre
 {
-    public BlockOreItem(String name, float hardness, float resistance, String toolType, int harvestLevel)
+    public BlockOreItem(String name, float hardness, float resistance)
     {
-        super(name, hardness, resistance, toolType, harvestLevel);
+        super(name, hardness, resistance);
     }
 
     @Override
