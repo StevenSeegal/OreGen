@@ -4,7 +4,6 @@ import com.dynu.stevenseegal.oregen.OreGen;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -14,17 +13,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockBase extends Block
 {
-    public BlockBase(Material blockMaterialIn, MapColor blockMapColorIn)
-    {
-        super(blockMaterialIn, blockMapColorIn);
-    }
-
-    public BlockBase(String name)
+    public BlockBase(String name, float hardness, float resistance, String toolType, int harvestLevel)
     {
         super(Material.ROCK);
+
+        setHardness(hardness);
+        setResistance(resistance);
+        setHarvestLevel(toolType, harvestLevel);
+        setSoundType(SoundType.STONE);
+
         setUnlocalizedName(LibMod.MOD_ID + "." + name);
         setRegistryName(name);
-        setSoundType(SoundType.STONE);
 
         setCreativeTab(OreGen.creativeTab);
     }

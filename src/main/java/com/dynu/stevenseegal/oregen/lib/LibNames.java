@@ -4,64 +4,101 @@ public class LibNames
 {
     public static final class Blocks
     {
-        public static final String COPPER_ORE = "copper_ore";
-        public static final String TIN_ORE = "tin_ore";
-        public static final String SILVER_ORE = "silver_ore";
-        public static final String LEAD_ORE = "lead_ore";
-        public static final String ALUMINUM_ORE = "aluminum_ore";
-        public static final String NICKEL_ORE = "nickel_ore";
-        public static final String SULFUR_ORE = "sulfur_ore";
-        public static final String SALTPETER_ORE = "saltpeter_ore";
-        public static final String URANIUM_ORE = "uranium_ore";
-        public static final String PLATINUM_ORE = "platinum_ore";
+        public static final String COPPER_ORE = "oreCopper";
+        public static final String TIN_ORE = "oreTin";
+        public static final String SILVER_ORE = "oreSilver";
+        public static final String LEAD_ORE = "oreLead";
+        public static final String ALUMINUM_ORE = "oreAluminum";
+        public static final String NICKEL_ORE = "oreNickel";
+        public static final String SULFUR_ORE = "oreSulfur";
+        public static final String SALTPETER_ORE = "oreSaltpeter";
+        public static final String URANIUM_ORE = "oreUranium";
+        public static final String PLATINUM_ORE = "orePlatinum";
 
-        public static final String COPPER_BLOCK = "copper_block";
-        public static final String TIN_BLOCK = "tin_block";
-        public static final String SILVER_BLOCK = "silver_block";
-        public static final String LEAD_BLOCK = "lead_block";
-        public static final String ALUMINUM_BLOCK = "aluminum_block";
-        public static final String NICKEL_BLOCK = "nickel_block";
-        public static final String BRONZE_BLOCK = "bronze_block";
-        public static final String STEEL_BLOCK = "steel_block";
-        public static final String URANIUM_BLOCK = "uranium_block";
-        public static final String PLATINUM_BLOCK = "platinum_block";
+        public static final String COPPER_BLOCK = "blockCopper";
+        public static final String TIN_BLOCK = "blockTin";
+        public static final String SILVER_BLOCK = "blockSilver";
+        public static final String LEAD_BLOCK = "blockLead";
+        public static final String ALUMINUM_BLOCK = "blockAluminum";
+        public static final String NICKEL_BLOCK = "blockNickel";
+        public static final String BRONZE_BLOCK = "blockBronze";
+        public static final String STEEL_BLOCK = "blockSteel";
+        public static final String URANIUM_BLOCK = "blockUranium";
+        public static final String PLATINUM_BLOCK = "blockPlatinum";
     }
 
     public static final class Items
     {
-        public static final String COPPER_INGOT = "copper_ingot";
-        public static final String TIN_INGOT = "tin_ingot";
-        public static final String SILVER_INGOT = "silver_ingot";
-        public static final String LEAD_INGOT = "lead_ingot";
-        public static final String ALUMINUM_INGOT = "aluminum_ingot";
-        public static final String NICKEL_INGOT = "nickel_ingot";
-        public static final String BRONZE_INGOT = "bronze_ingot";
-        public static final String STEEL_INGOT = "steel_ingot";
-        public static final String URANIUM_INGOT = "uranium_ingot";
-        public static final String PLATINUM_INGOT = "platinum_ingot";
+        public static final String COPPER_INGOT = "ingotCopper";
+        public static final String TIN_INGOT = "ingotTin";
+        public static final String SILVER_INGOT = "ingotSilver";
+        public static final String LEAD_INGOT = "ingotLead";
+        public static final String ALUMINUM_INGOT = "ingotAluminum";
+        public static final String NICKEL_INGOT = "ingotNickel";
+        public static final String BRONZE_INGOT = "ingotBronze";
+        public static final String STEEL_INGOT = "ingotSteel";
+        public static final String URANIUM_INGOT = "ingotUranium";
+        public static final String PLATINUM_INGOT = "ingotPlatinum";
 
-        public static final String COPPER_NUGGET = "copper_nugget";
-        public static final String TIN_NUGGET = "tin_nugget";
-        public static final String SILVER_NUGGET = "silver_nugget";
-        public static final String LEAD_NUGGET = "lead_nugget";
-        public static final String ALUMINUM_NUGGET = "aluminum_nugget";
-        public static final String NICKEL_NUGGET = "nickel_nugget";
-        public static final String BRONZE_NUGGET = "bronze_nugget";
-        public static final String STEEL_NUGGET = "steel_nugget";
-        public static final String URANIUM_NUGGET = "uranium_nugget";
-        public static final String PLATINUM_NUGGET = "platinum_nugget";
+        public static final String COPPER_NUGGET = "nuggetCopper";
+        public static final String TIN_NUGGET = "nuggetTin";
+        public static final String SILVER_NUGGET = "nuggetSilver";
+        public static final String LEAD_NUGGET = "nuggetLead";
+        public static final String ALUMINUM_NUGGET = "nuggetAluminum";
+        public static final String NICKEL_NUGGET = "nuggetNickel";
+        public static final String BRONZE_NUGGET = "nuggetBronze";
+        public static final String STEEL_NUGGET = "nuggetSteel";
+        public static final String URANIUM_NUGGET = "nuggetUranium";
+        public static final String PLATINUM_NUGGET = "nuggetPlatinum";
 
-        public static final String COPPER_DUST = "copper_dust";
-        public static final String TIN_DUST = "tin_dust";
-        public static final String SILVER_DUST = "silver_dust";
-        public static final String LEAD_DUST = "lead_dust";
-        public static final String ALUMINUM_DUST = "aluminum_dust";
-        public static final String NICKEL_DUST = "nickel_dust";
-        public static final String BRONZE_DUST = "bronze_dust";
-        public static final String STEEL_DUST = "steel_dust";
-        public static final String SULFUR_DUST = "sulfur_dust";
-        public static final String SALTPETER_DUST = "saltpeter_dust";
-        public static final String URANIUM_DUST = "uranium_dust";
-        public static final String PLATINUM_DUST = "platinum_dust";
+        public static final String COPPER_DUST = "dustCopper";
+        public static final String TIN_DUST = "dustTin";
+        public static final String SILVER_DUST = "dustSilver";
+        public static final String LEAD_DUST = "dustLead";
+        public static final String ALUMINUM_DUST = "dustAluminum";
+        public static final String NICKEL_DUST = "dustNickel";
+        public static final String BRONZE_DUST = "dustBronze";
+        public static final String STEEL_DUST = "dustSteel";
+        public static final String SULFUR_DUST = "dustSulfur";
+        public static final String SALTPETER_DUST = "dustSaltpeter";
+        public static final String URANIUM_DUST = "dustUranium";
+        public static final String PLATINUM_DUST = "dustPlatinum";
+    }
+
+    public static final class Config
+    {
+        public static final class Key
+        {
+            public static final String RETROGEN_VERSION = "RetroGenVersion";
+            public static final String RETROGEN_ENABLED = "RetroGenEnabled";
+            public static final String RETROGEN_LOG = "LogRetroGen";
+            public static final String GENERATE_AIR = "GenerateAir";
+            public static final String PRINT_OREDICT = "PrintOreDict";
+        }
+
+        public static final class Category
+        {
+            public static final String GENERAL = "General";
+            public static final String GENERATION = "Generation";
+            public static final String RETROGEN = "RetroGen";
+            public static final String DEBUG = "Debug";
+        }
+
+        public static final class Comment
+        {
+            public static final String ORE = "Generate %s in the world";
+            public static final String SETTINGS = "Need 5 numeric arguments. Format: veinSize,veinsPerChunk,minY,maxY,ratio";
+
+            public static final String RETROGEN_VERSION = "RetroGen version";
+            public static final String RETROGEN_ENABLED= "Enable RetroGen";
+            public static final String RETROGEN_LOG = "Show RetroGen in log";
+            public static final String GENERATE_AIR = "[DEBUG ONLY] Generate Ores in the air instead of underground";
+            public static final String PRINT_OREDICT = "Print the full OreDictionary to file 'OredictDump.txt'. This file can be found in the root of your Minecraft instance";
+        }
+
+        public static final class NBT
+        {
+            public static final String RETROGEN = "RetroGen";
+        }
     }
 }

@@ -6,7 +6,10 @@ import com.dynu.stevenseegal.oregen.item.ItemIngot;
 import com.dynu.stevenseegal.oregen.item.ItemNugget;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
+import com.dynu.stevenseegal.oregen.util.LogHelper;
+import com.dynu.stevenseegal.oregen.util.OreDictUtils;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.HashSet;
@@ -106,6 +110,18 @@ public class ModItems
             {
                 registry.register(item);
                 ITEMS.add(item);
+
+
+                String oredictName = OreDictUtils.getItemOredictName(item, item.getRegistryName().toString());
+                if (oredictName != null)
+                {
+                    OreDictionary.registerOre(oredictName, new ItemStack(item));
+                    LogHelper.debug("MODITEM: getItemOredictName for Item: " + item.getRegistryName().toString() + " Value: " + oredictName);
+                }
+                else
+                {
+                    LogHelper.debug("MODITEM: NO OREDICT NAME");
+                }
             }
         }
 

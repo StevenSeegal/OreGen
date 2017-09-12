@@ -1,0 +1,58 @@
+itemGroup.oregen=OreGen
+
+tile.oregen.oreCopper.name=Copper Ore
+tile.oregen.oreTin.name=Tin Ore
+tile.oregen.oreSilver.name=Silver Ore
+tile.oregen.oreLead.name=Lead Ore
+tile.oregen.oreAluminum.name=Aluminum Ore
+tile.oregen.oreNickel.name=Nickel Ore
+tile.oregen.oreSulfur.name=Sulfur Ore
+tile.oregen.oreSaltpeter.name=Saltpeter Ore
+tile.oregen.oreUranium.name=Uranium Ore
+tile.oregen.orePlatinum.name=Platinum Ore
+
+tile.oregen.blockCopper.name=Copper Block
+tile.oregen.blockTin.name=Tin Block
+tile.oregen.blockSilver.name=Silver Block
+tile.oregen.blockLead.name=Lead Block
+tile.oregen.blockAluminum.name=Aluminum Block
+tile.oregen.blockNickel.name=Nickel Block
+tile.oregen.blockBronze.name=Bronze Block
+tile.oregen.blockSteel.name=Steel Block
+tile.oregen.blockUranium.name=Uranium Block
+tile.oregen.blockPlatinum.name=Platinum Block
+
+item.oregen.ingotCopper.name=Copper Ingot
+item.oregen.ingotTin.name=Tin Ingot
+item.oregen.ingotSilver.name=Silver Ingot
+item.oregen.ingotLead.name=Lead Ingot
+item.oregen.ingotAluminum.name=Aluminum Ingot
+item.oregen.ingotNickel.name=Nickel Ingot
+item.oregen.ingotBronze.name=Bronze Ingot
+item.oregen.ingotSteel.name=Steel Ingot
+item.oregen.ingotUranium.name=Uranium Ingot
+item.oregen.ingotPlatinum.name=Platinum Ingot
+
+item.oregen.nuggetCopper.name=Copper Nugget
+item.oregen.nuggetTin.name=Tin Nugget
+item.oregen.nuggetSilver.name=Silver Nugget
+item.oregen.nuggetLead.name=Lead Nugget
+item.oregen.nuggetAluminum.name=Aluminum Nugget
+item.oregen.nuggetNickel.name=Nickel Nugget
+item.oregen.nuggetBronze.name=Bronze Nugget
+item.oregen.nuggetSteel.name=Steel Nugget
+item.oregen.nuggetUranium.name=Uranium Nugget
+item.oregen.nuggetPlatinum.name=Platinum Nugget
+
+item.oregen.dustCopper.name=Copper Dust
+item.oregen.dustTin.name=Tin Dust
+item.oregen.dustSilver.name=Silver Dust
+item.oregen.dustLead.name=Lead Dust
+item.oregen.dustAluminum.name=Aluminum Dust
+item.oregen.dustNickel.name=Nickel Dust
+item.oregen.dustBronze.name=Bronze Dust
+item.oregen.dustSteel.name=Steel Dust
+item.oregen.dustSulfur.name=Sulfur Dust
+item.oregen.dustSaltpeter.name=Saltpeter Dust
+item.oregen.dustUranium.name=Uranium Dust
+item.oregen.dustPlatinum.name=Platinum Dust
