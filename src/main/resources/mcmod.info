@@ -5,10 +5,10 @@
   "description": "One mod for generating ores used by most Tech-Mods.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "http://stevenseegal.dynu.com",
   "updateUrl": "",
   "authorList": ["StevenSeegal"],
-  "credits": "Hot dark liquid, loads of it...",
+  "credits": "Y0ungSandwich for the (Yet to come) Textures",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

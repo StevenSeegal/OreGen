@@ -1,9 +1,6 @@
 package com.dynu.stevenseegal.oregen.init;
 
-import com.dynu.stevenseegal.oregen.item.ItemBase;
-import com.dynu.stevenseegal.oregen.item.ItemDust;
-import com.dynu.stevenseegal.oregen.item.ItemIngot;
-import com.dynu.stevenseegal.oregen.item.ItemNugget;
+import com.dynu.stevenseegal.oregen.item.*;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
@@ -61,6 +58,13 @@ public class ModItems
     public static ItemDust URANIUM_DUST = new ItemDust(LibNames.Items.URANIUM_DUST);
     public static ItemDust PLATINUM_DUST = new ItemDust(LibNames.Items.PLATINUM_DUST);
 
+    public static ItemUpgrade UPGRADE_ISIDED = new ItemUpgrade(LibNames.Items.UPGRADE_ISIDED);
+
+    public static ItemDust COAL_DUST = new ItemDust(LibNames.Items.COAL_DUST);
+    public static ItemDust IRON_DUST = new ItemDust(LibNames.Items.IRON_DUST);
+    public static ItemDust GOLD_DUST = new ItemDust(LibNames.Items.GOLD_DUST);
+    public static ItemDust DIAMOND_DUST = new ItemDust(LibNames.Items.DIAMOND_DUST);
+
     @Mod.EventBusSubscriber(modid = LibMod.MOD_ID)
     public static class RegistrationHandler
     {
@@ -100,6 +104,13 @@ public class ModItems
                 SALTPETER_DUST,
                 URANIUM_DUST,
                 PLATINUM_DUST,
+
+                UPGRADE_ISIDED,
+
+                COAL_DUST,
+                IRON_DUST,
+                GOLD_DUST,
+                DIAMOND_DUST,
         };
 
         @SubscribeEvent

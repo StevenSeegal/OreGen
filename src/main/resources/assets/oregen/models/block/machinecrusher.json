@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "oregen:blocks/machinecrushertop",
+    "front": "oregen:blocks/machinecrusherfront",
+    "side": "oregen:blocks/machinecrusherside"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "CC",
+    "CT"
+  ],
+  "key": {
+    "C": {
+      "item": "#ingotCopper"
+    },
+    "T": {
+      "item": "#ingotTin"
+    }
+  },
+  "result": {
+    "item": "oregen:ingotBronze",
+    "count": 4
+  }
+}

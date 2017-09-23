@@ -5,8 +5,10 @@ import com.dynu.stevenseegal.oregen.block.BlockOre;
 import com.dynu.stevenseegal.oregen.item.ItemDust;
 import com.dynu.stevenseegal.oregen.item.ItemIngot;
 import com.dynu.stevenseegal.oregen.item.ItemNugget;
+import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.google.common.base.Charsets;
 import net.minecraft.block.Block;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -98,5 +100,11 @@ public class OreDictUtils
         {
             LogHelper.error("Error dumping OreDictEntries: " + e);
         }
+    }
+
+    public static void registerExtraVanillaItems()
+    {
+        OreDictionary.registerOre(LibNames.Vanilla.COAL, Items.COAL);
+        OreDictionary.registerOre(LibNames.Vanilla.BLAZE_ROD, Items.BLAZE_ROD);
     }
 }

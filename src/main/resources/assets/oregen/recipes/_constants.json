@@ -210,5 +210,33 @@
       "ore": "nuggetPlatinum"
     },
     "name": "nuggetPlatinum"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "dustSteel"
+    },
+    "name": "dustSteel"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "dustIron"
+    },
+    "name": "dustIron"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "dustCoal"
+    },
+    "name": "dustCoal"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "cobblestone"
+    },
+    "name": "cobblestone"
   }
 ]

@@ -22,6 +22,8 @@ tile.oregen.blockSteel.name=Steel Block
 tile.oregen.blockUranium.name=Uranium Block
 tile.oregen.blockPlatinum.name=Platinum Block
 
+tile.oregen.machineCrusher.name=Coal Powered Crusher
+
 item.oregen.ingotCopper.name=Copper Ingot
 item.oregen.ingotTin.name=Tin Ingot
 item.oregen.ingotSilver.name=Silver Ingot
@@ -56,3 +58,15 @@ item.oregen.dustSulfur.name=Sulfur Dust
 item.oregen.dustSaltpeter.name=Saltpeter Dust
 item.oregen.dustUranium.name=Uranium Dust
 item.oregen.dustPlatinum.name=Platinum Dust
+
+item.oregen.upgradeISided.name=ISided Upgrade (accept hoppers etc)
+
+item.oregen.dustCoal.name=Coal Dust
+item.oregen.dustIron.name=Iron Dust
+item.oregen.dustGold.name=Gold Dust
+item.oregen.dustDiamond.name=Diamond Dust
+
+container.crusher=Coal Powered Crusher
+
+message.upgrade.done=Crusher Successfully upgraded.
+message.upgrade.error=Crusher already has an upgrade.

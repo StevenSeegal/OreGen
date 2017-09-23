@@ -1,12 +1,10 @@
 package com.dynu.stevenseegal.oregen.init;
 
-import com.dynu.stevenseegal.oregen.block.BlockBase;
-import com.dynu.stevenseegal.oregen.block.BlockBlock;
-import com.dynu.stevenseegal.oregen.block.BlockOre;
-import com.dynu.stevenseegal.oregen.block.BlockOreItem;
+import com.dynu.stevenseegal.oregen.block.*;
 import com.dynu.stevenseegal.oregen.config.Config;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
+import com.dynu.stevenseegal.oregen.tileentity.TileEntityCrusher;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
 import com.dynu.stevenseegal.oregen.util.OreDictUtils;
 import com.google.common.base.Preconditions;
@@ -54,6 +52,9 @@ public class ModBlocks
     public static BlockBlock URANIUM_BLOCK = new BlockBlock(LibNames.Blocks.URANIUM_BLOCK, 3.0F, 5.0F);
     public static BlockBlock PLATINUM_BLOCK = new BlockBlock(LibNames.Blocks.PLATINUM_BLOCK, 3.0F, 5.0F);
 
+    public static MachineCrusher MACHINE_CRUSHER = new MachineCrusher(LibNames.Machine.CRUSHER, false);
+    public static MachineCrusher MACHINE_CRUSHER_RUNNING = new MachineCrusher(LibNames.Machine.CRUSHER_RUNNING, true);
+
     @Mod.EventBusSubscriber(modid = LibMod.MOD_ID)
     public static class RegistrationHandler
     {
@@ -81,6 +82,9 @@ public class ModBlocks
                 STEEL_BLOCK,
                 URANIUM_BLOCK,
                 PLATINUM_BLOCK,
+
+                MACHINE_CRUSHER,
+                MACHINE_CRUSHER_RUNNING,
         };
 
         @SubscribeEvent
@@ -120,6 +124,12 @@ public class ModBlocks
                 }
             }
             setHarvestLevel();
+            registerTileEntities();
+        }
+
+        public static void registerTileEntities()
+        {
+            GameRegistry.registerTileEntity(TileEntityCrusher.class, "_" + LibNames.Machine.CRUSHER);
         }
 
         public static void setHarvestLevel()
@@ -157,6 +167,11 @@ public class ModBlocks
                 {
                     BlockBase blockBase = (BlockBase)block;
                     blockBase.initModel();
+                }
+                else if (block instanceof MachineCrusher)
+                {
+                    MachineCrusher machineCrusher = (MachineCrusher)block;
+                    machineCrusher.initModel();
                 }
             }
         }

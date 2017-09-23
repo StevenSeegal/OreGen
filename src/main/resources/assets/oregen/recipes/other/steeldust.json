@@ -1,0 +1,14 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#dustIron"
+    },
+    {
+      "item": "#dustCoal"
+    }
+  ],
+  "result": {
+    "item": "oregen:dustSteel"
+  }
+}

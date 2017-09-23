@@ -27,6 +27,12 @@ public class LibNames
         public static final String PLATINUM_BLOCK = "blockPlatinum";
     }
 
+    public static final class Machine
+    {
+        public static final String CRUSHER = "machineCrusher";
+        public static final String CRUSHER_RUNNING = "machineCrusherRunning";
+    }
+
     public static final class Items
     {
         public static final String COPPER_INGOT = "ingotCopper";
@@ -63,6 +69,52 @@ public class LibNames
         public static final String SALTPETER_DUST = "dustSaltpeter";
         public static final String URANIUM_DUST = "dustUranium";
         public static final String PLATINUM_DUST = "dustPlatinum";
+
+        public static final String UPGRADE_ISIDED = "upgradeISided";
+
+        public static final String COAL_DUST = "dustCoal";
+        public static final String IRON_DUST = "dustIron";
+        public static final String GOLD_DUST = "dustGold";
+        public static final String DIAMOND_DUST = "dustDiamond";
+    }
+
+    public static final class Vanilla
+    {
+        public static final String IRON_ORE = "oreIron";
+        public static final String GOLD_ORE = "oreGold";
+        public static final String COAL_ORE = "oreCoal";
+        public static final String DIAMOND_ORE = "oreDiamond";
+        public static final String EMERALD_ORE = "oreEmerald";
+        public static final String REDSTONE_ORE = "oreRedstone";
+        public static final String QUARTZ_ORE = "oreQuartz";
+        public static final String LAPIS_ORE = "oreLapis";
+        public static final String GLOWSTONE_BLOCK = "glowstone";
+
+        public static final String IRON_INGOT = "ingotIron";
+        public static final String GOLD_INGOT = "ingotGold";
+        public static final String COAL = "coal";
+        public static final String DIAMOND = "gemDiamond";
+        public static final String BLAZE_ROD = "rodBlaze";
+    }
+
+    public static final class Messages
+    {
+        public static final String UPGRADE_DONE = "message.upgrade.done";
+        public static final String UPGRADE_ERROR = "message.upgrade.error";
+    }
+
+    public static final class Gui
+    {
+        public static final String CRUSHER_TITLE = "container.crusher";
+    }
+
+    public static final class NBT
+    {
+        public static final String CRUSHERCRUSHTIME = "CrusherCrushTime";
+        public static final String CRUSHTIME = "CrushTime";
+        public static final String TOTALCRUSHTIME = "TotalCrushTime";
+        public static final String CURRENTITEMCRUSHTIME = "CurrentItemCrushTime";
+        public static final String ISIDEDUPGRADE = "ISidedUpgrade";
     }
 
     public static final class Config

@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "CPC",
+    "PFP",
+    "CRC"
+  ],
+  "key": {
+    "C": {
+      "item": "#cobblestone"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "oregen:machineCrusher"
+  }
+}
