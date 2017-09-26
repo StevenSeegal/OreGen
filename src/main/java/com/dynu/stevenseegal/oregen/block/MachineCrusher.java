@@ -44,19 +44,19 @@ public class MachineCrusher extends Block implements ITileEntityProvider
     public MachineCrusher(String name, boolean active)
     {
         super((Material.ROCK));
-        setHardness(3.0F);
-        setResistance(5.0F);
-        setSoundType(SoundType.STONE);
-        setUnlocalizedName(LibMod.MOD_ID + "." + name);
-        setRegistryName(name);
+        this.setHardness(3.0F);
+        this.setResistance(5.0F);
+        this.setSoundType(SoundType.STONE);
+        this.setUnlocalizedName(LibMod.MOD_ID + "." + name);
+        this.setRegistryName(name);
 
         this.isCrushing = active;
 
-        setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+        setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 
         if (name.equals(LibNames.Machine.CRUSHER))
         {
-            setCreativeTab(OreGen.creativeTab);
+            this.setCreativeTab(OreGen.creativeTab);
         }
     }
 
@@ -87,13 +87,26 @@ public class MachineCrusher extends Block implements ITileEntityProvider
     @Override
     public int getMetaFromState(IBlockState state)
     {
-        return state.getValue(FACING).getIndex();
+        return state.getValue(FACING).getIndex(); // OK?
+    }
+
+    @Override
+    public IBlockState getStateFromMeta(int meta)
+    {
+        EnumFacing enumFacing = EnumFacing.getFront(meta);
+
+        if (enumFacing.getAxis() == EnumFacing.Axis.Y)
+        {
+            enumFacing = EnumFacing.NORTH;
+        }
+
+        return this.getDefaultState().withProperty(FACING, enumFacing);
     }
 
     @Override
     protected BlockStateContainer createBlockState()
     {
-        return new BlockStateContainer(this, new IProperty[] {FACING});
+        return new BlockStateContainer(this, new IProperty[] {FACING}); //OK
     }
 
     @Nullable
