@@ -88,6 +88,8 @@ public class BlockBlock extends BlockBase
         OreDictionary.registerOre(LibNames.OreDict.Blocks.URANIUM_BLOCK, new ItemStack(this, 1, BlockType.URANIUM.getMetaData()));
         OreDictionary.registerOre(LibNames.OreDict.Blocks.BRONZE_BLOCK, new ItemStack(this, 1, BlockType.BRONZE.getMetaData()));
         OreDictionary.registerOre(LibNames.OreDict.Blocks.STEEL_BLOCK, new ItemStack(this, 1, BlockType.STEEL.getMetaData()));
+        OreDictionary.registerOre(LibNames.OreDict.Blocks.IRIDIUM_BLOCK, new ItemStack(this, 1, BlockType.IRIDIUM.getMetaData()));
+        OreDictionary.registerOre(LibNames.OreDict.Blocks.MITHRIL_BLOCK, new ItemStack(this, 1, BlockType.MITHRIL.getMetaData()));
     }
 
     @Override
@@ -104,6 +106,8 @@ public class BlockBlock extends BlockBase
         setHarvestLevel("pickaxe", Config.HARVEST_URANIUM, getStateFromMeta(BlockType.URANIUM.getMetaData()));
         setHarvestLevel("pickaxe", Config.HARVEST_BRONZE, getStateFromMeta(BlockType.BRONZE.getMetaData()));
         setHarvestLevel("pickaxe", Config.HARVEST_STEEL, getStateFromMeta(BlockType.STEEL.getMetaData()));
+        setHarvestLevel("pickaxe", Config.HARVEST_IRIDIUM, getStateFromMeta(BlockType.IRIDIUM.getMetaData()));
+        setHarvestLevel("pickaxe", Config.HARVEST_MITHRIL, getStateFromMeta(BlockType.MITHRIL.getMetaData()));
     }
 
     public enum BlockType implements IStringSerializable
@@ -117,7 +121,9 @@ public class BlockBlock extends BlockBase
         PLATINUM(6, "platinum"),
         URANIUM(7, "uranium"),
         BRONZE(8, "bronze"),
-        STEEL(9, "steel");
+        STEEL(9, "steel"),
+        IRIDIUM(10, "iridium"),
+        MITHRIL(11, "mithril");
 
         private static final BlockType[] META_LOOKUP = new BlockType[values().length];
         private int metaData;

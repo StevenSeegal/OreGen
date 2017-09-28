@@ -29,6 +29,8 @@ public class LibNames
                         "steel",
                         "uranium",
                         "platinum",
+                        "iridium",
+                        "mithril",
                 };
 
         public static final String[] DUSTS =
@@ -49,6 +51,8 @@ public class LibNames
                         "iron",
                         "gold",
                         "diamond",
+                        "iridium",
+                        "mithril",
                 };
 
         public static final String[] NUGGETS =
@@ -63,6 +67,8 @@ public class LibNames
                         "steel",
                         "uranium",
                         "platinum",
+                        "iridium",
+                        "mithril",
                 };
 
         public static final String UPGRADE_ISIDED = "upgradeISided";
@@ -82,6 +88,8 @@ public class LibNames
             public static final String SALTPETER_ORE = "oreSaltpeter";
             public static final String URANIUM_ORE = "oreUranium";
             public static final String PLATINUM_ORE = "orePlatinum";
+            public static final String IRIDIUM_ORE = "oreIridium";
+            public static final String MITHRIL_ORE = "oreMithril";
 
             public static final String COPPER_BLOCK = "blockCopper";
             public static final String TIN_BLOCK = "blockTin";
@@ -93,6 +101,8 @@ public class LibNames
             public static final String STEEL_BLOCK = "blockSteel";
             public static final String URANIUM_BLOCK = "blockUranium";
             public static final String PLATINUM_BLOCK = "blockPlatinum";
+            public static final String IRIDIUM_BLOCK = "blockIridium";
+            public static final String MITHRIL_BLOCK = "blockMithril";
         }
 
         public static final class Items
@@ -107,6 +117,8 @@ public class LibNames
             public static final String STEEL_INGOT = "ingotSteel";
             public static final String URANIUM_INGOT = "ingotUranium";
             public static final String PLATINUM_INGOT = "ingotPlatinum";
+            public static final String IRIDIUM_INGOT = "ingotIridium";
+            public static final String MITHRIL_INGOT = "ingotMithril";
 
             public static final String COPPER_NUGGET = "nuggetCopper";
             public static final String TIN_NUGGET = "nuggetTin";
@@ -118,6 +130,8 @@ public class LibNames
             public static final String STEEL_NUGGET = "nuggetSteel";
             public static final String URANIUM_NUGGET = "nuggetUranium";
             public static final String PLATINUM_NUGGET = "nuggetPlatinum";
+            public static final String IRIDIUM_NUGGET = "nuggetIridium";
+            public static final String MITHRIL_NUGGET = "nuggetMithril";
 
             public static final String COPPER_DUST = "dustCopper";
             public static final String TIN_DUST = "dustTin";
@@ -131,6 +145,8 @@ public class LibNames
             public static final String SALTPETER_DUST = "dustSaltpeter";
             public static final String URANIUM_DUST = "dustUranium";
             public static final String PLATINUM_DUST = "dustPlatinum";
+            public static final String IRIDIUM_DUST = "dustIridium";
+            public static final String MITHRIL_DUST = "dustMithril";
 
             public static final String COAL_DUST = "dustCoal";
             public static final String IRON_DUST = "dustIron";
@@ -209,6 +225,8 @@ public class LibNames
                 public static final String PLATINUM = "Platinum";
                 public static final String BRONZE = "Bronze";
                 public static final String STEEL = "Steel";
+                public static final String IRIDIUM = "Iridium";
+                public static final String MITHRIL = "Mithril";
             }
         }
 

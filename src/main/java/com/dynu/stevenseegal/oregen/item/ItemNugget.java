@@ -24,5 +24,7 @@ public class ItemNugget extends ItemBaseMulti
         OreDictionary.registerOre(LibNames.OreDict.Items.STEEL_NUGGET, new ItemStack(this, 1, 7));
         OreDictionary.registerOre(LibNames.OreDict.Items.URANIUM_NUGGET, new ItemStack(this, 1, 8));
         OreDictionary.registerOre(LibNames.OreDict.Items.PLATINUM_NUGGET, new ItemStack(this, 1, 9));
+        OreDictionary.registerOre(LibNames.OreDict.Items.IRIDIUM_NUGGET, new ItemStack(this, 1, 10));
+        OreDictionary.registerOre(LibNames.OreDict.Items.MITHRIL_NUGGET, new ItemStack(this, 1, 11));
     }
 }

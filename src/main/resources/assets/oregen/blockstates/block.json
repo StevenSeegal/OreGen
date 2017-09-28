@@ -16,6 +16,8 @@
     "inventory,type=uranium": [{"textures": {"all": "oregen:blocks/block/uranium"}}],
     "inventory,type=bronze": [{"textures": {"all": "oregen:blocks/block/bronze"}}],
     "inventory,type=steel": [{"textures": {"all": "oregen:blocks/block/steel"}}],
+    "inventory,type=iridium": [{"textures": {"all": "oregen:blocks/block/iridium"}}],
+    "inventory,type=mithril": [{"textures": {"all": "oregen:blocks/block/mithril"}}],
     "type": {
       "copper": {"textures": {"all": "oregen:blocks/block/copper"}},
       "tin": {"textures": {"all": "oregen:blocks/block/tin"}},
@@ -26,7 +28,9 @@
       "platinum": {"textures": {"all": "oregen:blocks/block/platinum"}},
       "uranium": {"textures": {"all": "oregen:blocks/block/uranium"}},
       "bronze": {"textures": {"all": "oregen:blocks/block/bronze"}},
-      "steel": {"textures": {"all": "oregen:blocks/block/steel"}}
+      "steel": {"textures": {"all": "oregen:blocks/block/steel"}},
+      "iridium": {"textures": {"all": "oregen:blocks/block/iridium"}},
+      "mithril": {"textures": {"all": "oregen:blocks/block/mithril"}}
     }
   }
 }

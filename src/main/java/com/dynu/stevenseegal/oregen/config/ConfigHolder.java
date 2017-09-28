@@ -31,12 +31,6 @@ public class ConfigHolder
         this.enabled = true;
     }
 
-    private String getNameFromBlock()
-    {
-        System.out.println(blockState);
-        return "";//blockOre.getRegistryName().toString().split(":")[1].substring(3);
-    }
-
     public void loadConfiguration(Configuration cfg)
     {
         LogHelper.debug("ConfigHolder: " + name);

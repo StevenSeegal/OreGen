@@ -69,6 +69,20 @@
     },
     "name": "blockPlatinum"
   },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockIridium"
+    },
+    "name": "blockIridium"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockMithril"
+    },
+    "name": "blockMithril"
+  },
 
   {
     "ingredient": {
@@ -139,6 +153,20 @@
       "ore": "ingotPlatinum"
     },
     "name": "ingotPlatinum"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIridium"
+    },
+    "name": "ingotIridium"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotMithril"
+    },
+    "name": "ingotMithril"
   },
 
   {
@@ -211,6 +239,21 @@
     },
     "name": "nuggetPlatinum"
   },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetIridium"
+    },
+    "name": "nuggetIridium"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetMithril"
+    },
+    "name": "nuggetMithril"
+  },
+
   {
     "ingredient": {
       "type": "forge:ore_dict",

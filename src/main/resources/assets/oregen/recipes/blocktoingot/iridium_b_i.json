@@ -1,0 +1,13 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#blockIridium"
+    }
+  ],
+  "result": {
+    "item": "oregen:ingot",
+    "data": 10,
+    "count": 9
+  }
+}

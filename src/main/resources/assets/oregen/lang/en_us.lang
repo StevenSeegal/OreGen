@@ -10,6 +10,8 @@ tile.oregen.ore.sulfur.name=Sulfur Ore
 tile.oregen.ore.saltpeter.name=Saltpeter Ore
 tile.oregen.ore.uranium.name=Uranium Ore
 tile.oregen.ore.platinum.name=Platinum Ore
+tile.oregen.ore.iridium.name=Iridium Ore
+tile.oregen.ore.mithril.name=Mithril Ore
 
 tile.oregen.block.copper.name=Copper Block
 tile.oregen.block.tin.name=Tin Block
@@ -21,6 +23,8 @@ tile.oregen.block.bronze.name=Bronze Block
 tile.oregen.block.steel.name=Steel Block
 tile.oregen.block.uranium.name=Uranium Block
 tile.oregen.block.platinum.name=Platinum Block
+tile.oregen.block.iridium.name=Iridium Block
+tile.oregen.block.mithril.name=Mithril Block
 
 tile.oregen.machineCrusher.name=Coal Powered Crusher
 
@@ -34,6 +38,8 @@ item.oregen.ingot.bronze.name=Bronze Ingot
 item.oregen.ingot.steel.name=Steel Ingot
 item.oregen.ingot.uranium.name=Uranium Ingot
 item.oregen.ingot.platinum.name=Platinum Ingot
+tile.oregen.ingot.iridium.name=Iridium Ingot
+tile.oregen.ingot.mithril.name=Mithril Ingot
 
 item.oregen.nugget.copper.name=Copper Nugget
 item.oregen.nugget.tin.name=Tin Nugget
@@ -45,6 +51,8 @@ item.oregen.nugget.bronze.name=Bronze Nugget
 item.oregen.nugget.steel.name=Steel Nugget
 item.oregen.nugget.uranium.name=Uranium Nugget
 item.oregen.nugget.platinum.name=Platinum Nugget
+tile.oregen.nugget.iridium.name=Iridium Nugget
+tile.oregen.nugget.mithril.name=Mithril Nugget
 
 item.oregen.dust.copper.name=Copper Dust
 item.oregen.dust.tin.name=Tin Dust
@@ -62,6 +70,8 @@ item.oregen.dust.coal.name=Coal Dust
 item.oregen.dust.iron.name=Iron Dust
 item.oregen.dust.gold.name=Gold Dust
 item.oregen.dust.diamond.name=Diamond Dust
+tile.oregen.dust.iridium.name=Iridium Dust
+tile.oregen.dust.mithril.name=Mithril Dust
 
 item.oregen.upgradeISided.name=ISided Upgrade (accept hoppers etc)
 

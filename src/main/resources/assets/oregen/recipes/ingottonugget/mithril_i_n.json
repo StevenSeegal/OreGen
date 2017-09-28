@@ -1,0 +1,13 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#ingotMithril"
+    }
+  ],
+  "result": {
+    "item": "oregen:nugget",
+    "data": 11,
+    "count": 9
+  }
+}
