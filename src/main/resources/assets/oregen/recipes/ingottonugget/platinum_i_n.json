@@ -6,7 +6,8 @@
     }
   ],
   "result": {
-    "item": "oregen:nuggetPlatinum",
+    "item": "oregen:nugget",
+    "data": 9,
     "count": 9
   }
 }

@@ -6,7 +6,8 @@
     }
   ],
   "result": {
-    "item": "oregen:ingotAluminum",
+    "item": "oregen:ingot",
+    "data": 4,
     "count": 9
   }
 }

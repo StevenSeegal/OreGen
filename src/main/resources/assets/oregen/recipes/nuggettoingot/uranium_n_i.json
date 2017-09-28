@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:ingotUranium"
+    "item": "oregen:ingot",
+    "data": 8
   }
 }

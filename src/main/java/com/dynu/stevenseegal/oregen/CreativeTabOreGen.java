@@ -9,7 +9,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class CreativeTabOreGen extends CreativeTabs
 {
-
     public CreativeTabOreGen() {
         super(LibMod.MOD_ID);
     }
@@ -17,6 +16,6 @@ public class CreativeTabOreGen extends CreativeTabs
     @SideOnly(Side.CLIENT)
     @Override
     public ItemStack getTabIconItem() {
-        return new ItemStack(ModItems.COPPER_INGOT);
+        return new ItemStack(ModItems.ITEM_INGOT, 1, 0);
     }
 }

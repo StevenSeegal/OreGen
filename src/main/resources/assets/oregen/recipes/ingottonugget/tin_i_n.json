@@ -6,7 +6,8 @@
     }
   ],
   "result": {
-    "item": "oregen:nuggetTin",
+    "item": "oregen:nugget",
+    "data": 1,
     "count": 9
   }
 }

@@ -6,7 +6,8 @@
     }
   ],
   "result": {
-    "item": "oregen:ingotSteel",
+    "item": "oregen:ingot",
+    "data": 7,
     "count": 9
   }
 }

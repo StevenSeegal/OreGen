@@ -1,5 +1,6 @@
 package com.dynu.stevenseegal.oregen.init;
 
+import com.dynu.stevenseegal.oregen.block.BlockOre;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
@@ -17,28 +18,28 @@ public class SmeltingRecipes
     @SubscribeEvent
     public static void registerSmeltingRecipes(RegistryEvent.Register<IRecipe> event)
     {
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.COPPER_ORE, 1), new ItemStack(ModItems.COPPER_INGOT, 1), XP);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.TIN_ORE, 1), new ItemStack(ModItems.TIN_INGOT, 1), XP);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.SILVER_ORE, 1), new ItemStack(ModItems.SILVER_INGOT, 1), XP);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.LEAD_ORE, 1), new ItemStack(ModItems.LEAD_INGOT, 1), XP);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.ALUMINUM_ORE, 1), new ItemStack(ModItems.ALUMINUM_INGOT, 1), XP);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.NICKEL_ORE, 1), new ItemStack(ModItems.NICKEL_INGOT, 1), XP);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.URANIUM_ORE, 1), new ItemStack(ModItems.URANIUM_INGOT, 1), XP);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.PLATINUM_ORE, 1), new ItemStack(ModItems.PLATINUM_INGOT, 1), XP);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.COPPER.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 0), XP);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.TIN.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 1), XP);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.SILVER.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 2), XP);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.LEAD.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 3), XP);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.ALUMINUM.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 4), XP);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.NICKEL.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 5), XP);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.URANIUM.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 8), XP);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.PLATINUM.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 9), XP);
 
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.COPPER_DUST, 1), new ItemStack(ModItems.COPPER_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.TIN_DUST, 1), new ItemStack(ModItems.TIN_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.SILVER_DUST, 1), new ItemStack(ModItems.SILVER_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.LEAD_DUST, 1), new ItemStack(ModItems.LEAD_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ALUMINUM_DUST, 1), new ItemStack(ModItems.ALUMINUM_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.NICKEL_DUST, 1), new ItemStack(ModItems.NICKEL_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.BRONZE_DUST, 1), new ItemStack(ModItems.BRONZE_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.STEEL_DUST, 1), new ItemStack(ModItems.STEEL_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.URANIUM_DUST, 1), new ItemStack(ModItems.URANIUM_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.PLATINUM_DUST, 1), new ItemStack(ModItems.PLATINUM_INGOT, 1), NONE);
-        
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.IRON_DUST, 1), new ItemStack(Items.IRON_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.GOLD_DUST, 1), new ItemStack(Items.GOLD_INGOT, 1), NONE);
-        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.DIAMOND_DUST, 1), new ItemStack(Items.DIAMOND, 1), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 0), new ItemStack(ModItems.ITEM_INGOT, 1, 0), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 1), new ItemStack(ModItems.ITEM_INGOT, 1, 1), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 2), new ItemStack(ModItems.ITEM_INGOT, 1, 2), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 3), new ItemStack(ModItems.ITEM_INGOT, 1, 3), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 4), new ItemStack(ModItems.ITEM_INGOT, 1, 4), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 5), new ItemStack(ModItems.ITEM_INGOT, 1, 5), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 6), new ItemStack(ModItems.ITEM_INGOT, 1, 6), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 7), new ItemStack(ModItems.ITEM_INGOT, 1, 7), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 8), new ItemStack(ModItems.ITEM_INGOT, 1, 8), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 9), new ItemStack(ModItems.ITEM_INGOT, 1, 9), NONE);
+
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 13), new ItemStack(Items.IRON_INGOT, 1), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 14), new ItemStack(Items.GOLD_INGOT, 1), NONE);
+        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModItems.ITEM_DUST, 1, 15), new ItemStack(Items.DIAMOND, 1), NONE);
     }
 }

@@ -1,6 +1,7 @@
 package com.dynu.stevenseegal.oregen.block;
 
 import com.dynu.stevenseegal.oregen.OreGen;
+import com.dynu.stevenseegal.oregen.init.IBlockRegistryHandler;
 import com.dynu.stevenseegal.oregen.init.ModBlocks;
 import com.dynu.stevenseegal.oregen.init.ModItems;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
@@ -35,7 +36,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class MachineCrusher extends Block implements ITileEntityProvider
+public class MachineCrusher extends Block implements ITileEntityProvider, IBlockRegistryHandler
 {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
     private boolean isCrushing;
@@ -54,7 +55,7 @@ public class MachineCrusher extends Block implements ITileEntityProvider
 
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 
-        if (name.equals(LibNames.Machine.CRUSHER))
+        if (name.equals(LibNames.Blocks.MACHINE_CRUSHER))
         {
             this.setCreativeTab(OreGen.creativeTab);
         }
@@ -64,6 +65,17 @@ public class MachineCrusher extends Block implements ITileEntityProvider
     public void initModel()
     {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+    }
+
+    @Override
+    public void registerToOreDict()
+    {
+    }
+
+    @Override
+    public void setHarvestLevel()
+    {
+
     }
 
     @Override

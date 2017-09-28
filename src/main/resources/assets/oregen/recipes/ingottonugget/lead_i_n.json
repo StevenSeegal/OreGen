@@ -6,7 +6,8 @@
     }
   ],
   "result": {
-    "item": "oregen:nuggetLead",
+    "item": "oregen:nugget",
+    "data": 3,
     "count": 9
   }
 }

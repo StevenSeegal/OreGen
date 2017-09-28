@@ -5,6 +5,7 @@ import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
 import com.dynu.stevenseegal.oregen.util.StringUtils;
 import com.dynu.stevenseegal.oregen.world.gen.WorldGenOre;
+import net.minecraft.block.state.IBlockState;
 import net.minecraftforge.common.config.Configuration;
 
 public class ConfigHolder
@@ -14,25 +15,26 @@ public class ConfigHolder
     private int minY;
     private int maxY;
     private int ratio;
-    private BlockOre blockOre;
+    private IBlockState blockState;
     private String name;
     private boolean enabled;
 
-    public ConfigHolder(BlockOre blockOre, int veinSize, int veinsPerChunk, int minY, int maxY, int ratio)
+    public ConfigHolder(IBlockState blockState, String name, int veinSize, int veinsPerChunk, int minY, int maxY, int ratio)
     {
-        this.blockOre = blockOre;
+        this.blockState = blockState;
         this.veinSize = veinSize;
         this.veinsPerChunk = veinsPerChunk;
         this.minY = minY;
         this.maxY = maxY;
         this.ratio = ratio;
-        this.name = getNameFromBlock();
+        this.name = name;
         this.enabled = true;
     }
 
     private String getNameFromBlock()
     {
-        return blockOre.getRegistryName().toString().split(":")[1].substring(3);
+        System.out.println(blockState);
+        return "";//blockOre.getRegistryName().toString().split(":")[1].substring(3);
     }
 
     public void loadConfiguration(Configuration cfg)
@@ -125,8 +127,8 @@ public class ConfigHolder
     {
         if (enabled)
         {
-            LogHelper.debug("REG TO GEN: Registering " + name + " blockname: " + blockOre.getRegistryName() + " with settings: " + veinSize + " " + veinsPerChunk + " "+ minY + " " + maxY + " " + ratio);
-            WorldGenOre.addOreToGenerate(name, blockOre.getDefaultState(), veinSize, veinsPerChunk, minY, maxY, ratio);
+            LogHelper.debug("REG TO GEN: Registering " + name + " blockname: " + name + " with settings: " + veinSize + " " + veinsPerChunk + " "+ minY + " " + maxY + " " + ratio);
+            WorldGenOre.addOreToGenerate(name, blockState, veinSize, veinsPerChunk, minY, maxY, ratio);
         }
         else
         {

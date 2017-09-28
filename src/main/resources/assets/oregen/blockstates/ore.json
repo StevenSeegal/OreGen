@@ -1,0 +1,32 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_all",
+    "textures": {"all": "oregen:blocks/ore/copper"}
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory,type=copper": [{"textures": {"all": "oregen:blocks/ore/copper"}}],
+    "inventory,type=tin": [{"textures": {"all": "oregen:blocks/ore/tin"}}],
+    "inventory,type=silver": [{"textures": {"all": "oregen:blocks/ore/silver"}}],
+    "inventory,type=lead": [{"textures": {"all": "oregen:blocks/ore/lead"}}],
+    "inventory,type=aluminum": [{"textures": {"all": "oregen:blocks/ore/aluminum"}}],
+    "inventory,type=nickel": [{"textures": {"all": "oregen:blocks/ore/nickel"}}],
+    "inventory,type=platinum": [{"textures": {"all": "oregen:blocks/ore/platinum"}}],
+    "inventory,type=uranium": [{"textures": {"all": "oregen:blocks/ore/uranium"}}],
+    "inventory,type=sulfur": [{"textures": {"all": "oregen:blocks/ore/sulfur"}}],
+    "inventory,type=saltpeter": [{"textures": {"all": "oregen:blocks/ore/saltpeter"}}],
+    "type": {
+      "copper": {"textures": {"all": "oregen:blocks/ore/copper"}},
+      "tin": {"textures": {"all": "oregen:blocks/ore/tin"}},
+      "silver": {"textures": {"all": "oregen:blocks/ore/silver"}},
+      "lead": {"textures": {"all": "oregen:blocks/ore/lead"}},
+      "aluminum": {"textures": {"all": "oregen:blocks/ore/aluminum"}},
+      "nickel": {"textures": {"all": "oregen:blocks/ore/nickel"}},
+      "platinum": {"textures": {"all": "oregen:blocks/ore/platinum"}},
+      "uranium": {"textures": {"all": "oregen:blocks/ore/uranium"}},
+      "sulfur": {"textures": {"all": "oregen:blocks/ore/sulfur"}},
+      "saltpeter": {"textures": {"all": "oregen:blocks/ore/saltpeter"}}
+    }
+  }
+}

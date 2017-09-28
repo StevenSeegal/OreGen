@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:blockCopper"
+    "item": "oregen:block",
+    "data": 0
   }
 }

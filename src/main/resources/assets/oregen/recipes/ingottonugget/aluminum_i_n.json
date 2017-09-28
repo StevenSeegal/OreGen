@@ -6,7 +6,8 @@
     }
   ],
   "result": {
-    "item": "oregen:nuggetAluminum",
+    "item": "oregen:nugget",
+    "data": 4,
     "count": 9
   }
 }

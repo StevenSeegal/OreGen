@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:ingotPlatinum"
+    "item": "oregen:ingot",
+    "data": 9
   }
 }

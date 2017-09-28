@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:blockUranium"
+    "item": "oregen:block",
+    "data": 7
   }
 }

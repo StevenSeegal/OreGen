@@ -6,7 +6,8 @@
     }
   ],
   "result": {
-    "item": "oregen:nuggetUranium",
+    "item": "oregen:nugget",
+    "data": 8,
     "count": 9
   }
 }

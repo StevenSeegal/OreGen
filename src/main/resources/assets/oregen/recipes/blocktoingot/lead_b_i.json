@@ -6,7 +6,8 @@
     }
   ],
   "result": {
-    "item": "oregen:ingotLead",
+    "item": "oregen:ingot",
+    "data": 3,
     "count": 9
   }
 }

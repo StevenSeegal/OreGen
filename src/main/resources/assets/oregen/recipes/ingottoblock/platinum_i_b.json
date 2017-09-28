@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:blockPlatinum"
+    "item": "oregen:block",
+    "data": 6
   }
 }

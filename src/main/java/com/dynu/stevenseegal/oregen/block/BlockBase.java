@@ -1,6 +1,7 @@
 package com.dynu.stevenseegal.oregen.block;
 
 import com.dynu.stevenseegal.oregen.OreGen;
+import com.dynu.stevenseegal.oregen.init.IBlockRegistryHandler;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -11,7 +12,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockBase extends Block
+public class BlockBase extends Block implements IBlockRegistryHandler
 {
     public BlockBase(String name, float hardness, float resistance)
     {
@@ -31,5 +32,15 @@ public class BlockBase extends Block
     public void initModel()
     {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+    }
+
+    @Override
+    public void registerToOreDict()
+    {
+    }
+
+    @Override
+    public void setHarvestLevel()
+    {
     }
 }

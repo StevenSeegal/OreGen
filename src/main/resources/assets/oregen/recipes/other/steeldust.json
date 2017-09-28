@@ -9,6 +9,7 @@
     }
   ],
   "result": {
-    "item": "oregen:dustSteel"
+    "item": "oregen:dust",
+    "data": 7
   }
 }

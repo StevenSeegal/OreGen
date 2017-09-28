@@ -104,7 +104,7 @@ public class OreDictUtils
 
     public static void registerExtraVanillaItems()
     {
-        OreDictionary.registerOre(LibNames.Vanilla.COAL, Items.COAL);
-        OreDictionary.registerOre(LibNames.Vanilla.BLAZE_ROD, Items.BLAZE_ROD);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.COAL, Items.COAL);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.BLAZE_ROD, Items.BLAZE_ROD);
     }
 }

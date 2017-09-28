@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:blockTin"
+    "item": "oregen:block",
+    "data": 1
   }
 }

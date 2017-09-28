@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:ingotNickel"
+    "item": "oregen:ingot",
+    "data": 5
   }
 }

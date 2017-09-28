@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:blockSteel"
+    "item": "oregen:block",
+    "data": 9
   }
 }

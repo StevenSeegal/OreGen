@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "oregen:blockAluminum"
+    "item": "oregen:block",
+    "data": 4
   }
 }
