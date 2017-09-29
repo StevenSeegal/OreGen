@@ -3,8 +3,10 @@ package com.dynu.stevenseegal.oregen.item;
 import com.dynu.stevenseegal.oregen.OreGen;
 import com.dynu.stevenseegal.oregen.init.IItemRegistryHandler;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
+import com.dynu.stevenseegal.oregen.util.RarityHelper;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
@@ -32,6 +34,12 @@ public class ItemBaseMulti extends Item implements IItemRegistryHandler
     public String[] getSubNames()
     {
         return this.subNames;
+    }
+
+    @Override
+    public EnumRarity getRarity(ItemStack stack)
+    {
+        return RarityHelper.getRarityFor(getSubNames()[stack.getItemDamage()]);
     }
 
     @Override

@@ -1,13 +1,14 @@
 package com.dynu.stevenseegal.oregen.init;
 
 import com.dynu.stevenseegal.oregen.block.*;
+import com.dynu.stevenseegal.oregen.block.item.ItemBlockBlock;
+import com.dynu.stevenseegal.oregen.block.item.ItemBlockOre;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.dynu.stevenseegal.oregen.tileentity.TileEntityCrusher;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemMultiTexture;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -40,8 +41,8 @@ public class ModBlocks
 
         public static final ItemBlock[] ITEM_BLOCKS =
                 {
-                        new ItemMultiTexture(BLOCK_ORE, BLOCK_ORE, BLOCK_ORE::getName),
-                        new ItemMultiTexture(BLOCK_BLOCK, BLOCK_BLOCK, BLOCK_BLOCK::getName),
+                        new ItemBlockOre(BLOCK_ORE),
+                        new ItemBlockBlock(BLOCK_BLOCK),
 
                         new ItemBlock(MACHINE_CRUSHER),
                         new ItemBlock(MACHINE_CRUSHER_RUNNING),

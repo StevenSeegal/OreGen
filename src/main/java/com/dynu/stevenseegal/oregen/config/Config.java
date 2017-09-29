@@ -46,8 +46,8 @@ public class Config
         ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.SALTPETER.getMetaData()), "saltpeter",3,2,5,16,20));
         ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.URANIUM.getMetaData()), "uranium",3,6,5,64,50));
         ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.PLATINUM.getMetaData()), "platinum",3,3,5,32,30));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.IRIDIUM.getMetaData()), "iridium",3,2,5,32,20));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.MITHRIL.getMetaData()), "mithril",3,2,5,32,20));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.IRIDIUM.getMetaData()), "iridium",2,2,5,32,10));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.MITHRIL.getMetaData()), "mithril",2,2,5,32,10));
     }
 
     public static void loadConfiguration(Configuration cfg)
