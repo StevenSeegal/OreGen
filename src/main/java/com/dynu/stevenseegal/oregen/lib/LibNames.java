@@ -16,6 +16,7 @@ public class LibNames
         public static final String ITEM_INGOT = "ingot";
         public static final String ITEM_DUST = "dust";
         public static final String ITEM_NUGGET = "nugget";
+        public static final String ITEM_UPGRADE = "upgrade";
 
         public static final String[] INGOTS =
                 {
@@ -71,7 +72,12 @@ public class LibNames
                         "mithril",
                 };
 
-        public static final String UPGRADE_ISIDED = "upgradeISided";
+        public static final String[] UPGRADES =
+                {
+                        "blank",
+                        "isided",
+                        "muffler",
+                };
     }
 
     public static final class OreDict
@@ -171,6 +177,26 @@ public class LibNames
             public static final String COAL = "coal";
             public static final String DIAMOND = "gemDiamond";
             public static final String BLAZE_ROD = "rodBlaze";
+
+
+
+            public static final String WOOL_WHITE = "blockWoolWhite";
+            public static final String WOOL_ORANGE = "blockWoolOrange";
+            public static final String WOOL_MAGENTA = "blockWoolMagenta";
+            public static final String WOOL_LIGHT_BLUE = "blockWoolLightBlue";
+            public static final String WOOL_YELLOW = "blockWoolYellow";
+            public static final String WOOL_LIME = "blockWoolLime";
+            public static final String WOOL_PINK = "blockWoolPink";
+            public static final String WOOL_GRAY = "blockWoolGray";
+            public static final String WOOL_LIGHT_GREY = "blockWoolLightGray";
+            public static final String WOOL_CYAN = "blockWoolCyan";
+            public static final String WOOL_PURPLE = "blockWoolPurple";
+            public static final String WOOL_BLUE = "blockWoolBlue";
+            public static final String WOOL_BROWN = "blockWoolBrown";
+            public static final String WOOL_GREEN = "blockWoolGreen";
+            public static final String WOOL_RED = "blockWoolRed";
+            public static final String WOOL_BLACK = "blockWoolBlack";
+            public static final String WOOL = "blockWool";
         }
     }
 
@@ -192,6 +218,7 @@ public class LibNames
         public static final String TOTALCRUSHTIME = "TotalCrushTime";
         public static final String CURRENTITEMCRUSHTIME = "CurrentItemCrushTime";
         public static final String ISIDEDUPGRADE = "ISidedUpgrade";
+        public static final String MUFFLERUPGRADE = "MufflerUpgrade";
     }
 
     public static final class Config

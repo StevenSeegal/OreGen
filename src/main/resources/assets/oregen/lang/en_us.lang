@@ -73,9 +73,11 @@ item.oregen.dust.diamond.name=Diamond Dust
 item.oregen.dust.iridium.name=Iridium Dust
 item.oregen.dust.mithril.name=Mithril Dust
 
-item.oregen.upgradeISided.name=ISided Upgrade (accept hoppers etc)
+item.oregen.upgrade.blank.name=Blank Upgrade
+item.oregen.upgrade.isided.name=ISided Upgrade (accept hoppers etc)
+item.oregen.upgrade.muffler.name=Sound Muffler Upgrade
 
 container.crusher=Coal Powered Crusher
 
 message.upgrade.done=Crusher Successfully upgraded.
-message.upgrade.error=Crusher already has an upgrade.
+message.upgrade.error=Crusher already has this upgrade.

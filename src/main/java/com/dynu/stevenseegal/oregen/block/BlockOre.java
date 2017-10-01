@@ -57,6 +57,7 @@ public class BlockOre extends BlockBase
         return state.getValue(ORE_TYPE).getMetaData();
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
     {
@@ -70,11 +71,6 @@ public class BlockOre extends BlockBase
     public int damageDropped(IBlockState state)
     {
         return state.getValue(ORE_TYPE).getMetaData();
-    }
-
-    public String getName(ItemStack itemStack)
-    {
-        return OreType.byMetaData(itemStack.getMetadata()).getName();
     }
 
     private List<ItemStack> getNonSilkTouchDrops(Item item, int metaData, int amount, int fortune, Random random)

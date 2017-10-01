@@ -1,0 +1,24 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " W ",
+    "IUI",
+    " W "
+  ],
+  "key": {
+    "W": {
+      "item": "#blockWool"
+    },
+    "I": {
+      "item": "#ingotIron"
+    },
+    "U": {
+      "item": "oregen:upgrade",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "oregen:upgrade",
+    "data": 2
+  }
+}

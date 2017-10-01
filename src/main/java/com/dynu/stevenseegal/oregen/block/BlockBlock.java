@@ -45,6 +45,7 @@ public class BlockBlock extends BlockBase
         return state.getValue(BLOCK_TYPE).getMetaData();
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
     {
@@ -58,11 +59,6 @@ public class BlockBlock extends BlockBase
     public int damageDropped(IBlockState state)
     {
         return state.getValue(BLOCK_TYPE).getMetaData();
-    }
-
-    public String getName(ItemStack itemStack)
-    {
-        return BlockType.byMetaData(itemStack.getMetadata()).getName();
     }
 
     @SideOnly(Side.CLIENT)

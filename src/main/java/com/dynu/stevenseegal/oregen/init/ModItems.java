@@ -19,8 +19,7 @@ public class ModItems
     public static ItemIngot ITEM_INGOT = new ItemIngot(LibNames.Items.ITEM_INGOT, LibNames.Items.INGOTS);
     public static ItemDust ITEM_DUST = new ItemDust(LibNames.Items.ITEM_DUST, LibNames.Items.DUSTS);
     public static ItemNugget ITEM_NUGGET = new ItemNugget(LibNames.Items.ITEM_NUGGET, LibNames.Items.NUGGETS);
-
-    public static ItemUpgrade UPGRADE_ISIDED = new ItemUpgrade(LibNames.Items.UPGRADE_ISIDED);
+    public static ItemUpgrade ITEM_UPGRADE = new ItemUpgrade(LibNames.Items.ITEM_UPGRADE, LibNames.Items.UPGRADES);
 
     @Mod.EventBusSubscriber(modid = LibMod.MOD_ID)
     public static class RegistrationHandler
@@ -30,8 +29,7 @@ public class ModItems
                         ITEM_INGOT,
                         ITEM_DUST,
                         ITEM_NUGGET,
-
-                        UPGRADE_ISIDED,
+                        ITEM_UPGRADE,
                 };
 
         @SubscribeEvent

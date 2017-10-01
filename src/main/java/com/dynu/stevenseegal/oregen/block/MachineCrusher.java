@@ -34,6 +34,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.Random;
 
 public class MachineCrusher extends Block implements ITileEntityProvider, IBlockRegistryHandler
@@ -75,7 +76,6 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
     @Override
     public void setHarvestLevel()
     {
-
     }
 
     @Override
@@ -99,7 +99,7 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
     @Override
     public int getMetaFromState(IBlockState state)
     {
-        return state.getValue(FACING).getIndex(); // OK?
+        return state.getValue(FACING).getIndex();
     }
 
     @Override
@@ -118,7 +118,7 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
     @Override
     protected BlockStateContainer createBlockState()
     {
-        return new BlockStateContainer(this, new IProperty[] {FACING}); //OK
+        return new BlockStateContainer(this, new IProperty[] {FACING});
     }
 
     @Nullable
@@ -140,12 +140,6 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
             double d2 = (double)pos.getZ() + 0.5D;
             double d3 = 0.52D;
             double d4 = rand.nextDouble() * 0.6D - 0.3D;
-
-            if (rand.nextDouble() < 0.1D)
-            {
-                //worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
-                // TODO Sound?
-            }
 
             switch (enumfacing)
             {
@@ -180,12 +174,17 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
         {
             return false;
         }
-        if (playerIn.getHeldItemMainhand().isItemEqual(new ItemStack(ModItems.UPGRADE_ISIDED)))
+
+        if (playerIn.getHeldItemMainhand().isItemEqual(new ItemStack(ModItems.ITEM_UPGRADE,1 ,1)))
         {
-            if (((TileEntityCrusher) tileEntity).insertUpgrade())
+            if (((TileEntityCrusher) tileEntity).insertISidedUpgrade())
             {
-                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_DONE), false);
                 playerIn.getHeldItemMainhand().shrink(1);
+                if (playerIn.getHeldItemMainhand().isEmpty())
+                {
+                    playerIn.setHeldItem(hand, ItemStack.EMPTY);
+                }
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_DONE), false);
             }
             else
             {
@@ -193,6 +192,24 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
             }
             return false;
         }
+        else if (playerIn.getHeldItemMainhand().isItemEqual(new ItemStack(ModItems.ITEM_UPGRADE,1 ,2)))
+        {
+            if (((TileEntityCrusher) tileEntity).insertMufflerUpgrade())
+            {
+                playerIn.getHeldItemMainhand().shrink(1);
+                if (playerIn.getHeldItemMainhand().isEmpty())
+                {
+                    playerIn.setHeldItem(hand, ItemStack.EMPTY);
+                }
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_DONE), false);
+            }
+            else
+            {
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_ERROR), false);
+            }
+            return false;
+        }
+
         playerIn.openGui(OreGen.instance, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());
         return true;
     }
@@ -229,10 +246,14 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
             {
                 TileEntityCrusher tileEntityCrusher = (TileEntityCrusher)tileEntity;
                 InventoryHelper.dropInventoryItems(worldIn, pos, tileEntityCrusher);
-                if (((TileEntityCrusher) tileEntity).hasISidedUpgrade())
+
+                List<ItemStack> dropList = tileEntityCrusher.getAdditionalDrops();
+                if (!dropList.isEmpty())
                 {
-                    ItemStack itemStack = new ItemStack(ModItems.UPGRADE_ISIDED);
-                    InventoryHelper.spawnItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), itemStack);
+                    for (ItemStack dropStack : dropList)
+                    {
+                        InventoryHelper.spawnItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), dropStack);
+                    }
                 }
             }
         }

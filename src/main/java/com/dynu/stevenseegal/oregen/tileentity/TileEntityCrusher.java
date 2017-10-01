@@ -2,6 +2,8 @@ package com.dynu.stevenseegal.oregen.tileentity;
 
 import com.dynu.stevenseegal.oregen.block.MachineCrusher;
 import com.dynu.stevenseegal.oregen.handler.CrusherRecipeManager;
+import com.dynu.stevenseegal.oregen.init.ModItems;
+import com.dynu.stevenseegal.oregen.init.SoundHandler;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -15,6 +17,7 @@ import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
@@ -26,6 +29,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class TileEntityCrusher extends TileEntity implements ITickable, ISidedInventory
 {
@@ -40,6 +44,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
     private int crushTime;
     private int totalCrushTime;
     private boolean iSidedUpgrade = false;
+    private boolean mufflerUpgrade = false;
 
     @Override
     public int getSizeInventory()
@@ -307,6 +312,12 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
                 outputSlotStack.grow(crushResult.getCount());
             }
             inputSlotStack.shrink(1);
+
+            if (!this.hasMufflerUpgrade())
+            {
+                System.out.println("PLAYING SOUND");
+                world.playSound(null, getPos(), SoundHandler.CRUSHER_CRUSH, SoundCategory.BLOCKS, 0.7F, 1.0F);
+            }
         }
     }
 
@@ -315,8 +326,6 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
     {
         return inventory.getField(0) > 0;
     }
-
-
 
     @Override
     public int getField(int id)
@@ -400,7 +409,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         return this.iSidedUpgrade;
     }
 
-    public boolean insertUpgrade()
+    public boolean insertISidedUpgrade()
     {
         if (this.hasISidedUpgrade())
         {
@@ -411,6 +420,38 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
             this.iSidedUpgrade = true;
             return true;
         }
+    }
+
+    public boolean hasMufflerUpgrade()
+    {
+        return this.mufflerUpgrade;
+    }
+
+    public boolean insertMufflerUpgrade()
+    {
+        if (this.hasMufflerUpgrade())
+        {
+            return false;
+        }
+        else
+        {
+            this.mufflerUpgrade = true;
+            return true;
+        }
+    }
+
+    public List<ItemStack> getAdditionalDrops()
+    {
+        NonNullList<ItemStack> dropList = NonNullList.create();
+        if (this.hasISidedUpgrade())
+        {
+            dropList.add(new ItemStack(ModItems.ITEM_UPGRADE, 1, 1));
+        }
+        if (this.hasMufflerUpgrade())
+        {
+            dropList.add(new ItemStack(ModItems.ITEM_UPGRADE, 1, 2));
+        }
+        return dropList;
     }
 
     @Override
@@ -462,6 +503,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         this.totalCrushTime = compound.getInteger(LibNames.NBT.TOTALCRUSHTIME);
         this.currentItemCrushTime = compound.getInteger(LibNames.NBT.CURRENTITEMCRUSHTIME);
         this.iSidedUpgrade = compound.getBoolean(LibNames.NBT.ISIDEDUPGRADE);
+        this.mufflerUpgrade = compound.getBoolean(LibNames.NBT.MUFFLERUPGRADE);
     }
 
     @Override
@@ -473,6 +515,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         compound.setInteger(LibNames.NBT.TOTALCRUSHTIME, this.totalCrushTime);
         compound.setInteger(LibNames.NBT.CURRENTITEMCRUSHTIME, this.currentItemCrushTime);
         compound.setBoolean(LibNames.NBT.ISIDEDUPGRADE, this.iSidedUpgrade);
+        compound.setBoolean(LibNames.NBT.MUFFLERUPGRADE, this.mufflerUpgrade);
         ItemStackHelper.saveAllItems(compound, this.crusherInventory);
 
         return compound;

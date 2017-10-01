@@ -39,7 +39,7 @@ public class GuiCrusher extends GuiContainer
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
     {
         String s = this.crusherInventory.getDisplayName().getFormattedText();
-        this.fontRenderer.drawString(s, this.xSize / 2 - this.fontRenderer.getStringWidth(s) / 2, 6, 4210752);
+        this.fontRenderer.drawString(s, 8, 6, 4210752);
         this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
     }
 
@@ -62,6 +62,24 @@ public class GuiCrusher extends GuiContainer
 
         int ani = this.getAnimation(16);
         this.drawTexturedModalRect(xGui + 84, yGui + 25, 176, 30 - ani, 16, ani);
+
+        drawUpgrades();
+    }
+
+    private void drawUpgrades()
+    {
+        System.out.println("DRAW UPGRADES");
+        TileEntityCrusher tileEntityCrusher = (TileEntityCrusher)crusherInventory;
+        if (tileEntityCrusher != null)
+        {
+            System.out.println("TILEENTITY OKAY");
+            System.out.println(tileEntityCrusher.hasISidedUpgrade());
+            if (tileEntityCrusher.hasISidedUpgrade())
+            {
+                System.out.println("HASUPGRADE ISEDED");
+                this.drawTexturedModalRect(160, 6, 176, 35, 12, 12);
+            }
+        }
     }
 
     private int getCrushingProgressScaled(int pixels)

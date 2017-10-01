@@ -281,5 +281,20 @@
       "ore": "cobblestone"
     },
     "name": "cobblestone"
+  },
+
+  {
+    "ingredient": {
+  "type": "forge:ore_dict",
+  "ore": "ingotIron"
+  },
+  "name": "ingotIron"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockWool"
+    },
+    "name": "blockWool"
   }
 ]

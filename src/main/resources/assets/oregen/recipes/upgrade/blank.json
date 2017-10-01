@@ -1,0 +1,23 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " S ",
+    "PIP",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "I": {
+      "item": "#ingotIron"
+    }
+  },
+  "result": {
+    "item": "oregen:upgrade",
+    "data": 0
+  }
+}

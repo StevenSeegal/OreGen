@@ -2,21 +2,23 @@
   "type": "forge:ore_shaped",
   "pattern": [
     " H ",
-    "PIP",
+    "IUI",
     " H "
   ],
   "key": {
     "H": {
       "item": "minecraft:hopper"
     },
-    "P": {
-      "item": "minecraft:paper"
-    },
     "I": {
-      "item": "minecraft:iron_ingot"
+      "item": "#ingotIron"
+    },
+    "U": {
+      "item": "oregen:upgrade",
+      "data": 0
     }
   },
   "result": {
-    "item": "oregen:upgradeISided"
+    "item": "oregen:upgrade",
+    "data": 1
   }
 }

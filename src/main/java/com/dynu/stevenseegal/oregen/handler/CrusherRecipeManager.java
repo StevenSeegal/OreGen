@@ -45,7 +45,7 @@ public class CrusherRecipeManager
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.LAPIS_ORE, new ItemStack(Items.DYE, 5, 4), 400);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.GLOWSTONE_BLOCK, new ItemStack(Items.GLOWSTONE_DUST, 4, 0), 400);
 
-        this.addOreDictCrusherRecipe(LibNames.OreDict.Items.COPPER_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 0), 200);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Items.COPPER_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 0), 20);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Items.TIN_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 1), 200);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Items.SILVER_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 2), 200);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Items.LEAD_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 3), 200);

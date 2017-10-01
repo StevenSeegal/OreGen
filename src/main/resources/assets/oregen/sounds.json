@@ -1,0 +1,6 @@
+{
+  "crusher_crush": {
+    "category": "block",
+    "sounds": ["oregen:crushercrush"]
+  }
+}

@@ -74,7 +74,7 @@ public class CapeUtils
             return;
         }
         playerTextures.put(MinecraftProfileTexture.Type.CAPE, resourceLocation);
-        player.sendMessage(new TextComponentString(TextFormatting.DARK_GREEN + "Enjoy your cape!"));
+        player.sendMessage(new TextComponentString(TextFormatting.DARK_PURPLE + "[OreGen] " + TextFormatting.DARK_GREEN + "Enjoy your cape!\n" + TextFormatting.DARK_GREEN + "Blame " + TextFormatting.RED + "Y0ungSandwich" + TextFormatting.DARK_GREEN + " for the textures..."));
         LogHelper.info("Replaced cape for " + displayName);
     }
 }
