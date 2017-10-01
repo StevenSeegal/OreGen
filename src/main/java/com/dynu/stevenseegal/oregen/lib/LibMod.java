@@ -18,7 +18,7 @@ public class LibMod
 
         public static final String CAPE_TEXTURE_DEFAULT = "textures/capes/oregen.png";
         public static final String CAPE_TEXTURE_STEVENSEEGAL = "textures/capes/stevenseegal.png";
-        public static final String CAPE_TEXTURE_YOUNGSANDWICH = CAPE_TEXTURE_STEVENSEEGAL;
+        public static final String CAPE_TEXTURE_YOUNGSANDWICH = "textures/capes/youngsandwich.png";
         public static final String CAPE_TEXTURE_GAMEOVER = CAPE_TEXTURE_DEFAULT;
         public static final String CAPE_TEXTURE_IROOMI = CAPE_TEXTURE_DEFAULT;
         public static final String CAPE_TEXTURE_KAMIZURA = CAPE_TEXTURE_DEFAULT;
