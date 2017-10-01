@@ -51,6 +51,17 @@ public class GuiCrusher extends GuiContainer
         int yGui = (this.height - this. ySize) / 2;
         this.drawTexturedModalRect(xGui, yGui, 0, 0, this.xSize, this.ySize);
 
+        int pos = 0;
+        if (TileEntityCrusher.hasISidedUpgrade(this.crusherInventory))
+        {
+            this.drawTexturedModalRect(xGui + 159, yGui + 5 + pos, 176, 35, 12, 12);
+            pos = 13;
+        }
+        if (TileEntityCrusher.hasMufflerUpgrade(this.crusherInventory))
+        {
+            this.drawTexturedModalRect(xGui + 159, yGui + 5 + pos, 176, 47, 12, 12);
+        }
+
         if (TileEntityCrusher.isCrushing(this.crusherInventory))
         {
             int fuelBar = this.getCrushingLeftScaled(13);
@@ -62,24 +73,6 @@ public class GuiCrusher extends GuiContainer
 
         int ani = this.getAnimation(16);
         this.drawTexturedModalRect(xGui + 84, yGui + 25, 176, 30 - ani, 16, ani);
-
-        drawUpgrades();
-    }
-
-    private void drawUpgrades()
-    {
-        System.out.println("DRAW UPGRADES");
-        TileEntityCrusher tileEntityCrusher = (TileEntityCrusher)crusherInventory;
-        if (tileEntityCrusher != null)
-        {
-            System.out.println("TILEENTITY OKAY");
-            System.out.println(tileEntityCrusher.hasISidedUpgrade());
-            if (tileEntityCrusher.hasISidedUpgrade())
-            {
-                System.out.println("HASUPGRADE ISEDED");
-                this.drawTexturedModalRect(160, 6, 176, 35, 12, 12);
-            }
-        }
     }
 
     private int getCrushingProgressScaled(int pixels)

@@ -1,5 +1,7 @@
 package com.dynu.stevenseegal.oregen.lib;
 
+import net.minecraft.util.text.TextFormatting;
+
 public class LibNames
 {
     public static final class Blocks
@@ -202,6 +204,10 @@ public class LibNames
 
     public static final class Messages
     {
+        public static final String PREFIX = TextFormatting.DARK_PURPLE + "[OreGen]";
+        public static final TextFormatting TEXTCOLOR_DEFAULT = TextFormatting.DARK_GREEN;
+        public static final TextFormatting TEXTCOLOR_RED = TextFormatting.RED;
+
         public static final String UPGRADE_DONE = "message.upgrade.done";
         public static final String UPGRADE_ERROR = "message.upgrade.error";
     }

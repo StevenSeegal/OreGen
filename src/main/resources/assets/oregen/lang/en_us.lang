@@ -79,5 +79,5 @@ item.oregen.upgrade.muffler.name=Sound Muffler Upgrade
 
 container.crusher=Coal Powered Crusher
 
-message.upgrade.done=Crusher Successfully upgraded.
-message.upgrade.error=Crusher already has this upgrade.
+message.upgrade.done=%s Crusher Successfully upgraded with %s.
+message.upgrade.error=%s Crusher already has %s upgrade.

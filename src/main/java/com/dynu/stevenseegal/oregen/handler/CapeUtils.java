@@ -1,5 +1,6 @@
 package com.dynu.stevenseegal.oregen.handler;
 
+import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
 import com.dynu.stevenseegal.oregen.util.ReflectionHelper;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
@@ -74,7 +75,7 @@ public class CapeUtils
             return;
         }
         playerTextures.put(MinecraftProfileTexture.Type.CAPE, resourceLocation);
-        player.sendMessage(new TextComponentString(TextFormatting.DARK_PURPLE + "[OreGen] " + TextFormatting.DARK_GREEN + "Enjoy your cape!\n" + TextFormatting.DARK_GREEN + "Blame " + TextFormatting.RED + "Y0ungSandwich" + TextFormatting.DARK_GREEN + " for the textures..."));
+        player.sendMessage(new TextComponentString(LibNames.Messages.PREFIX + LibNames.Messages.TEXTCOLOR_DEFAULT + " Enjoy your cape!\n" + LibNames.Messages.TEXTCOLOR_DEFAULT + "Blame " + LibNames.Messages.TEXTCOLOR_RED + "Y0ungSandwich" + LibNames.Messages.TEXTCOLOR_DEFAULT + " for the textures..."));
         LogHelper.info("Replaced cape for " + displayName);
     }
 }

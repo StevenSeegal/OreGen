@@ -315,7 +315,6 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
 
             if (!this.hasMufflerUpgrade())
             {
-                System.out.println("PLAYING SOUND");
                 world.playSound(null, getPos(), SoundHandler.CRUSHER_CRUSH, SoundCategory.BLOCKS, 0.7F, 1.0F);
             }
         }
@@ -325,6 +324,18 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
     public static boolean isCrushing(IInventory inventory)
     {
         return inventory.getField(0) > 0;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public static boolean hasISidedUpgrade(IInventory inventory)
+    {
+        return inventory.getField(4) == 1;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public static boolean hasMufflerUpgrade(IInventory inventory)
+    {
+        return inventory.getField(5) == 1;
     }
 
     @Override
@@ -340,6 +351,10 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
                 return this.crushTime;
             case 3:
                 return this.totalCrushTime;
+            case 4:
+                return this.iSidedUpgrade ? 1 : 0;
+            case 5:
+                return this.mufflerUpgrade ? 1 : 0;
             default:
                 return 0;
         }
@@ -361,13 +376,17 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
                 break;
             case 3:
                 this.totalCrushTime = value;
+            case 4:
+                this.iSidedUpgrade = value == 1 ? true : false;
+            case 5:
+                this.mufflerUpgrade = value == 1 ? true : false;
         }
     }
 
     @Override
     public int getFieldCount()
     {
-        return 4;
+        return 6;
     }
 
     @Override

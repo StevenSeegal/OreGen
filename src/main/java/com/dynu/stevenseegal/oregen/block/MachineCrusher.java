@@ -27,6 +27,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
@@ -175,6 +176,7 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
             return false;
         }
 
+        ItemStack heldItemCopy = playerIn.getHeldItemMainhand().copy();
         if (playerIn.getHeldItemMainhand().isItemEqual(new ItemStack(ModItems.ITEM_UPGRADE,1 ,1)))
         {
             if (((TileEntityCrusher) tileEntity).insertISidedUpgrade())
@@ -184,11 +186,11 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
                 {
                     playerIn.setHeldItem(hand, ItemStack.EMPTY);
                 }
-                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_DONE), false);
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_DONE, LibNames.Messages.PREFIX, getUpgradeName(heldItemCopy, true)).setStyle(new Style().setColor(LibNames.Messages.TEXTCOLOR_DEFAULT)), false);
             }
             else
             {
-                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_ERROR), false);
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_ERROR, LibNames.Messages.PREFIX, getUpgradeName(heldItemCopy, false)).setStyle(new Style().setColor(LibNames.Messages.TEXTCOLOR_DEFAULT)), false);
             }
             return false;
         }
@@ -201,17 +203,40 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
                 {
                     playerIn.setHeldItem(hand, ItemStack.EMPTY);
                 }
-                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_DONE), false);
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_DONE, LibNames.Messages.PREFIX, getUpgradeName(heldItemCopy, true)).setStyle(new Style().setColor(LibNames.Messages.TEXTCOLOR_DEFAULT)), false);
             }
             else
             {
-                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_ERROR), false);
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_ERROR, LibNames.Messages.PREFIX, getUpgradeName(heldItemCopy, false)).setStyle(new Style().setColor(LibNames.Messages.TEXTCOLOR_DEFAULT)), false);
             }
             return false;
         }
 
         playerIn.openGui(OreGen.instance, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());
         return true;
+    }
+
+    public String getUpgradeName(ItemStack itemStack, boolean plain)
+    {
+        String returnString = "";
+        int meta = itemStack.getMetadata();
+        if (meta == 1)
+        {
+            returnString = LibNames.Messages.TEXTCOLOR_RED + "iSided";
+            if (!plain)
+            {
+                returnString = LibNames.Messages.TEXTCOLOR_DEFAULT + "an " + returnString;
+            }
+        }
+        else if (meta == 2)
+        {
+            returnString = LibNames.Messages.TEXTCOLOR_RED + "Muffler";
+            if (!plain)
+            {
+                returnString = LibNames.Messages.TEXTCOLOR_DEFAULT + "a " + returnString;
+            }
+        }
+        return returnString;
     }
 
     public static void setState(boolean active, World world, BlockPos blockPos)
