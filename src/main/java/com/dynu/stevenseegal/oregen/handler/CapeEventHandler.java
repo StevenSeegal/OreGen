@@ -24,6 +24,8 @@ public class CapeEventHandler
     private static Map<String, ResourceLocation> PERSONAL_CAPES = new HashMap<String, ResourceLocation>();
     private static final ResourceLocation DEFAULT_CAPE = new ResourceLocation(LibMod.MOD_ID, LibMod.Textures.CAPE_TEXTURE_DEFAULT);
 
+    public static boolean capeHandled = false;
+
     @SubscribeEvent
     public static void onEntityJoinWorld(EntityJoinWorldEvent event)
     {
@@ -84,6 +86,6 @@ public class CapeEventHandler
 
         // For testing only, need to be removed if all works well TODO
         PERSONAL_CAPES.put("StevenSeegalTEST", new ResourceLocation(LibMod.MOD_ID, LibMod.Textures.CAPE_TEXTURE_STEVENSEEGAL));
-        PERSONAL_CAPES.put("Y0ungSandwichTEST", new ResourceLocation(LibMod.MOD_ID, LibMod.Textures.CAPE_TEXTURE_STEVENSEEGAL));
+        PERSONAL_CAPES.put("Y0ungSandwichTEST", new ResourceLocation(LibMod.MOD_ID, LibMod.Textures.CAPE_TEXTURE_YOUNGSANDWICH));
     }
 }

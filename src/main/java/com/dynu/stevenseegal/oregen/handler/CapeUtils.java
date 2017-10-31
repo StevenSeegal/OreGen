@@ -9,7 +9,6 @@ import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextFormatting;
 
 import java.lang.invoke.MethodHandle;
 import java.util.Map;
@@ -74,8 +73,15 @@ public class CapeUtils
             LogHelper.warn("This is NOT a game breaking error!!!");
             return;
         }
+
         playerTextures.put(MinecraftProfileTexture.Type.CAPE, resourceLocation);
-        player.sendMessage(new TextComponentString(LibNames.Messages.PREFIX + LibNames.Messages.TEXTCOLOR_DEFAULT + " Enjoy your cape!\n" + LibNames.Messages.TEXTCOLOR_DEFAULT + "Blame " + LibNames.Messages.TEXTCOLOR_RED + "Y0ungSandwich" + LibNames.Messages.TEXTCOLOR_DEFAULT + " for the textures..."));
-        LogHelper.info("Replaced cape for " + displayName);
+
+        if (Minecraft.getMinecraft().player.getDisplayNameString().equals(displayName) && !CapeEventHandler.capeHandled)
+        {
+
+            player.sendMessage(new TextComponentString(LibNames.Messages.PREFIX + LibNames.Messages.TEXTCOLOR_DEFAULT + " Enjoy your cape!\n" + LibNames.Messages.TEXTCOLOR_DEFAULT + "Blame " + LibNames.Messages.TEXTCOLOR_RED + "Y0ungSandwich" + LibNames.Messages.TEXTCOLOR_DEFAULT + " for the textures..."));
+            LogHelper.info("Replaced cape for " + displayName);
+            CapeEventHandler.capeHandled = true;
+        }
     }
 }

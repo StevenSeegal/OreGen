@@ -63,6 +63,19 @@ public class CrusherRecipeManager
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.GOLD_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 14), 200);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.DIAMOND, new ItemStack(ModItems.ITEM_DUST, 1, 15), 200);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.BLAZE_ROD, new ItemStack(Items.BLAZE_POWDER, 5, 0), 200);
+
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.COPPER_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 0), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.TIN_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 1), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.SILVER_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 2), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.LEAD_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 3), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.ALUMINUM_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 4), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.NICKEL_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 5), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.BRONZE_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 6), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.STEEL_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 7), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.URANIUM_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 8), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.PLATINUM_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 9), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.IRIDIUM_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 16), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.MITHRIL_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 17), 1800);
     }
     
     public void addOreDictCrusherRecipe(String oreDictName, ItemStack result, int crushTime)
