@@ -1,0 +1,13 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#ingotNth"
+    }
+  ],
+  "result": {
+    "item": "oregen:nugget",
+    "data": 12,
+    "count": 9
+  }
+}

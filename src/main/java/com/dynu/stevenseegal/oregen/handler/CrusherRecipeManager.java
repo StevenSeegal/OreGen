@@ -34,6 +34,8 @@ public class CrusherRecipeManager
         this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.SALTPETER_ORE, new ItemStack(ModItems.ITEM_DUST, 5, 11), 400);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.IRIDIUM_ORE, new ItemStack(ModItems.ITEM_DUST, 2, 16), 400);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.MITHRIL_ORE, new ItemStack(ModItems.ITEM_DUST, 2, 17), 400);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.NTH_ORE, new ItemStack(ModItems.ITEM_DUST, 2, 18), 400);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.URU_ORE, new ItemStack(ModItems.ITEM_DUST, 2, 19), 400);
 
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.COAL_ORE, new ItemStack(Items.COAL, 4, 0), 400);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.IRON_ORE, new ItemStack(ModItems.ITEM_DUST, 2, 13), 400);
@@ -57,6 +59,9 @@ public class CrusherRecipeManager
         this.addOreDictCrusherRecipe(LibNames.OreDict.Items.PLATINUM_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 9), 200);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Items.IRIDIUM_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 16), 200);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Items.MITHRIL_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 17), 200);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Items.NTH_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 18), 200);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Items.URU_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 19), 200);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Items.THORIUM_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 20), 200);
 
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.COAL, new ItemStack(ModItems.ITEM_DUST, 1, 12), 200);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.IRON_INGOT, new ItemStack(ModItems.ITEM_DUST, 1, 13), 200);
@@ -76,6 +81,9 @@ public class CrusherRecipeManager
         this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.PLATINUM_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 9), 1800);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.IRIDIUM_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 16), 1800);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.MITHRIL_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 17), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.NTH_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 18), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.URU_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 19), 1800);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Blocks.THORIUM_BLOCK, new ItemStack(ModItems.ITEM_DUST, 9, 20), 1800);
     }
     
     public void addOreDictCrusherRecipe(String oreDictName, ItemStack result, int crushTime)

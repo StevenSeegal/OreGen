@@ -34,6 +34,9 @@ public class LibNames
                         "platinum",
                         "iridium",
                         "mithril",
+                        "nth",
+                        "uru",
+                        "thorium",
                 };
 
         public static final String[] DUSTS =
@@ -56,6 +59,9 @@ public class LibNames
                         "diamond",
                         "iridium",
                         "mithril",
+                        "nth",
+                        "uru",
+                        "thorium",
                 };
 
         public static final String[] NUGGETS =
@@ -72,6 +78,9 @@ public class LibNames
                         "platinum",
                         "iridium",
                         "mithril",
+                        "nth",
+                        "uru",
+                        "thorium",
                 };
 
         public static final String[] UPGRADES =
@@ -98,6 +107,8 @@ public class LibNames
             public static final String PLATINUM_ORE = "orePlatinum";
             public static final String IRIDIUM_ORE = "oreIridium";
             public static final String MITHRIL_ORE = "oreMithril";
+            public static final String NTH_ORE = "oreNth";
+            public static final String URU_ORE = "oreUru";
 
             public static final String COPPER_BLOCK = "blockCopper";
             public static final String TIN_BLOCK = "blockTin";
@@ -111,6 +122,9 @@ public class LibNames
             public static final String PLATINUM_BLOCK = "blockPlatinum";
             public static final String IRIDIUM_BLOCK = "blockIridium";
             public static final String MITHRIL_BLOCK = "blockMithril";
+            public static final String NTH_BLOCK = "blockNth";
+            public static final String URU_BLOCK = "blockUru";
+            public static final String THORIUM_BLOCK = "blockThorium";
         }
 
         public static final class Items
@@ -127,6 +141,9 @@ public class LibNames
             public static final String PLATINUM_INGOT = "ingotPlatinum";
             public static final String IRIDIUM_INGOT = "ingotIridium";
             public static final String MITHRIL_INGOT = "ingotMithril";
+            public static final String NTH_INGOT = "ingotNth";
+            public static final String URU_INGOT = "ingotUru";
+            public static final String THORIUM_INGOT = "ingotThorium";
 
             public static final String COPPER_NUGGET = "nuggetCopper";
             public static final String TIN_NUGGET = "nuggetTin";
@@ -140,6 +157,9 @@ public class LibNames
             public static final String PLATINUM_NUGGET = "nuggetPlatinum";
             public static final String IRIDIUM_NUGGET = "nuggetIridium";
             public static final String MITHRIL_NUGGET = "nuggetMithril";
+            public static final String NTH_NUGGET = "nuggetNth";
+            public static final String URU_NUGGET = "nuggetUru";
+            public static final String THORIUM_NUGGET = "nuggetThorium";
 
             public static final String COPPER_DUST = "dustCopper";
             public static final String TIN_DUST = "dustTin";
@@ -155,6 +175,9 @@ public class LibNames
             public static final String PLATINUM_DUST = "dustPlatinum";
             public static final String IRIDIUM_DUST = "dustIridium";
             public static final String MITHRIL_DUST = "dustMithril";
+            public static final String NTH_DUST = "dustNth";
+            public static final String URU_DUST = "dustUru";
+            public static final String THORIUM_DUST = "dustThorium";
 
             public static final String COAL_DUST = "dustCoal";
             public static final String IRON_DUST = "dustIron";
@@ -260,6 +283,9 @@ public class LibNames
                 public static final String STEEL = "Steel";
                 public static final String IRIDIUM = "Iridium";
                 public static final String MITHRIL = "Mithril";
+                public static final String NTH = "Nth";
+                public static final String URU = "Uru";
+                public static final String THORUIM = "Thorium";
             }
         }
 

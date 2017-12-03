@@ -18,6 +18,8 @@
     "inventory,type=saltpeter": [{"textures": {"all": "oregen:blocks/ore/saltpeter"}}],
     "inventory,type=iridium": [{"textures": {"all": "oregen:blocks/ore/iridium"}}],
     "inventory,type=mithril": [{"textures": {"all": "oregen:blocks/ore/mithril"}}],
+    "inventory,type=nth": [{"textures": {"all": "oregen:blocks/ore/nth"}}],
+    "inventory,type=uru": [{"textures": {"all": "oregen:blocks/ore/uru"}}],
     "type": {
       "copper": {"textures": {"all": "oregen:blocks/ore/copper"}},
       "tin": {"textures": {"all": "oregen:blocks/ore/tin"}},
@@ -30,7 +32,9 @@
       "sulfur": {"textures": {"all": "oregen:blocks/ore/sulfur"}},
       "saltpeter": {"textures": {"all": "oregen:blocks/ore/saltpeter"}},
       "iridium": {"textures": {"all": "oregen:blocks/ore/iridium"}},
-      "mithril": {"textures": {"all": "oregen:blocks/ore/mithril"}}
+      "mithril": {"textures": {"all": "oregen:blocks/ore/mithril"}},
+      "nth": {"textures": {"all": "oregen:blocks/ore/nth"}},
+      "uru": {"textures": {"all": "oregen:blocks/ore/uru"}}
     }
   }
 }

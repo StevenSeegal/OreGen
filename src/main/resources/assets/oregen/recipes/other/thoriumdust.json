@@ -1,0 +1,15 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#dustNth"
+    },
+    {
+      "item": "#dustUru"
+    }
+  ],
+  "result": {
+    "item": "oregen:dust",
+    "data": 20
+  }
+}

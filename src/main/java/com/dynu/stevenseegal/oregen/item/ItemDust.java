@@ -32,5 +32,8 @@ public class ItemDust extends ItemBaseMulti
         OreDictionary.registerOre(LibNames.OreDict.Items.DIAMOND_DUST, new ItemStack(this, 1, 15));
         OreDictionary.registerOre(LibNames.OreDict.Items.IRIDIUM_DUST, new ItemStack(this, 1, 16));
         OreDictionary.registerOre(LibNames.OreDict.Items.MITHRIL_DUST, new ItemStack(this, 1, 17));
+        OreDictionary.registerOre(LibNames.OreDict.Items.NTH_DUST, new ItemStack(this, 1, 18));
+        OreDictionary.registerOre(LibNames.OreDict.Items.URU_DUST, new ItemStack(this, 1, 19));
+        OreDictionary.registerOre(LibNames.OreDict.Items.THORIUM_DUST, new ItemStack(this, 1, 20));
     }
 }

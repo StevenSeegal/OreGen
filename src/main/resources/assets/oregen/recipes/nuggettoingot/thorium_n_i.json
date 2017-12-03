@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "#nuggetThorium"
+    }
+  },
+  "result": {
+    "item": "oregen:ingot",
+    "data": 14
+  }
+}

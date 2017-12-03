@@ -86,6 +86,9 @@ public class BlockBlock extends BlockBase
         OreDictionary.registerOre(LibNames.OreDict.Blocks.STEEL_BLOCK, new ItemStack(this, 1, BlockType.STEEL.getMetaData()));
         OreDictionary.registerOre(LibNames.OreDict.Blocks.IRIDIUM_BLOCK, new ItemStack(this, 1, BlockType.IRIDIUM.getMetaData()));
         OreDictionary.registerOre(LibNames.OreDict.Blocks.MITHRIL_BLOCK, new ItemStack(this, 1, BlockType.MITHRIL.getMetaData()));
+        OreDictionary.registerOre(LibNames.OreDict.Blocks.NTH_BLOCK, new ItemStack(this, 1, BlockType.NTH.getMetaData()));
+        OreDictionary.registerOre(LibNames.OreDict.Blocks.URU_BLOCK, new ItemStack(this, 1, BlockType.URU.getMetaData()));
+        OreDictionary.registerOre(LibNames.OreDict.Blocks.THORIUM_BLOCK, new ItemStack(this, 1, BlockType.THORIUM.getMetaData()));
     }
 
     @Override
@@ -104,6 +107,9 @@ public class BlockBlock extends BlockBase
         setHarvestLevel("pickaxe", Config.HARVEST_STEEL, getStateFromMeta(BlockType.STEEL.getMetaData()));
         setHarvestLevel("pickaxe", Config.HARVEST_IRIDIUM, getStateFromMeta(BlockType.IRIDIUM.getMetaData()));
         setHarvestLevel("pickaxe", Config.HARVEST_MITHRIL, getStateFromMeta(BlockType.MITHRIL.getMetaData()));
+        setHarvestLevel("pickaxe", Config.HARVEST_NTH, getStateFromMeta(BlockType.NTH.getMetaData()));
+        setHarvestLevel("pickaxe", Config.HARVEST_URU, getStateFromMeta(BlockType.URU.getMetaData()));
+        setHarvestLevel("pickaxe", Config.HARVEST_THORIUM, getStateFromMeta(BlockType.THORIUM.getMetaData()));
     }
 
     public enum BlockType implements IStringSerializable
@@ -119,7 +125,10 @@ public class BlockBlock extends BlockBase
         BRONZE(8, "bronze"),
         STEEL(9, "steel"),
         IRIDIUM(10, "iridium"),
-        MITHRIL(11, "mithril");
+        MITHRIL(11, "mithril"),
+        NTH(12, "nth"),
+        URU(13, "uru"),
+        THORIUM(14, "thorium");
 
         private static final BlockType[] META_LOOKUP = new BlockType[values().length];
         private int metaData;

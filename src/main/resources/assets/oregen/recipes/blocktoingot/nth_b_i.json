@@ -1,0 +1,13 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#blockNth"
+    }
+  ],
+  "result": {
+    "item": "oregen:ingot",
+    "data": 12,
+    "count": 9
+  }
+}

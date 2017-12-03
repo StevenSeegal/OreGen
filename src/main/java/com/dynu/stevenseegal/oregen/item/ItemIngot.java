@@ -26,5 +26,8 @@ public class ItemIngot extends ItemBaseMulti
         OreDictionary.registerOre(LibNames.OreDict.Items.PLATINUM_INGOT, new ItemStack(this, 1, 9));
         OreDictionary.registerOre(LibNames.OreDict.Items.IRIDIUM_INGOT, new ItemStack(this, 1, 10));
         OreDictionary.registerOre(LibNames.OreDict.Items.MITHRIL_INGOT, new ItemStack(this, 1, 11));
+        OreDictionary.registerOre(LibNames.OreDict.Items.NTH_INGOT, new ItemStack(this, 1, 12));
+        OreDictionary.registerOre(LibNames.OreDict.Items.URU_INGOT, new ItemStack(this, 1, 13));
+        OreDictionary.registerOre(LibNames.OreDict.Items.THORIUM_INGOT, new ItemStack(this, 1, 14));
     }
 }

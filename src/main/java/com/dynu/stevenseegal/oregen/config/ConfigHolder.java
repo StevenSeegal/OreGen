@@ -1,6 +1,5 @@
 package com.dynu.stevenseegal.oregen.config;
 
-import com.dynu.stevenseegal.oregen.block.BlockOre;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
 import com.dynu.stevenseegal.oregen.util.StringUtils;
@@ -18,8 +17,9 @@ public class ConfigHolder
     private IBlockState blockState;
     private String name;
     private boolean enabled;
+    private int genDim;
 
-    public ConfigHolder(IBlockState blockState, String name, int veinSize, int veinsPerChunk, int minY, int maxY, int ratio)
+    public ConfigHolder(IBlockState blockState, String name, int veinSize, int veinsPerChunk, int minY, int maxY, int ratio, int genDim)
     {
         this.blockState = blockState;
         this.veinSize = veinSize;
@@ -29,6 +29,7 @@ public class ConfigHolder
         this.ratio = ratio;
         this.name = name;
         this.enabled = true;
+        this.genDim = genDim;
     }
 
     public void loadConfiguration(Configuration cfg)
@@ -122,7 +123,7 @@ public class ConfigHolder
         if (enabled)
         {
             LogHelper.debug("REG TO GEN: Registering " + name + " blockname: " + name + " with settings: " + veinSize + " " + veinsPerChunk + " "+ minY + " " + maxY + " " + ratio);
-            WorldGenOre.addOreToGenerate(name, blockState, veinSize, veinsPerChunk, minY, maxY, ratio);
+            WorldGenOre.addOreToGenerate(name, blockState, veinSize, veinsPerChunk, minY, maxY, ratio, genDim);
         }
         else
         {

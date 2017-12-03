@@ -1,0 +1,13 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "#blockThorium"
+    }
+  ],
+  "result": {
+    "item": "oregen:ingot",
+    "data": 14,
+    "count": 9
+  }
+}

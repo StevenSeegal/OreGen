@@ -30,23 +30,59 @@ public class WorldGenOre implements IWorldGenerator
 {
     public static ArrayList<OreSettings> oreToGenerate = new ArrayList<>();
 
-    public static OreSettings addOreToGenerate(String name, IBlockState state, int veinSize, int veinsPerChunk, int minY, int maxY, int ratio)
+    public static OreSettings addOreToGenerate(String name, IBlockState state, int veinSize, int veinsPerChunk, int minY, int maxY, int ratio, int dimension)
     {
         LogHelper.debug("Added ore " + name + " to GEN, CONFIG AIR: " + Config.GENERATE_AIR);
-        OreSettings gen = new OreSettings(name, state, veinSize + 2, Config.GENERATE_AIR ? Blocks.AIR : Blocks.STONE, minY, maxY, veinsPerChunk, ratio);
+        OreSettings gen = new OreSettings(name, state, veinSize + 2, getReplacableBlockForDim(dimension), minY, maxY, veinsPerChunk, ratio, dimension);
         oreToGenerate.add(gen);
         return gen;
+    }
+
+    private static Block getReplacableBlockForDim(int dimId)
+    {
+        if (Config.GENERATE_AIR)
+        {
+            return LibMod.GenReplacedBlocks.AIR;
+        }
+
+        Block replaceBlock = Blocks.STONE;
+        if (dimId == -1)
+        {
+            replaceBlock = LibMod.GenReplacedBlocks.NETHER;
+        }
+        else if (dimId == 1)
+        {
+            replaceBlock = LibMod.GenReplacedBlocks.END;
+        }
+        return replaceBlock;
     }
 
     public void generateOres(Random random, int chunkX, int chunkZ, World world, boolean newGen)
     {
         for (OreSettings gen : oreToGenerate)
         {
-            if (newGen || Config.RETROGEN_ENABLED)
+            if (canGenerateInDimension(world, gen.dim))
             {
-                gen.generate(world, random, chunkX * 16, chunkZ * 16);
-                //LogHelper.debug("Generating: " + gen.name);
+                if (newGen || Config.RETROGEN_ENABLED)
+                {
+                    gen.generate(world, random, chunkX * 16, chunkZ * 16);
+                    LogHelper.debug("Generating: " + gen.name);
+                }
             }
+        }
+    }
+
+    private boolean canGenerateInDimension(World world, int blockDim)
+    {
+        int worldDim = world.provider.getDimension();
+
+        if (worldDim == -1 || worldDim == 1)
+        {
+            return worldDim == blockDim;
+        }
+        else
+        {
+            return blockDim != -1 && blockDim != 1;
         }
     }
 
@@ -134,8 +170,9 @@ public class WorldGenOre implements IWorldGenerator
         int maxY;
         int veinsPerChunk;
         int ratio;
+        int dim;
 
-        public OreSettings(String name, IBlockState state, int maxVeinSize, Block replaceTarget, int minY, int maxY, int veinsPerChunk, int ratio)
+        public OreSettings(String name, IBlockState state, int maxVeinSize, Block replaceTarget, int minY, int maxY, int veinsPerChunk, int ratio, int dim)
         {
             this.name = name;
             this.genMinable = new WorldGenMinable(state, maxVeinSize, BlockMatcher.forBlock(replaceTarget));
@@ -143,6 +180,7 @@ public class WorldGenOre implements IWorldGenerator
             this.maxY = maxY;
             this.veinsPerChunk = veinsPerChunk;
             this.ratio = ratio;
+            this.dim = dim;
         }
 
         public void generate(World world, Random random, int x, int z)

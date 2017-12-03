@@ -33,21 +33,26 @@ public class Config
     public static int HARVEST_STEEL = 2;
     public static int HARVEST_IRIDIUM = 3;
     public static int HARVEST_MITHRIL = 3;
+    public static int HARVEST_NTH = 3;
+    public static int HARVEST_URU = 3;
+    public static int HARVEST_THORIUM = 3;
 
     public static void initConfigHolder(Configuration cfg)
     {
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.COPPER.getMetaData()), "copper", 7, 10, 40, 100, 60));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.TIN.getMetaData()), "tin",7,10,16,64,60));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.SILVER.getMetaData()), "silver",6,6,5,20,30));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.LEAD.getMetaData()), "lead",7,8,16,48,40));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.ALUMINUM.getMetaData()), "aluminum",5,6,16,64,40));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.NICKEL.getMetaData()), "nickel",4,2,5,20,30));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.SULFUR.getMetaData()), "sulfur",4,3,5,16,20));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.SALTPETER.getMetaData()), "saltpeter",3,2,5,16,20));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.URANIUM.getMetaData()), "uranium",3,6,5,64,50));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.PLATINUM.getMetaData()), "platinum",3,3,5,32,30));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.IRIDIUM.getMetaData()), "iridium",2,2,5,32,10));
-        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.MITHRIL.getMetaData()), "mithril",2,2,5,32,10));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.COPPER.getMetaData()), "copper", 7, 10, 40, 100, 60, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.TIN.getMetaData()), "tin",7,10,16,64,60, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.SILVER.getMetaData()), "silver",6,6,5,20,30, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.LEAD.getMetaData()), "lead",7,8,16,48,40, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.ALUMINUM.getMetaData()), "aluminum",5,6,16,64,40, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.NICKEL.getMetaData()), "nickel",4,2,5,20,30, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.SULFUR.getMetaData()), "sulfur",4,3,5,16,20, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.SALTPETER.getMetaData()), "saltpeter",3,2,5,16,20, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.URANIUM.getMetaData()), "uranium",3,6,5,64,50, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.PLATINUM.getMetaData()), "platinum",3,3,5,32,30, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.IRIDIUM.getMetaData()), "iridium",2,2,5,32,10, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.MITHRIL.getMetaData()), "mithril",2,2,5,32,10, 0));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.NTH.getMetaData()), "nth", 4, 6, 16, 120, 50, -1));
+        ORE_CONFIG.add(new ConfigHolder(ModBlocks.BLOCK_ORE.getStateFromMeta(BlockOre.OreType.URU.getMetaData()), "uru", 3, 6, 1, 120,40, 1));
     }
 
     public static void loadConfiguration(Configuration cfg)
@@ -72,6 +77,11 @@ public class Config
         HARVEST_STEEL = cfg.getInt(LibNames.Config.Key.Harvest.STEEL, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_STEEL, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.STEEL));
         HARVEST_IRIDIUM = cfg.getInt(LibNames.Config.Key.Harvest.IRIDIUM, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_IRIDIUM, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.IRIDIUM));
         HARVEST_MITHRIL = cfg.getInt(LibNames.Config.Key.Harvest.MITHRIL, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_MITHRIL, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.MITHRIL));
+
+
+        HARVEST_NTH = cfg.getInt(LibNames.Config.Key.Harvest.NTH, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_NTH, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.NTH));
+        HARVEST_URU = cfg.getInt(LibNames.Config.Key.Harvest.URU, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_URU, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.URU));
+        HARVEST_THORIUM = cfg.getInt(LibNames.Config.Key.Harvest.THORUIM, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_THORIUM, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.THORUIM));
 
         for (ConfigHolder holder : ORE_CONFIG)
         {

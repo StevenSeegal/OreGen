@@ -83,6 +83,27 @@
     },
     "name": "blockMithril"
   },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockNth"
+    },
+    "name": "blockNth"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockUru"
+    },
+    "name": "blockUru"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockThorium"
+    },
+    "name": "blockThorium"
+  },
 
   {
     "ingredient": {
@@ -167,6 +188,27 @@
       "ore": "ingotMithril"
     },
     "name": "ingotMithril"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotNth"
+    },
+    "name": "ingotNth"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotUru"
+    },
+    "name": "ingotUru"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotThorium"
+    },
+    "name": "ingotThorium"
   },
 
   {
@@ -253,6 +295,27 @@
     },
     "name": "nuggetMithril"
   },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetNth"
+    },
+    "name": "nuggetNth"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetUru"
+    },
+    "name": "nuggetUru"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetThorium"
+    },
+    "name": "nuggetThorium"
+  },
 
   {
     "ingredient": {
@@ -281,6 +344,20 @@
       "ore": "cobblestone"
     },
     "name": "cobblestone"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "dustNth"
+    },
+    "name": "dustNth"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "dustUru"
+    },
+    "name": "dustUru"
   },
 
   {
