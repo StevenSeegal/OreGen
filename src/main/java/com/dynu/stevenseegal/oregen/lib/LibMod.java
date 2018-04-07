@@ -13,22 +13,7 @@ public class LibMod
     public static final String MOD_CLIENT_PROXY = "com.dynu.stevenseegal.oregen.proxy.ClientProxy";
     public static final String MOD_SERVER_PROXY = "com.dynu.stevenseegal.oregen.proxy.ServerProxy";
 
-    public static final String CAPE_URL = "*";
-
-    public static final class Textures
-    {
-        public static final String GUI_CRUSHER_BACKGROUND = "textures/gui/crusher.png";
-
-        public static final String CAPE_TEXTURE_DEFAULT = "textures/capes/oregen.png";
-        public static final String CAPE_TEXTURE_STEVENSEEGAL = "textures/capes/stevenseegal.png";
-        public static final String CAPE_TEXTURE_YOUNGSANDWICH = "textures/capes/youngsandwich.png";
-        public static final String CAPE_TEXTURE_GAMEOVER = CAPE_TEXTURE_DEFAULT;
-        public static final String CAPE_TEXTURE_IROOMI = CAPE_TEXTURE_DEFAULT;
-        public static final String CAPE_TEXTURE_KAMIZURA = CAPE_TEXTURE_DEFAULT;
-        public static final String CAPE_TEXTURE_MATTOKAH = CAPE_TEXTURE_DEFAULT;
-        public static final String CAPE_TEXTURE_TRIFFIDDK = CAPE_TEXTURE_DEFAULT;
-        public static final String CAPE_TEXTURE_CTHREE = CAPE_TEXTURE_DEFAULT;
-    }
+    public static final String GUI_CRUSHER_BACKGROUND = "textures/gui/crusher.png";
 
     public static final class GenReplacedBlocks
     {

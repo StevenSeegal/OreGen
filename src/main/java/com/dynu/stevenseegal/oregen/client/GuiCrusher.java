@@ -16,7 +16,7 @@ public class GuiCrusher extends GuiContainer
     private int animation = 0;
     private boolean reverse = false;
 
-    public static final ResourceLocation GUI_BASE = new ResourceLocation(LibMod.MOD_ID, LibMod.Textures.GUI_CRUSHER_BACKGROUND);
+    public static final ResourceLocation GUI_BASE = new ResourceLocation(LibMod.MOD_ID, LibMod.GUI_CRUSHER_BACKGROUND);
     private final InventoryPlayer playerInventory;
     private final IInventory crusherInventory;
 

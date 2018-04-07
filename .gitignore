@@ -23,5 +23,4 @@ run
 out
 tmp
 .git
-oregen_capes.json
-src/main/java/com/dynu/stevenseegal/oregen/lib/LibMod.java
+.DS_Store
