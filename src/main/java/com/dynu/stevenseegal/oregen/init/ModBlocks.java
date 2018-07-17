@@ -79,7 +79,7 @@ public class ModBlocks
 
         public static void registerTileEntities()
         {
-            GameRegistry.registerTileEntity(TileEntityCrusher.class, "_" + LibNames.Blocks.MACHINE_CRUSHER);
+            GameRegistry.registerTileEntity(TileEntityCrusher.class, new ResourceLocation(LibMod.MOD_NAME, "_" + LibNames.Blocks.MACHINE_CRUSHER));
         }
 
         public static void setHarvestLevel()
