@@ -42,11 +42,11 @@ public class OreDescriptions
     {
         if (dim == -1)
         {
-            return "End";
+            return "Nether";
         }
         else if (dim == 1)
         {
-            return "Nether";
+            return "End";
         }
         else
         {

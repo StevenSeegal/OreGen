@@ -12,8 +12,8 @@ tile.oregen.ore.uranium.name=Uranium Ore
 tile.oregen.ore.platinum.name=Platinum Ore
 tile.oregen.ore.iridium.name=Iridium Ore
 tile.oregen.ore.mithril.name=Mithril Ore
-tile.oregen.ore.nth.name=Nth Block
-tile.oregen.ore.uru.name=Uru Block
+tile.oregen.ore.nth.name=Nth Ore
+tile.oregen.ore.uru.name=Uru Ore
 
 tile.oregen.block.copper.name=Copper Block
 tile.oregen.block.tin.name=Tin Block
