@@ -95,3 +95,9 @@ container.crusher=Coal Powered Crusher
 
 message.upgrade.done=%s Crusher Successfully upgraded with %s.
 message.upgrade.error=%s Crusher already has %s upgrade.
+
+jei.oregen.description.spawn=Spawns at
+jei.oregen.description.max=Maximum
+jei.oregen.description.min=Minimum
+jei.oregen.description.dim=Dimension
+jei.oregen.description.disabled=Ore is disabled in the config

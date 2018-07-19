@@ -1,5 +1,7 @@
 package com.dynu.stevenseegal.oregen.util;
 
+import net.minecraft.util.text.translation.I18n;
+
 public class StringUtils
 {
     public static boolean isInteger(String str)
@@ -48,24 +50,8 @@ public class StringUtils
         return returnStr;
     }
 
-    public static String stripModName(String str)
+    public static String translate(String key)
     {
-        String returnStr = null;
-        String[] s = str.split(":");
-        if (s.length == 2)
-        {
-            returnStr = s[1];
-        }
-        return returnStr;
-    }
-
-    public static String stripPrefix(String str, int delimiter)
-    {
-        String returnStr = null;
-        if (str.length() > delimiter)
-        {
-            returnStr = str.substring(delimiter);
-        }
-        return returnStr;
+        return I18n.translateToLocal(key);
     }
 }

@@ -129,4 +129,9 @@ public class CrusherRecipeManager
     {
         return itemStack2.getItem() == itemStack1.getItem() && (itemStack2.getMetadata() == 32767 || itemStack2.getMetadata() == itemStack1.getMetadata());
     }
+
+    public Map<OreIngredient, ItemStack> getOredictRecipeList()
+    {
+        return this.crusherRecipeList;
+    }
 }

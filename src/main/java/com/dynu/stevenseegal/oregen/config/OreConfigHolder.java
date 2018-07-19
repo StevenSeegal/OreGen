@@ -1,5 +1,7 @@
 package com.dynu.stevenseegal.oregen.config;
 
+import com.dynu.stevenseegal.oregen.block.BlockOre;
+import com.dynu.stevenseegal.oregen.init.ModBlocks;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
 import com.dynu.stevenseegal.oregen.util.StringUtils;
@@ -7,8 +9,9 @@ import com.dynu.stevenseegal.oregen.world.gen.WorldGenOre;
 import net.minecraft.block.state.IBlockState;
 import net.minecraftforge.common.config.Configuration;
 
-public class ConfigHolder
+public class OreConfigHolder
 {
+    private int meta;
     private int veinSize;
     private int veinsPerChunk;
     private int minY;
@@ -19,17 +22,18 @@ public class ConfigHolder
     private boolean enabled;
     private int genDim;
 
-    public ConfigHolder(IBlockState blockState, String name, int veinSize, int veinsPerChunk, int minY, int maxY, int ratio, int genDim)
+    public OreConfigHolder(int meta, int veinSize, int veinsPerChunk, int minY, int maxY, int ratio, int genDim)
     {
-        this.blockState = blockState;
+        this.meta = meta;
         this.veinSize = veinSize;
         this.veinsPerChunk = veinsPerChunk;
         this.minY = minY;
         this.maxY = maxY;
         this.ratio = ratio;
-        this.name = name;
+        this.name = BlockOre.OreType.byMetaData(meta).getName();
         this.enabled = true;
         this.genDim = genDim;
+        this.blockState = ModBlocks.BLOCK_ORE.getStateFromMeta(meta);
     }
 
     public void loadConfiguration(Configuration cfg)
@@ -129,5 +133,35 @@ public class ConfigHolder
         {
             LogHelper.debug("REG TO GEN: Ore " + name + " is disabled");
         }
+    }
+
+    public String getJeiUnLocalizedName()
+    {
+        return "tile.oregen.ore." + this.name + ".name";
+    }
+
+    public int getMeta()
+    {
+        return meta;
+    }
+
+    public int getMinY()
+    {
+        return this.minY;
+    }
+
+    public int getMaxY()
+    {
+        return this.maxY;
+    }
+
+    public int getGenDim()
+    {
+        return this.genDim;
+    }
+
+    public boolean isEnabled()
+    {
+        return this.enabled;
     }
 }
