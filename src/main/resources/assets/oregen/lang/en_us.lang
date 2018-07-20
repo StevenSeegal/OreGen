@@ -88,7 +88,7 @@ item.oregen.dust.uru.name=Uru Dust
 item.oregen.dust.thorium.name=Thorium Dust
 
 item.oregen.upgrade.blank.name=Blank Upgrade
-item.oregen.upgrade.isided.name=ISided Upgrade (accept hoppers etc)
+item.oregen.upgrade.isided.name=ISided Upgrade
 item.oregen.upgrade.muffler.name=Sound Muffler Upgrade
 
 container.crusher=Coal Powered Crusher
@@ -101,3 +101,8 @@ jei.oregen.description.max=Maximum
 jei.oregen.description.min=Minimum
 jei.oregen.description.dim=Dimension
 jei.oregen.description.disabled=Ore is disabled in the config
+jei.oregen.description.crusher=A Crusher running on Coal or any other valid fuel source. \nEach Ore will output 2 dusts which can be smelted into an ingot each. \nIngots can be crushed into 1 dust.
+jei.oregen.description.upgradeblank=Base upgrade needed to craft other upgrades.
+jei.oregen.description.upgradeisided=This upgrade allows items to be put into and out of the Crusher with a Hopper and pipes.\nTop: Input of items.\nSide: Input of fuel\nBottom: Output of result.
+jei.oregen.description.upgrademuffler=This upgrade disables the crushing sound. \nIt's a pleasure to your ears.
+jei.oregen.description.upgradeinsert=This upgrade can be installed by right-clicking it on the Crusher.

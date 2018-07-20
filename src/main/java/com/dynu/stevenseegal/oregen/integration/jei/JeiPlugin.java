@@ -19,7 +19,7 @@ public class JeiPlugin implements IModPlugin
 
         CrusherRecipeCategory.register(registry, jeiHelpers, guiHelper);
 
-        OreDescriptions.addOreDescriptions(registry);
+        Descriptions.addDescriptions(registry);
 
         blacklistItems(jeiHelpers.getIngredientBlacklist());
     }
