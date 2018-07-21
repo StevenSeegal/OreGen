@@ -84,7 +84,7 @@ public class CrusherRecipeManager
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.EMERALD_ORE, new ItemStack(Items.EMERALD, 2, 0), CRUSHTIME_ORE);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.REDSTONE_ORE, new ItemStack(Items.REDSTONE, 5, 0), CRUSHTIME_ORE);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.QUARTZ_ORE, new ItemStack(Items.QUARTZ, 5, 0), CRUSHTIME_ORE);
-        this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.LAPIS_ORE, new ItemStack(Items.DYE, 5, 4), CRUSHTIME_ORE);
+        this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.LAPIS_ORE, new ItemStack(Items.DYE, 8, 4), CRUSHTIME_ORE);
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.GLOWSTONE_BLOCK, new ItemStack(Items.GLOWSTONE_DUST, 4, 0), CRUSHTIME_ORE);
 
         this.addOreDictCrusherRecipe(LibNames.OreDict.Vanilla.COAL, new ItemStack(ModItems.ITEM_DUST, 1, 12), CRUSHTIME_NORMAL);

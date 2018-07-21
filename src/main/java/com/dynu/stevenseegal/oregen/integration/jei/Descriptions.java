@@ -32,10 +32,10 @@ public class Descriptions
 
             if (oreConfig.isEnabled())
             {
-                String spawnInfo = StringUtils.translate("jei.oregen.description.spawn") + ":";
-                String maxY = StringUtils.translate("jei.oregen.description.max") + ": " + oreConfig.getMaxY();
-                String minY = StringUtils.translate("jei.oregen.description.min") + ": " + oreConfig.getMinY();
-                String dim = StringUtils.translate("jei.oregen.description.dim") + ": " + getDimensionName(oreConfig.getGenDim());
+                String spawnInfo = StringUtils.translate("jei.oregen.description.spawn");
+                String maxY = StringUtils.translateFormatted("jei.oregen.description.max", oreConfig.getMaxY());
+                String minY = StringUtils.translateFormatted("jei.oregen.description.min", oreConfig.getMinY());
+                String dim = StringUtils.translateFormatted("jei.oregen.description.dim", getDimensionName(oreConfig.getGenDim()));
                 registry.addDescription(new ItemStack(ModBlocks.BLOCK_ORE, 1, meta), name, emptyLine, spawnInfo, maxY, minY, dim);
             }
             else

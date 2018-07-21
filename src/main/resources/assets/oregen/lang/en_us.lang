@@ -96,10 +96,11 @@ container.crusher=Coal Powered Crusher
 message.upgrade.done=%s Crusher Successfully upgraded with %s.
 message.upgrade.error=%s Crusher already has %s upgrade.
 
-jei.oregen.description.spawn=Spawns at
-jei.oregen.description.max=Maximum
-jei.oregen.description.min=Minimum
-jei.oregen.description.dim=Dimension
+jei.oregen.gui.crusher.crushtime=Crush Time: %s
+jei.oregen.description.spawn=Spawns at:
+jei.oregen.description.max=Maximum: %s
+jei.oregen.description.min=Minimum: %s
+jei.oregen.description.dim=Dimension: %s
 jei.oregen.description.disabled=Ore is disabled in the config
 jei.oregen.description.crusher=A Crusher running on Coal or any other valid fuel source. \nEach Ore will output 2 dusts which can be smelted into an ingot each. \nIngots can be crushed into 1 dust.
 jei.oregen.description.upgradeblank=Base upgrade needed to craft other upgrades.

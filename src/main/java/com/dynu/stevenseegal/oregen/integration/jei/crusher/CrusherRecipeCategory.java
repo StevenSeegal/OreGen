@@ -17,9 +17,9 @@ import net.minecraft.util.ResourceLocation;
 
 public class CrusherRecipeCategory<T extends IRecipeWrapper> implements IRecipeCategory<CrusherRecipeWrapper>
 {
-    private final int inputSlot = 0;
-    private final int fuelSlot = 1;
-    private final int outputSlot = 2;
+    public static final int inputSlot = 0;
+    public static final int fuelSlot = 1;
+    public static final int outputSlot = 2;
 
     private final IDrawable background;
     private final IDrawableAnimated flame;
@@ -28,7 +28,7 @@ public class CrusherRecipeCategory<T extends IRecipeWrapper> implements IRecipeC
     public CrusherRecipeCategory(IGuiHelper guiHelper)
     {
         ResourceLocation backgroundLocation = new ResourceLocation(LibMod.MOD_ID, LibMod.GUI_CRUSHER_BACKGROUND);
-        background = guiHelper.createDrawable(backgroundLocation, 55, 16, 82, 54);
+        background = guiHelper.createDrawable(backgroundLocation, 26, 16, 140, 54);
 
         IDrawableStatic flameDrawable = guiHelper.createDrawable(backgroundLocation, 176, 0, 14, 14);
         flame = guiHelper.createAnimatedDrawable(flameDrawable, 300, IDrawableAnimated.StartDirection.TOP, true);
@@ -73,18 +73,22 @@ public class CrusherRecipeCategory<T extends IRecipeWrapper> implements IRecipeC
     @Override
     public void drawExtras(Minecraft minecraft)
     {
-        flame.draw(minecraft, 2, 20);
-        processBar.draw(minecraft, 25, 25);
+        flame.draw(minecraft, 31, 20);
+        processBar.draw(minecraft, 54, 25);
     }
 
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, CrusherRecipeWrapper crusherRecipeWrapper, IIngredients ingredients)
     {
+        recipeLayout.getItemStacks().addTooltipCallback(crusherRecipeWrapper);
         IGuiItemStackGroup guiItemStacks = recipeLayout.getItemStacks();
 
-        guiItemStacks.init(inputSlot, true, 0, 0);
-        guiItemStacks.init(outputSlot, false, 60, 18);
+        guiItemStacks.init(inputSlot, true, 29, 0);
+        guiItemStacks.init(fuelSlot, false, 29, 36);
+        guiItemStacks.init(outputSlot, false, 89, 18);
 
-        guiItemStacks.set(ingredients);
+        guiItemStacks.set(inputSlot, ingredients.getInputs(ItemStack.class).get(0));
+        guiItemStacks.set(fuelSlot, JeiPlugin.FUEL_LIST);
+        guiItemStacks.set(outputSlot, ingredients.getOutputs(ItemStack.class).get(0));
     }
 }
