@@ -315,7 +315,7 @@ public class LibNames
             public static final String RETROGEN_VERSION = "RetroGen version";
             public static final String RETROGEN_ENABLED= "Enable RetroGen";
             public static final String RETROGEN_LOG = "Show RetroGen in log";
-            public static final String GENERATE_AIR = "[DEBUG ONLY] Generate Ores in the air instead of underground";
+            public static final String GENERATE_AIR = "[DEBUG ONLY] Generate Ores in the air instead of underground. This allows you so see the block spawn ratio on a 'Flat World'";
             public static final String PRINT_OREDICT = "Print the full OreDictionary to file 'OredictDump.txt'. This file can be found in the root of your Minecraft instance";
         }
 

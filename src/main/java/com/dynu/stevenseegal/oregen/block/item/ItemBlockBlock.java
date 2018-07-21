@@ -20,7 +20,7 @@ public class ItemBlockBlock extends ItemBlock
     @Override
     public String getUnlocalizedName(ItemStack stack)
     {
-        return "tile.oregen.block." + BlockBlock.BlockType.byMetaData(stack.getMetadata()).getName();// + ".name";
+        return "tile.oregen.block." + BlockBlock.BlockType.byMetaData(stack.getMetadata()).getName();
     }
 
     @Override

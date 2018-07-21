@@ -54,4 +54,9 @@ public class StringUtils
     {
         return I18n.translateToLocal(key);
     }
+
+    public static String translateFormatted(String key, Object... format)
+    {
+        return I18n.translateToLocalFormatted(key, format);
+    }
 }

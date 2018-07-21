@@ -8,7 +8,6 @@ import com.google.common.collect.ArrayListMultimap;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockMatcher;
-import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -45,16 +44,18 @@ public class WorldGenOre implements IWorldGenerator
             return LibMod.GenReplacedBlocks.AIR;
         }
 
-        Block replaceBlock = Blocks.STONE;
         if (dimId == -1)
         {
-            replaceBlock = LibMod.GenReplacedBlocks.NETHER;
+            return LibMod.GenReplacedBlocks.NETHER;
         }
         else if (dimId == 1)
         {
-            replaceBlock = LibMod.GenReplacedBlocks.END;
+            return LibMod.GenReplacedBlocks.END;
         }
-        return replaceBlock;
+        else
+        {
+            return LibMod.GenReplacedBlocks.OVERWORLD;
+        }
     }
 
     public void generateOres(Random random, int chunkX, int chunkZ, World world, boolean newGen)
