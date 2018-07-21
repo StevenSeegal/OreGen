@@ -203,25 +203,33 @@ public class LibNames
             public static final String DIAMOND = "gemDiamond";
             public static final String BLAZE_ROD = "rodBlaze";
 
-
-
-            public static final String WOOL_WHITE = "blockWoolWhite";
-            public static final String WOOL_ORANGE = "blockWoolOrange";
-            public static final String WOOL_MAGENTA = "blockWoolMagenta";
-            public static final String WOOL_LIGHT_BLUE = "blockWoolLightBlue";
-            public static final String WOOL_YELLOW = "blockWoolYellow";
-            public static final String WOOL_LIME = "blockWoolLime";
-            public static final String WOOL_PINK = "blockWoolPink";
-            public static final String WOOL_GRAY = "blockWoolGray";
-            public static final String WOOL_LIGHT_GREY = "blockWoolLightGray";
-            public static final String WOOL_CYAN = "blockWoolCyan";
-            public static final String WOOL_PURPLE = "blockWoolPurple";
-            public static final String WOOL_BLUE = "blockWoolBlue";
-            public static final String WOOL_BROWN = "blockWoolBrown";
-            public static final String WOOL_GREEN = "blockWoolGreen";
-            public static final String WOOL_RED = "blockWoolRed";
-            public static final String WOOL_BLACK = "blockWoolBlack";
             public static final String WOOL = "blockWool";
+            public static final String QUARTZ_BLOCK = "blockQuartz";
+            public static final String CLAY_BLOCK = "blockClay";
+            public static final String HARDENED_CLAY_BLOCK = "blockStainedHardenedClay";
+            public static final String BRICKS_BLOCK = "blockBricks";
+            public static final String NETHERBRICKS_BLOCK = "blockNetherBrick";
+
+            public static final String FLOWER_DANDELION = "flowerDandelion";
+            public static final String FLOWER_POPPY = "flowerPoppy";
+            public static final String FLOWER_BLUE_ORCHID = "flowerBlueOrchid";
+            public static final String FLOWER_ALLIUM = "flowerAllium";
+            public static final String FLOWER_AZURE_BLUET = "flowerAzureBluet";
+            public static final String FLOWER_TULIP_RED = "flowerTulipRed";
+            public static final String FLOWER_TULIP_ORANGE = "flowerTulipOrange";
+            public static final String FLOWER_TULIP_WHITE = "flowerTulipWhite";
+            public static final String FLOWER_TULIP_PINK = "flowerTulipPink";
+            public static final String FLOWER_SUNFLOWER = "flowerSunflower";
+            public static final String FLOWER_OXEYE_DAISY = "flowerOxeyeDaisy";
+            public static final String FLOWER_LILAC = "flowerLilac";
+            public static final String FLOWER_ROSE_BUSH = "flowerRoseBush";
+            public static final String FLOWER_PEONY = "flowerPeony";
+
+            // Registered by Forge
+            public static final String COBBLESTONE = "cobblestone";
+            public static final String GRAVEL = "gravel";
+            public static final String SANDSTONE = "sandstone";
+            public static final String BONE = "bone";
         }
     }
 

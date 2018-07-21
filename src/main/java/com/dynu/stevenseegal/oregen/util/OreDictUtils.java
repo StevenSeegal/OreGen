@@ -31,58 +31,45 @@ public class OreDictUtils
 
     public static void registerExtraVanillaItems()
     {
+        int MAX_BLOCK_META = 16;
+        int MAX_QUARTZ_META = 4;
+
         OreDictionary.registerOre(LibNames.OreDict.Vanilla.COAL, Items.COAL);
         OreDictionary.registerOre(LibNames.OreDict.Vanilla.BLAZE_ROD, Items.BLAZE_ROD);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.CLAY_BLOCK, Blocks.CLAY);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.BRICKS_BLOCK, Blocks.BRICK_BLOCK);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.NETHERBRICKS_BLOCK, Blocks.NETHER_BRICK);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.HARDENED_CLAY_BLOCK, Blocks.HARDENED_CLAY);
 
-        ItemStack blockWoolWhite = new ItemStack(Blocks.WOOL, 1, 0);
-        ItemStack blockWoolOrange = new ItemStack(Blocks.WOOL, 1, 1);
-        ItemStack blockWoolMagenta = new ItemStack(Blocks.WOOL, 1, 2);
-        ItemStack blockWoolLightBlue = new ItemStack(Blocks.WOOL, 1, 3);
-        ItemStack blockWoolYellow = new ItemStack(Blocks.WOOL, 1, 4);
-        ItemStack blockWoolLime = new ItemStack(Blocks.WOOL, 1, 5);
-        ItemStack blockWoolPink = new ItemStack(Blocks.WOOL, 1, 6);
-        ItemStack blockWoolGray = new ItemStack(Blocks.WOOL, 1, 7);
-        ItemStack blockWoolLightGray = new ItemStack(Blocks.WOOL, 1, 8);
-        ItemStack blockWoolCyan = new ItemStack(Blocks.WOOL, 1, 9);
-        ItemStack blockWoolPurple = new ItemStack(Blocks.WOOL, 1, 10);
-        ItemStack blockWoolBlue = new ItemStack(Blocks.WOOL, 1, 11);
-        ItemStack blockWoolBrown = new ItemStack(Blocks.WOOL, 1, 12);
-        ItemStack blockWoolGreen = new ItemStack(Blocks.WOOL, 1, 13);
-        ItemStack blockWoolRed = new ItemStack(Blocks.WOOL, 1, 14);
-        ItemStack blockWoolBlack = new ItemStack(Blocks.WOOL, 1, 15);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_DANDELION, Blocks.YELLOW_FLOWER);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_POPPY, new ItemStack(Blocks.RED_FLOWER, 1, 0));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_BLUE_ORCHID, new ItemStack(Blocks.RED_FLOWER, 1, 1));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_ALLIUM, new ItemStack(Blocks.RED_FLOWER, 1, 2));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_AZURE_BLUET, new ItemStack(Blocks.RED_FLOWER, 1, 3));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_TULIP_RED, new ItemStack(Blocks.RED_FLOWER, 1, 4));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_TULIP_ORANGE, new ItemStack(Blocks.RED_FLOWER, 1, 5));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_TULIP_WHITE, new ItemStack(Blocks.RED_FLOWER, 1, 6));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_TULIP_PINK, new ItemStack(Blocks.RED_FLOWER, 1, 7));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_OXEYE_DAISY, new ItemStack(Blocks.RED_FLOWER, 1, 8));
 
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_WHITE, blockWoolWhite);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_ORANGE, blockWoolOrange);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_MAGENTA, blockWoolMagenta);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_LIGHT_BLUE, blockWoolLightBlue);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_YELLOW, blockWoolYellow);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_LIME, blockWoolLime);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_PINK, blockWoolPink);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_GRAY, blockWoolGray);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_LIGHT_GREY, blockWoolLightGray);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_CYAN, blockWoolCyan);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_PURPLE, blockWoolPurple);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_BLUE, blockWoolBlue);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_BROWN, blockWoolBrown);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_GREEN, blockWoolGreen);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_RED, blockWoolRed);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL_BLACK, blockWoolBlack);
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_SUNFLOWER, new ItemStack(Blocks.DOUBLE_PLANT, 1, 0));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_LILAC, new ItemStack(Blocks.DOUBLE_PLANT, 1, 1));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_ROSE_BUSH, new ItemStack(Blocks.DOUBLE_PLANT, 1, 4));
+        OreDictionary.registerOre(LibNames.OreDict.Vanilla.FLOWER_PEONY, new ItemStack(Blocks.DOUBLE_PLANT, 1, 5));
 
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolWhite);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolOrange);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolMagenta);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolLightBlue);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolYellow);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolLime);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolPink);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolGray);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolLightGray);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolCyan);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolPurple);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolBlue);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolBrown);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolGreen);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolRed);
-        OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, blockWoolBlack);
+        for (int i = 0; i < MAX_BLOCK_META ; i++)
+        {
+            OreDictionary.registerOre(LibNames.OreDict.Vanilla.WOOL, new ItemStack(Blocks.WOOL, 1, i));
+        }
+
+        for (int i = 0; i < MAX_BLOCK_META; i++)
+        {
+            OreDictionary.registerOre(LibNames.OreDict.Vanilla.HARDENED_CLAY_BLOCK, new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, i));
+        }
+
+        for (int i = 0; i < MAX_QUARTZ_META; i++)
+        {
+            OreDictionary.registerOre(LibNames.OreDict.Vanilla.QUARTZ_BLOCK, new ItemStack(Blocks.QUARTZ_BLOCK, 1, i));
+        }
     }
 }
