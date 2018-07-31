@@ -1,6 +1,7 @@
 package com.dynu.stevenseegal.oregen.config;
 
 import com.dynu.stevenseegal.oregen.block.BlockOre;
+import com.dynu.stevenseegal.oregen.lib.LibCrusherRecipes;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
 import com.dynu.stevenseegal.oregen.proxy.ServerProxy;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
@@ -36,6 +37,9 @@ public class Config
     public static int HARVEST_NTH = 3;
     public static int HARVEST_URU = 3;
     public static int HARVEST_THORIUM = 3;
+
+    public static String[] DEFAULT_CRUSHER_RECIPES;
+    public static String[] CUSTOM_CRUSHER_RECIPES;
 
     public static void initConfigHolder(Configuration cfg)
     {
@@ -77,11 +81,12 @@ public class Config
         HARVEST_STEEL = cfg.getInt(LibNames.Config.Key.Harvest.STEEL, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_STEEL, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.STEEL));
         HARVEST_IRIDIUM = cfg.getInt(LibNames.Config.Key.Harvest.IRIDIUM, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_IRIDIUM, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.IRIDIUM));
         HARVEST_MITHRIL = cfg.getInt(LibNames.Config.Key.Harvest.MITHRIL, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_MITHRIL, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.MITHRIL));
-
-
         HARVEST_NTH = cfg.getInt(LibNames.Config.Key.Harvest.NTH, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_NTH, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.NTH));
         HARVEST_URU = cfg.getInt(LibNames.Config.Key.Harvest.URU, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_URU, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.URU));
         HARVEST_THORIUM = cfg.getInt(LibNames.Config.Key.Harvest.THORUIM, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_THORIUM, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.THORUIM));
+
+        DEFAULT_CRUSHER_RECIPES = cfg.getStringList(LibNames.Config.Key.CrusherRecipes.DEFAULT, LibNames.Config.Category.CRUSHER_RECIPES, LibCrusherRecipes.defaultRecipes, LibNames.Config.Comment.DEFAULT_CRUSHER_RECIPES);
+        CUSTOM_CRUSHER_RECIPES = cfg.getStringList(LibNames.Config.Key.CrusherRecipes.CUSTOM, LibNames.Config.Category.CRUSHER_RECIPES, LibCrusherRecipes.customRecipes, LibNames.Config.Comment.CUSTOM_CRUShER_RECIPES);
 
         for (OreConfigHolder holder : ORE_CONFIG)
         {

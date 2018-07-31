@@ -1,10 +1,10 @@
 package com.dynu.stevenseegal.oregen.tileentity;
 
 import com.dynu.stevenseegal.oregen.block.MachineCrusher;
-import com.dynu.stevenseegal.oregen.handler.CrusherRecipeManager;
 import com.dynu.stevenseegal.oregen.init.ModItems;
 import com.dynu.stevenseegal.oregen.init.SoundHandler;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
+import com.dynu.stevenseegal.oregen.recipe.CrusherRecipeManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
@@ -232,7 +232,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
 
     public int getCrushTime(ItemStack itemStack)
     {
-        return CrusherRecipeManager.instance().getCrushTime(itemStack);
+        return CrusherRecipeManager.getInstance().getCrushTime(itemStack);
     }
 
     public static int getItemBurnTime(ItemStack itemStack)
@@ -265,7 +265,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         }
         else
         {
-            ItemStack recipeStack = CrusherRecipeManager.instance().getCrushingResult(this.crusherInventory.get(0));
+            ItemStack recipeStack = CrusherRecipeManager.getInstance().getCrushingResult(this.crusherInventory.get(0));
 
             if (recipeStack.isEmpty())
             {
@@ -300,7 +300,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         if (this.canCrush())
         {
             ItemStack inputSlotStack = this.crusherInventory.get(0);
-            ItemStack crushResult = CrusherRecipeManager.instance().getCrushingResult(inputSlotStack);
+            ItemStack crushResult = CrusherRecipeManager.getInstance().getCrushingResult(inputSlotStack);
             ItemStack outputSlotStack = this.crusherInventory.get(2);
 
             if (outputSlotStack.isEmpty())

@@ -1,6 +1,6 @@
 package com.dynu.stevenseegal.oregen.inventory;
 
-import com.dynu.stevenseegal.oregen.handler.CrusherRecipeManager;
+import com.dynu.stevenseegal.oregen.recipe.CrusherRecipeManager;
 import com.dynu.stevenseegal.oregen.tileentity.TileEntityCrusher;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -114,7 +114,7 @@ public class ContainerCrusher extends Container
             }
             else if (index != 1 && index != 0)
             {
-                if (!CrusherRecipeManager.instance().getCrushingResult(itemStack1).isEmpty())
+                if(!CrusherRecipeManager.getInstance().getCrushingResult(itemStack1).isEmpty())
                 {
                     if (!this.mergeItemStack(itemStack1, 0, 1, false))
                     {

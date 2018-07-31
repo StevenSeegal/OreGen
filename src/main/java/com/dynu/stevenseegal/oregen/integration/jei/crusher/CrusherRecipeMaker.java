@@ -1,32 +1,30 @@
 package com.dynu.stevenseegal.oregen.integration.jei.crusher;
 
-import com.dynu.stevenseegal.oregen.handler.CrusherRecipeManager;
+import com.dynu.stevenseegal.oregen.recipe.CrusherRecipe;
+import com.dynu.stevenseegal.oregen.recipe.CrusherRecipeManager;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.recipe.IStackHelper;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreIngredient;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class CrusherRecipeMaker
 {
     public static List<CrusherRecipeWrapper> getOredictCrusherRecipes(IJeiHelpers helpers)
     {
         IStackHelper stackHelper = helpers.getStackHelper();
-        CrusherRecipeManager crusherRecipeManager = CrusherRecipeManager.instance();
-        Map<OreIngredient, ItemStack> crusherRecipes = crusherRecipeManager.getOredictRecipeList();
+        CrusherRecipeManager crusherRecipeManager = CrusherRecipeManager.getInstance();
+        List<CrusherRecipe> crusherRecipes = crusherRecipeManager.getCrusherRecipeList();
 
         List<CrusherRecipeWrapper> recipes = new ArrayList<CrusherRecipeWrapper>();
 
-        for (Map.Entry<OreIngredient, ItemStack> crusherRecipe : crusherRecipes.entrySet())
+        for (CrusherRecipe crusherRecipe : crusherRecipes)
         {
-            OreIngredient oreIngredient = crusherRecipe.getKey();
-            ItemStack output = crusherRecipe.getValue();
-            ItemStack[] input = oreIngredient.getMatchingStacks();
+            ItemStack output = crusherRecipe.getOutput();
+            ItemStack[] input = crusherRecipe.getOreDictInputList();
 
             if (input.length == 0 || output == null || output.getItem() == null)
             {

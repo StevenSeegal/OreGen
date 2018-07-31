@@ -1,6 +1,6 @@
 package com.dynu.stevenseegal.oregen.integration.jei.crusher;
 
-import com.dynu.stevenseegal.oregen.handler.CrusherRecipeManager;
+import com.dynu.stevenseegal.oregen.recipe.CrusherRecipeManager;
 import com.dynu.stevenseegal.oregen.tileentity.TileEntityCrusher;
 import com.dynu.stevenseegal.oregen.util.StringUtils;
 import mezz.jei.api.gui.ITooltipCallback;
@@ -44,12 +44,12 @@ public class CrusherRecipeWrapper implements IRecipeWrapper, ITooltipCallback<It
     @Override
     public void drawInfo(Minecraft minecraft, int recipeWidth, int recipeHeight, int mouseX, int mouseY)
     {
-        CrusherRecipeManager crusherRecipes = CrusherRecipeManager.instance();
+        CrusherRecipeManager crusherRecipeManager = CrusherRecipeManager.getInstance();
         ItemStack input = (inputs.get(0)).get(0);
 
         if (input != null && input.getItem() != null)
         {
-            String crushtime = StringUtils.translateFormatted("jei.oregen.gui.crusher.crushtime", crusherRecipes.getCrushTime(input));
+            String crushtime = StringUtils.translateFormatted("jei.oregen.gui.crusher.crushtime", crusherRecipeManager.getCrushTime(input));
             minecraft.fontRenderer.drawString(crushtime, recipeWidth - minecraft.fontRenderer.getStringWidth(crushtime), 0, Color.gray.getRGB());
         }
     }

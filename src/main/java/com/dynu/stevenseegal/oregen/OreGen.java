@@ -4,6 +4,7 @@ import com.dynu.stevenseegal.oregen.config.Config;
 import com.dynu.stevenseegal.oregen.handler.GuiHandler;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import com.dynu.stevenseegal.oregen.proxy.IProxy;
+import com.dynu.stevenseegal.oregen.recipe.CrusherRecipeManager;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
 import com.dynu.stevenseegal.oregen.util.OreDictUtils;
 import com.dynu.stevenseegal.oregen.world.gen.WorldGenOre;
@@ -49,6 +50,7 @@ public class OreGen
     public void postInit(FMLPostInitializationEvent event)
     {
         proxy.postInit(event);
+        CrusherRecipeManager.getInstance().loadRecipes();
         if (Config.PRINT_OREDICT)
         {
             OreDictUtils.exportOreDictEntries();

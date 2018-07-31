@@ -187,49 +187,9 @@ public class LibNames
 
         public static final class Vanilla
         {
-            public static final String IRON_ORE = "oreIron";
-            public static final String GOLD_ORE = "oreGold";
-            public static final String COAL_ORE = "oreCoal";
-            public static final String DIAMOND_ORE = "oreDiamond";
-            public static final String EMERALD_ORE = "oreEmerald";
-            public static final String REDSTONE_ORE = "oreRedstone";
-            public static final String QUARTZ_ORE = "oreQuartz";
-            public static final String LAPIS_ORE = "oreLapis";
-            public static final String GLOWSTONE_BLOCK = "glowstone";
-
-            public static final String IRON_INGOT = "ingotIron";
-            public static final String GOLD_INGOT = "ingotGold";
-            public static final String COAL = "coal";
-            public static final String DIAMOND = "gemDiamond";
-            public static final String BLAZE_ROD = "rodBlaze";
-
             public static final String WOOL = "blockWool";
             public static final String QUARTZ_BLOCK = "blockQuartz";
-            public static final String CLAY_BLOCK = "blockClay";
-            public static final String HARDENED_CLAY_BLOCK = "blockStainedHardenedClay";
-            public static final String BRICKS_BLOCK = "blockBricks";
-            public static final String NETHERBRICKS_BLOCK = "blockNetherBrick";
-
-            public static final String FLOWER_DANDELION = "flowerDandelion";
-            public static final String FLOWER_POPPY = "flowerPoppy";
-            public static final String FLOWER_BLUE_ORCHID = "flowerBlueOrchid";
-            public static final String FLOWER_ALLIUM = "flowerAllium";
-            public static final String FLOWER_AZURE_BLUET = "flowerAzureBluet";
-            public static final String FLOWER_TULIP_RED = "flowerTulipRed";
-            public static final String FLOWER_TULIP_ORANGE = "flowerTulipOrange";
-            public static final String FLOWER_TULIP_WHITE = "flowerTulipWhite";
-            public static final String FLOWER_TULIP_PINK = "flowerTulipPink";
-            public static final String FLOWER_SUNFLOWER = "flowerSunflower";
-            public static final String FLOWER_OXEYE_DAISY = "flowerOxeyeDaisy";
-            public static final String FLOWER_LILAC = "flowerLilac";
-            public static final String FLOWER_ROSE_BUSH = "flowerRoseBush";
-            public static final String FLOWER_PEONY = "flowerPeony";
-
-            // Registered by Forge
-            public static final String COBBLESTONE = "cobblestone";
-            public static final String GRAVEL = "gravel";
-            public static final String SANDSTONE = "sandstone";
-            public static final String BONE = "bone";
+            public static final String HARDENED_CLAY_BLOCK = "blockHardenedClay";
         }
     }
 
@@ -295,6 +255,12 @@ public class LibNames
                 public static final String URU = "Uru";
                 public static final String THORUIM = "Thorium";
             }
+
+            public static final class CrusherRecipes
+            {
+                public static final String DEFAULT = "DefaultRecipeList";
+                public static final String CUSTOM = "CustomRecipeList";
+            }
         }
 
         public static final class Category
@@ -304,12 +270,15 @@ public class LibNames
             public static final String RETROGEN = "RetroGen";
             public static final String DEBUG = "Debug";
             public static final String HARVEST_LEVEL = "HarvestLevel";
+            public static final String CRUSHER_RECIPES = "CrusherRecipes";
         }
 
         public static final class Comment
         {
             public static final String ORE = "Generate %s in the world";
-            public static final String SETTINGS = "Need 5 numeric arguments. Format: veinSize,veinsPerChunk,minY,maxY,ratio";
+            public static final String SETTINGS =
+                    "Modify the spawn settings of this ore. Need 5 numeric arguments\n"
+                    + "The format is: veinSize,veinsPerChunk,minY,maxY,ratio";
             public static final String HARVEST_LEVEL = "Set the harvest level for %s. 0=wood, 1=stone, 2=iron, 3=diamond";
 
             public static final String RETROGEN_VERSION = "RetroGen version";
@@ -317,6 +286,22 @@ public class LibNames
             public static final String RETROGEN_LOG = "Show RetroGen in log";
             public static final String GENERATE_AIR = "[DEBUG ONLY] Generate Ores in the air instead of underground. This allows you so see the block spawn ratio on a 'Flat World'";
             public static final String PRINT_OREDICT = "Print the full OreDictionary to file 'OredictDump.txt'. This file can be found in the root of your Minecraft instance";
+
+            public static final String DEFAULT_CRUSHER_RECIPES =
+                    "Modify the default recipes to the Coal Powered Crusher here, please add your custom recipes in the 'CustomRecipeList' section\n"
+                    + "The format of the recipes is: modid:input:meta-modid:output:meta#amount-crushtime\n"
+                    + "The 'meta' only need to be set when the input/outout item has metadata/item damage, if not set, 0 is default\n"
+                    + "The 'amount' is optional and can only be set for the output, if not set, 1 is default\n"
+                    + "The input item can be an item from the ore dictionary, use it as 'oredict:name', leave 'meta' blank for an ore dictionary entry\n"
+                    + "The 'crushtime' is the ammount is tick it takes to crush the item, one normal cycle is is 200\n";
+
+            public static final String CUSTOM_CRUShER_RECIPES =
+                    "Add custom recipes to the Coal Powered Crusher here\n"
+                    + "The format of the recipes is: modid:input:meta-modid:output:meta#amount-crushtime\n"
+                    + "The 'meta' only need to be set when the input/outout item has metadata/item damage, if not set, 0 is default\n"
+                    + "The 'amount' is optional and can only be set for the output, if not set, 1 is default\n"
+                    + "The input item can be an item from the ore dictionary, use it as 'oredict:name', leave 'meta' blank for an ore dictionary entry\n"
+                    + "The 'crushtime' is the ammount is tick it takes to crush the item, one normal cycle is is 200\n";
         }
 
         public static final class NBT
