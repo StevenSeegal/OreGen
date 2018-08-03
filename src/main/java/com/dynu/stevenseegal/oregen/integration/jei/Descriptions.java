@@ -52,22 +52,26 @@ public class Descriptions
         ItemStack itemStackUpgradeBlank = new ItemStack(ModItems.ITEM_UPGRADE, 1, 0);
         ItemStack itemStackUpgradeISided = new ItemStack(ModItems.ITEM_UPGRADE, 1, 1);
         ItemStack itemStackUpgradeMuffler = new ItemStack(ModItems.ITEM_UPGRADE, 1, 2);
+        ItemStack itemStackUpgradeSpeed = new ItemStack(ModItems.ITEM_UPGRADE, 1, 3);
 
         String nameCrusher = itemStackCrusher.getDisplayName();
         String nameUpgradeBlank = itemStackUpgradeBlank.getDisplayName();
         String nameUpgradeISided = itemStackUpgradeISided.getDisplayName();
         String nameUpgradeMuffler = itemStackUpgradeMuffler.getDisplayName();
+        String nameUpgradeSpeed = itemStackUpgradeSpeed.getDisplayName();
 
         String infoCrusher = StringUtils.translate("jei.oregen.description.crusher");
         String infoUpgradeBlank = StringUtils.translate("jei.oregen.description.upgradeblank");
         String infoUpgradeISided = StringUtils.translate("jei.oregen.description.upgradeisided");
         String infoUpgradeMuffler = StringUtils.translate("jei.oregen.description.upgrademuffler");
+        String infoUpgradeSpeed = StringUtils.translate("jei.oregen.description.upgradespeed");
         String infoUpgradeInsert = StringUtils.translate("jei.oregen.description.upgradeinsert");
 
         registry.addDescription(itemStackCrusher, nameCrusher, emptyLine, infoCrusher);
         registry.addDescription(itemStackUpgradeBlank, nameUpgradeBlank, emptyLine, infoUpgradeBlank);
         registry.addDescription(itemStackUpgradeISided, nameUpgradeISided, emptyLine, infoUpgradeISided, infoUpgradeInsert);
         registry.addDescription(itemStackUpgradeMuffler, nameUpgradeMuffler, emptyLine, infoUpgradeMuffler, infoUpgradeInsert);
+        registry.addDescription(itemStackUpgradeSpeed, nameUpgradeSpeed, emptyLine, infoUpgradeSpeed, infoUpgradeInsert);
     }
 
     private static String getDimensionName(int dim)

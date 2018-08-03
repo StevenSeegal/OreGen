@@ -51,15 +51,20 @@ public class GuiCrusher extends GuiContainer
         int yGui = (this.height - this. ySize) / 2;
         this.drawTexturedModalRect(xGui, yGui, 0, 0, this.xSize, this.ySize);
 
-        int pos = 0;
+        int upgradeOffset = 0;
         if (TileEntityCrusher.hasISidedUpgrade(this.crusherInventory))
         {
-            this.drawTexturedModalRect(xGui + 159, yGui + 5 + pos, 176, 35, 12, 12);
-            pos = 13;
+            this.drawTexturedModalRect(xGui + 159, yGui + 5 + upgradeOffset, 176, 35, 12, 12);
+            upgradeOffset += 13;
         }
         if (TileEntityCrusher.hasMufflerUpgrade(this.crusherInventory))
         {
-            this.drawTexturedModalRect(xGui + 159, yGui + 5 + pos, 176, 47, 12, 12);
+            this.drawTexturedModalRect(xGui + 159, yGui + 5 + upgradeOffset, 176, 47, 12, 12);
+            upgradeOffset += 13;
+        }
+        if (TileEntityCrusher.hasSpeedUpgrade(this.crusherInventory))
+        {
+            this.drawTexturedModalRect(xGui + 159, yGui + 5 + upgradeOffset, 176, 59, 12, 12);
         }
 
         if (TileEntityCrusher.isCrushing(this.crusherInventory))

@@ -45,6 +45,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
     private int totalCrushTime;
     private boolean iSidedUpgrade = false;
     private boolean mufflerUpgrade = false;
+    private boolean speedUpgrade = false;
 
     @Override
     public int getSizeInventory()
@@ -145,7 +146,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
 
         if (this.isCrushing())
         {
-            --this.crusherCrushTime;
+            this.crusherCrushTime = this.crusherCrushTime - (this.speedUpgrade ? 2 : 1);
         }
 
         if (!this.world.isRemote)
@@ -178,7 +179,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
 
                 if (this.isCrushing() && this.canCrush())
                 {
-                    ++this.crushTime;
+                    this.crushTime = this.crushTime + (this.speedUpgrade ? 2 : 1);
 
                     if (this.crushTime == this.totalCrushTime)
                     {
@@ -338,6 +339,12 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         return inventory.getField(5) == 1;
     }
 
+    @SideOnly(Side.CLIENT)
+    public static boolean hasSpeedUpgrade(IInventory inventory)
+    {
+        return inventory.getField(6) == 1;
+    }
+
     @Override
     public int getField(int id)
     {
@@ -355,6 +362,8 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
                 return this.iSidedUpgrade ? 1 : 0;
             case 5:
                 return this.mufflerUpgrade ? 1 : 0;
+            case 6:
+                return this.speedUpgrade ? 1: 0;
             default:
                 return 0;
         }
@@ -380,13 +389,15 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
                 this.iSidedUpgrade = value == 1 ? true : false;
             case 5:
                 this.mufflerUpgrade = value == 1 ? true : false;
+            case 6:
+                this.speedUpgrade = value == 1 ? true : false;
         }
     }
 
     @Override
     public int getFieldCount()
     {
-        return 6;
+        return 7;
     }
 
     @Override
@@ -459,6 +470,24 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         }
     }
 
+    public boolean hasSpeedUpgrade()
+    {
+        return this.speedUpgrade;
+    }
+
+    public boolean insertSpeedUpgrade()
+    {
+        if (this.hasSpeedUpgrade())
+        {
+            return false;
+        }
+        else
+        {
+            this.speedUpgrade = true;
+            return true;
+        }
+    }
+
     public List<ItemStack> getAdditionalDrops()
     {
         NonNullList<ItemStack> dropList = NonNullList.create();
@@ -469,6 +498,10 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         if (this.hasMufflerUpgrade())
         {
             dropList.add(new ItemStack(ModItems.ITEM_UPGRADE, 1, 2));
+        }
+        if (this.hasSpeedUpgrade())
+        {
+            dropList.add(new ItemStack(ModItems.ITEM_UPGRADE, 1, 3));
         }
         return dropList;
     }
@@ -523,6 +556,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         this.currentItemCrushTime = compound.getInteger(LibNames.NBT.CURRENTITEMCRUSHTIME);
         this.iSidedUpgrade = compound.getBoolean(LibNames.NBT.ISIDEDUPGRADE);
         this.mufflerUpgrade = compound.getBoolean(LibNames.NBT.MUFFLERUPGRADE);
+        this.speedUpgrade = compound.getBoolean(LibNames.NBT.SPEEDUPGRADE);
     }
 
     @Override
@@ -535,6 +569,7 @@ public class TileEntityCrusher extends TileEntity implements ITickable, ISidedIn
         compound.setInteger(LibNames.NBT.CURRENTITEMCRUSHTIME, this.currentItemCrushTime);
         compound.setBoolean(LibNames.NBT.ISIDEDUPGRADE, this.iSidedUpgrade);
         compound.setBoolean(LibNames.NBT.MUFFLERUPGRADE, this.mufflerUpgrade);
+        compound.setBoolean(LibNames.NBT.SPEEDUPGRADE, this.speedUpgrade);
         ItemStackHelper.saveAllItems(compound, this.crusherInventory);
 
         return compound;

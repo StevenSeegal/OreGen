@@ -211,6 +211,23 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
             }
             return false;
         }
+        else if (playerIn.getHeldItemMainhand().isItemEqual(new ItemStack(ModItems.ITEM_UPGRADE,1 ,3)))
+        {
+            if (((TileEntityCrusher) tileEntity).insertSpeedUpgrade())
+            {
+                playerIn.getHeldItemMainhand().shrink(1);
+                if (playerIn.getHeldItemMainhand().isEmpty())
+                {
+                    playerIn.setHeldItem(hand, ItemStack.EMPTY);
+                }
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_DONE, LibNames.Messages.PREFIX, getUpgradeName(heldItemCopy, true)).setStyle(new Style().setColor(LibNames.Messages.TEXTCOLOR_DEFAULT)), false);
+            }
+            else
+            {
+                playerIn.sendStatusMessage(new TextComponentTranslation(LibNames.Messages.UPGRADE_ERROR, LibNames.Messages.PREFIX, getUpgradeName(heldItemCopy, false)).setStyle(new Style().setColor(LibNames.Messages.TEXTCOLOR_DEFAULT)), false);
+            }
+            return false;
+        }
 
         playerIn.openGui(OreGen.instance, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());
         return true;
@@ -231,6 +248,14 @@ public class MachineCrusher extends Block implements ITileEntityProvider, IBlock
         else if (meta == 2)
         {
             returnString = LibNames.Messages.TEXTCOLOR_RED + "Muffler";
+            if (!plain)
+            {
+                returnString = LibNames.Messages.TEXTCOLOR_DEFAULT + "a " + returnString;
+            }
+        }
+        else if (meta == 3)
+        {
+            returnString = LibNames.Messages.TEXTCOLOR_RED + "Speed";
             if (!plain)
             {
                 returnString = LibNames.Messages.TEXTCOLOR_DEFAULT + "a " + returnString;

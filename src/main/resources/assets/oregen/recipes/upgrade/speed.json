@@ -1,0 +1,24 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " D ",
+    "IUI",
+    " D "
+  ],
+  "key": {
+    "D": {
+      "item": "#diamond"
+    },
+    "I": {
+      "item": "#ingotIron"
+    },
+    "U": {
+      "item": "oregen:upgrade",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "oregen:upgrade",
+    "data": 3
+  }
+}

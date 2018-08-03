@@ -88,6 +88,7 @@ public class LibNames
                         "blank",
                         "isided",
                         "muffler",
+                        "speed",
                 };
     }
 
@@ -216,6 +217,7 @@ public class LibNames
         public static final String CURRENTITEMCRUSHTIME = "CurrentItemCrushTime";
         public static final String ISIDEDUPGRADE = "ISidedUpgrade";
         public static final String MUFFLERUPGRADE = "MufflerUpgrade";
+        public static final String SPEEDUPGRADE = "SpeedUpgrade";
     }
 
     public static final class Config
