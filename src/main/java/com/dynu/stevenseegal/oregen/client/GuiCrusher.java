@@ -15,6 +15,10 @@ public class GuiCrusher extends GuiContainer
 {
     private int animation = 0;
     private boolean reverse = false;
+    private boolean initUpgrades = false;
+    private boolean hasISidedUpgrade = false;
+    private boolean hasMufflerUpgrade = false;
+    private boolean hasSpeedUpgrade = false;
 
     public static final ResourceLocation GUI_BASE = new ResourceLocation(LibMod.MOD_ID, LibMod.GUI_CRUSHER_BACKGROUND);
     private final InventoryPlayer playerInventory;
@@ -30,6 +34,13 @@ public class GuiCrusher extends GuiContainer
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks)
     {
+        if (!initUpgrades)
+        {
+            this.hasISidedUpgrade = TileEntityCrusher.hasISidedUpgrade(this.crusherInventory);
+            this.hasMufflerUpgrade = TileEntityCrusher.hasMufflerUpgrade(this.crusherInventory);
+            this.hasSpeedUpgrade = TileEntityCrusher.hasSpeedUpgrade(this.crusherInventory);
+            this.initUpgrades = true;
+        }
         this.drawDefaultBackground();
         super.drawScreen(mouseX, mouseY, partialTicks);
         this.renderHoveredToolTip(mouseX, mouseY);
@@ -52,17 +63,17 @@ public class GuiCrusher extends GuiContainer
         this.drawTexturedModalRect(xGui, yGui, 0, 0, this.xSize, this.ySize);
 
         int upgradeOffset = 0;
-        if (TileEntityCrusher.hasISidedUpgrade(this.crusherInventory))
+        if (this.hasISidedUpgrade)
         {
             this.drawTexturedModalRect(xGui + 159, yGui + 5 + upgradeOffset, 176, 35, 12, 12);
             upgradeOffset += 13;
         }
-        if (TileEntityCrusher.hasMufflerUpgrade(this.crusherInventory))
+        if (this.hasMufflerUpgrade)
         {
             this.drawTexturedModalRect(xGui + 159, yGui + 5 + upgradeOffset, 176, 47, 12, 12);
             upgradeOffset += 13;
         }
-        if (TileEntityCrusher.hasSpeedUpgrade(this.crusherInventory))
+        if (this.hasSpeedUpgrade)
         {
             this.drawTexturedModalRect(xGui + 159, yGui + 5 + upgradeOffset, 176, 59, 12, 12);
         }
