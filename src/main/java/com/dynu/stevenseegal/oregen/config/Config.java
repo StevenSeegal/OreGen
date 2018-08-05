@@ -20,6 +20,10 @@ public class Config
     public static boolean GENERATE_AIR = false;
     public static boolean PRINT_OREDICT = false;
 
+    public static boolean GFL_CHUNK_MODE = true;
+    public static boolean GFL_AUTO_CHANGE_CRUSHER_RECIPES = true;
+    public static int GFL_CRUSHER_CHUNK_AMOUNT = 1;
+
     public static int HARVEST_COPPER = 1;
     public static int HARVEST_TIN = 1;
     public static int HARVEST_SILVER = 2;

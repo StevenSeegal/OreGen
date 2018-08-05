@@ -1,5 +1,6 @@
 package com.dynu.stevenseegal.oregen.init;
 
+import com.dynu.stevenseegal.oregen.config.Config;
 import com.dynu.stevenseegal.oregen.item.*;
 import com.dynu.stevenseegal.oregen.lib.LibMod;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
@@ -20,6 +21,8 @@ public class ModItems
     public static ItemDust ITEM_DUST = new ItemDust(LibNames.Items.ITEM_DUST, LibNames.Items.DUSTS);
     public static ItemNugget ITEM_NUGGET = new ItemNugget(LibNames.Items.ITEM_NUGGET, LibNames.Items.NUGGETS);
     public static ItemUpgrade ITEM_UPGRADE = new ItemUpgrade(LibNames.Items.ITEM_UPGRADE, LibNames.Items.UPGRADES);
+    public static ItemChunkDirty ITEM_CHUNK_DIRTY = new ItemChunkDirty(LibNames.Items.ITEM_CHUNK_DIRTY, LibNames.Items.CHUNK_DIRTY);
+    public static ItemChunkClean ITEM_CHUNK_CLEAN = new ItemChunkClean(LibNames.Items.ITEM_CHUNK_CLEAN, LibNames.Items.CHUNK_CLEAN);
 
     @Mod.EventBusSubscriber(modid = LibMod.MOD_ID)
     public static class RegistrationHandler
@@ -32,12 +35,25 @@ public class ModItems
                         ITEM_UPGRADE,
                 };
 
+        public static final Item[] CHUNKS =
+                {
+                        ITEM_CHUNK_DIRTY,
+                        ITEM_CHUNK_CLEAN,
+                };
+
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event)
         {
             for (Item item : ITEMS)
             {
                 event.getRegistry().register(item.setRegistryName(getRegistryName(item.getUnlocalizedName())));
+            }
+            if (Config.GFL_CHUNK_MODE)
+            {
+                for (Item chunk : CHUNKS)
+                {
+                    event.getRegistry().register(chunk.setRegistryName(getRegistryName(chunk.getUnlocalizedName())));
+                }
             }
             registerToOreDict();
         }
@@ -62,6 +78,13 @@ public class ModItems
                 if (item instanceof IItemRegistryHandler)
                 {
                     ((IItemRegistryHandler) item).initModel();
+                }
+            }
+            if (Config.GFL_CHUNK_MODE)
+            {
+                for (Item chunk : CHUNKS)
+                {
+                    ((IItemRegistryHandler) chunk).initModel();
                 }
             }
         }

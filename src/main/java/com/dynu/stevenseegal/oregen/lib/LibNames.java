@@ -19,6 +19,8 @@ public class LibNames
         public static final String ITEM_DUST = "dust";
         public static final String ITEM_NUGGET = "nugget";
         public static final String ITEM_UPGRADE = "upgrade";
+        public static final String ITEM_CHUNK_DIRTY = "chunkdirty";
+        public static final String ITEM_CHUNK_CLEAN = "chunkclean";
 
         public static final String[] INGOTS =
                 {
@@ -81,6 +83,42 @@ public class LibNames
                         "nth",
                         "uru",
                         "thorium",
+                };
+
+        public static final String[] CHUNK_DIRTY =
+                {
+                        "copper",
+                        "tin",
+                        "silver",
+                        "lead",
+                        "aluminum",
+                        "nickel",
+                        "uranium",
+                        "platinum",
+                        "iridium",
+                        "mithril",
+                        "nth",
+                        "uru",
+                        "iron",
+                        "gold",
+                };
+
+        public static final String[] CHUNK_CLEAN =
+                {
+                        "copper",
+                        "tin",
+                        "silver",
+                        "lead",
+                        "aluminum",
+                        "nickel",
+                        "uranium",
+                        "platinum",
+                        "iridium",
+                        "mithril",
+                        "nth",
+                        "uru",
+                        "iron",
+                        "gold",
                 };
 
         public static final String[] UPGRADES =

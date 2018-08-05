@@ -1,6 +1,8 @@
 package com.dynu.stevenseegal.oregen.recipe;
 
 import com.dynu.stevenseegal.oregen.config.Config;
+import com.dynu.stevenseegal.oregen.lib.LibNames;
+import com.dynu.stevenseegal.oregen.util.EnumGFLDustToChunk;
 import com.dynu.stevenseegal.oregen.util.LogHelper;
 import com.dynu.stevenseegal.oregen.util.StringUtils;
 import com.google.common.collect.Lists;
@@ -52,6 +54,7 @@ public class CrusherRecipeManager
         {
             int crushTime = 0;
             boolean oreDict =false;
+            boolean gflChangeOutput = false;
             String oreDictName = "";
 
             String[] splittedRecipe = customRecipe.split("-");
@@ -75,10 +78,24 @@ public class CrusherRecipeManager
                     {
                         oreDict = true;
                         oreDictName = recipePart.substring(8);
+                        if (Config.GFL_CHUNK_MODE && Config.GFL_AUTO_CHANGE_CRUSHER_RECIPES && oreDictName.startsWith("ore") && EnumGFLDustToChunk.containsOre(oreDictName))
+                        {
+                            gflChangeOutput = true;
+                        }
                     }
                     else
                     {
-                        Object itemStack = parseItemStack(recipePart);
+                        Object itemStack;
+                        try
+                        {
+                            itemStack = parseItemStack(recipePart, gflChangeOutput);
+                        }
+                        catch (Exception e)
+                        {
+                            LogHelper.error("Something went wrong with recipe: " + customRecipe);
+                            e.printStackTrace();
+                            break;
+                        }
 
                         if (itemStack instanceof ItemStack && !((ItemStack) itemStack).isEmpty())
                         {
@@ -114,6 +131,7 @@ public class CrusherRecipeManager
                 if (oreIngredient.getMatchingStacks().length > 0)
                 {
                     crusherRecipeList.add(new CrusherRecipe(oreIngredient, (ItemStack) itemStackList.get(0), crushTime));
+                    LogHelper.info("Added CrusherRecipe <OreDict>: " + oreDictName + " -> " + ((ItemStack) itemStackList.get(0)).getCount() + " x " + ((ItemStack) itemStackList.get(0)).getDisplayName());
                     injectedRecipes++;
                 }
                 else
@@ -125,6 +143,7 @@ public class CrusherRecipeManager
             else if (!oreDict && itemStackList.size() == 2 && crushTime > 0)
             {
                 crusherRecipeList.add(new CrusherRecipe((ItemStack) itemStackList.get(0), (ItemStack) itemStackList.get(1), crushTime));
+                LogHelper.info("Added CrusherRecipe <ItemStack>: " + ((ItemStack) itemStackList.get(0)).getDisplayName() + " -> " + ((ItemStack) itemStackList.get(1)).getCount() + " x " + ((ItemStack) itemStackList.get(1)).getDisplayName());
                 injectedRecipes++;
             }
         }
@@ -135,7 +154,7 @@ public class CrusherRecipeManager
         }
     }
 
-    private Object parseItemStack(String recipePart)// throws Exception
+    private Object parseItemStack(String recipePart, boolean gflChangeOutput) throws Exception
     {
         String[] parts = recipePart.split("#");
 
@@ -147,6 +166,16 @@ public class CrusherRecipeManager
 
         parts = recipePart.split(":");
         int meta = parts.length == 2 ? 0 : Integer.parseInt(parts[2]);
+
+        if (gflChangeOutput)
+        {
+            if (parts[1].equals("dust"))
+            {
+                parts[1] = LibNames.Items.ITEM_CHUNK_DIRTY;
+                amount = Config.GFL_CRUSHER_CHUNK_AMOUNT;
+                meta = EnumGFLDustToChunk.getChunkMeta(meta);
+            }
+        }
 
         NBTTagCompound compound = new NBTTagCompound();
         compound.setString("id", parts[0] + ":" + parts[1]);

@@ -60,7 +60,15 @@ public class Descriptions
         String nameUpgradeMuffler = itemStackUpgradeMuffler.getDisplayName();
         String nameUpgradeSpeed = itemStackUpgradeSpeed.getDisplayName();
 
-        String infoCrusher = StringUtils.translate("jei.oregen.description.crusher");
+        String infoCrusher;
+        if (!Config.GFL_CHUNK_MODE)
+        {
+            infoCrusher = StringUtils.translate("jei.oregen.description.crusher.normal");
+        }
+        else
+        {
+            infoCrusher = StringUtils.translate("jei.oregen.description.crusher.gflmode");
+        }
         String infoUpgradeBlank = StringUtils.translate("jei.oregen.description.upgradeblank");
         String infoUpgradeISided = StringUtils.translate("jei.oregen.description.upgradeisided");
         String infoUpgradeMuffler = StringUtils.translate("jei.oregen.description.upgrademuffler");
