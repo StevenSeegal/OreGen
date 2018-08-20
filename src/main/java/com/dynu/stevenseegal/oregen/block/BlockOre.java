@@ -108,7 +108,7 @@ public class BlockOre extends BlockBase
             {
                 xp = MathHelper.getInt(random, state.getValue(ORE_TYPE).getMinXP(), state.getValue(ORE_TYPE).getMaxXP());
             }
-            //LogHelper.info(state.getBlock().getLocalizedName() + "- XP: " + xp); //TODO remove
+            LogHelper.info(state.getValue(ORE_TYPE).getName() + " - XP: " + xp); //TODO remove
             return xp;
         }
         else
@@ -133,7 +133,7 @@ public class BlockOre extends BlockBase
         {
             amount = getChunkQuantityWithFortune(fortune, random);
         }
-        //LogHelper.info(state.getBlock().getLocalizedName() + " - QuantityDropped: " + amount); //TODO remove
+        LogHelper.info(state.getValue(ORE_TYPE).getName() + " - QuantityDropped: " + amount); //TODO remove
         return amount;
     }
 

@@ -319,7 +319,7 @@ public class LibNames
             public static final String DEBUG = "Debug";
             public static final String HARVEST_LEVEL = "HarvestLevel";
             public static final String CRUSHER_RECIPES = "CrusherRecipes";
-            public static final String GFL_CHUNK_MODE = "GoForLaunch Chunk Drop Mode";
+            public static final String GFL_CHUNK_MODE = "GoForLaunch_Mode";
         }
 
         public static final class Comment
@@ -353,10 +353,12 @@ public class LibNames
                     + "The 'crushtime' is the ammount is tick it takes to crush the item, one normal cycle is is 200\n";
 
             public static final String GFL_CHUNK_MODE = "This enabled the 'ChunkDrop mode'. This mod's ore's and Minecraft's Iron and Gold ore now drops 'Dirty Chunks' instead of their normal ore.\n"
-                    + "Unless you use a pickaxe with silktouch!";
-            public static final String GFL_DOUBLE_CHUNK_CHANCE = "The chance players get to drop 2 'Dirty Chunks'. 0.00 = 0%, 1.0 = 100% and anything in between.";
+                    + "Unless you use a pickaxe with the 'SilkTouch' Enchant!";
+            public static final String GFL_DOUBLE_CHUNK_CHANCE = "The chance players get to drop 2 'Dirty Chunks' while using a pickaxe with the 'Fortune' Enchant.\n"
+                    + "0.00 = 0%, 1.0 = 100% and anything in between.";
             public static final String GFL_AUTO_CHANGE_CRUSHER_RECIPES = "Automatically transform the Crusher recipe list to output 'Dirty Chunks' instead of 'Dusts' while crushing and ore.";
-            public static final String GFL_CRUSHER_CHUNK_AMOUNT = "The amount of 'Dirty Chunks' a player get while crushing an ore.";
+            public static final String GFL_CRUSHER_CHUNK_AMOUNT = "The amount of 'Dirty Chunks' a player get while crushing an ore.\n"
+                    + "This in only used while converting the Crusher Recipes!";
         }
 
         public static final class NBT

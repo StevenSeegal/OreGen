@@ -4,20 +4,20 @@ public class LibCrusherRecipes
 {
     public final static String[] defaultRecipes =
             {
-                    "oredict:oreCopper-oregen:dust:0#2-400",
-                    "oredict:oreTin-oregen:dust:1#2-400",
-                    "oredict:oreSilver-oregen:dust:2#2-400",
-                    "oredict:oreLead-oregen:dust:3#2-400",
-                    "oredict:oreAluminum-oregen:dust:4#2-400",
-                    "oredict:oreNickel-oregen:dust:5#2-400",
-                    "oredict:oreUranium-oregen:dust:8#2-400",
-                    "oredict:orePlatinum-oregen:dust:9#2-400",
-                    "oredict:oreSulfur-oregen:dust:10#5-400",
-                    "oredict:oreSaltpeter-oregen:dust:11#5-400",
-                    "oredict:oreIridium-oregen:dust:16#2-400",
-                    "oredict:oreMithril-oregen:dust:17#2-400",
-                    "oredict:oreNth-oregen:dust:18#2-400",
-                    "oredict:oreUru-oregen:dust:19#2-400",
+                    "oredict:oreCopper-oregen:dust:0#2-200", //400
+                    "oredict:oreTin-oregen:dust:1#2-200",
+                    "oredict:oreSilver-oregen:dust:2#2-200",
+                    "oredict:oreLead-oregen:dust:3#2-200",
+                    "oredict:oreAluminum-oregen:dust:4#2-200",
+                    "oredict:oreNickel-oregen:dust:5#2-200",
+                    "oredict:oreUranium-oregen:dust:8#2-200",
+                    "oredict:orePlatinum-oregen:dust:9#2-200",
+                    "oredict:oreSulfur-oregen:dust:10#5-200",
+                    "oredict:oreSaltpeter-oregen:dust:11#5-200",
+                    "oredict:oreIridium-oregen:dust:16#2-200",
+                    "oredict:oreMithril-oregen:dust:17#2-200",
+                    "oredict:oreNth-oregen:dust:18#2-200",
+                    "oredict:oreUru-oregen:dust:19#2-200", //400
 
                     "oredict:blockCopper-oregen:dust:0#9-1800",
                     "oredict:blockTin-oregen:dust:1#9-1800",
@@ -51,14 +51,14 @@ public class LibCrusherRecipes
                     "oredict:ingotUru-oregen:dust:19#1-200",
                     "oredict:ingotThorium-oregen:dust:20#1-200",
 
-                    "minecraft:coal_ore-minecraft:coal#4-400",
-                    "minecraft:iron_ore-oregen:dust:13#2-400",
-                    "minecraft:gold_ore-oregen:dust:14#2-400",
-                    "minecraft:diamond_ore-minecraft:diamond#2-400",
-                    "minecraft:emerald_ore-minecraft:emerald#2-400",
-                    "minecraft:redstone_ore-minecraft:redstone#6-400",
-                    "minecraft:quartz_ore-minecraft:quartz#6-400",
-                    "minecraft:lapis_ore-minecraft:dye:4#8-400",
+                    "minecraft:coal_ore-minecraft:coal#4-200", //400
+                    "minecraft:iron_ore-oregen:dust:13#2-200",
+                    "minecraft:gold_ore-oregen:dust:14#2-200",
+                    "minecraft:diamond_ore-minecraft:diamond#2-200",
+                    "minecraft:emerald_ore-minecraft:emerald#2-200",
+                    "minecraft:redstone_ore-minecraft:redstone#6-200",
+                    "minecraft:quartz_ore-minecraft:quartz#6-200",
+                    "minecraft:lapis_ore-minecraft:dye:4#8-200", //400
 
                     "minecraft:coal-oregen:dust:12#1-200",
                     "minecraft:iron_ingot-oregen:dust:13#1-200",
