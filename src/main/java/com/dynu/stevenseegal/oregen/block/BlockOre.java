@@ -3,29 +3,27 @@ package com.dynu.stevenseegal.oregen.block;
 import com.dynu.stevenseegal.oregen.config.Config;
 import com.dynu.stevenseegal.oregen.init.ModItems;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
+import com.dynu.stevenseegal.oregen.util.LogHelper;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class BlockOre extends BlockBase
@@ -70,57 +68,111 @@ public class BlockOre extends BlockBase
     @Override
     public int damageDropped(IBlockState state)
     {
+        if (state.getValue(ORE_TYPE).getMetaData() == OreType.SULFUR.getMetaData() || state.getValue(ORE_TYPE).getMetaData() == OreType.SALTPETER.getMetaData())
+        {
+            return state.getValue(ORE_TYPE).getItemDropMeta();
+        }
+        else if (Config.GFL_CHUNK_MODE)
+        {
+            return state.getValue(ORE_TYPE).getItemDropMeta();
+        }
         return state.getValue(ORE_TYPE).getMetaData();
     }
 
-    private List<ItemStack> getNonSilkTouchDrops(Item item, int metaData, int amount, int fortune, Random random)
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        NonNullList<ItemStack> dropList = NonNullList.create();
-        int count = amount;
-
-        if (fortune > 0)
+        if (state.getValue(ORE_TYPE).getMetaData() == OreType.SULFUR.getMetaData() || state.getValue(ORE_TYPE).getMetaData() == OreType.SALTPETER.getMetaData())
         {
-            int fort = random.nextInt(fortune + 2) - 1;
-            if (fort < 0)
-            {
-                fort = 0;
-            }
-            count = count * (fort + 1);
+            return ModItems.ITEM_DUST;
         }
-
-        for (int i = 0; i < count; i++)
+        else if (Config.GFL_CHUNK_MODE)
         {
-            dropList.add(new ItemStack(item, 1, metaData));
+            return ModItems.ITEM_CHUNK_DIRTY;
         }
-        return dropList;
+        return Item.getItemFromBlock(this);
     }
 
     @Override
-    public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, ItemStack heldItem)
+    public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune)
     {
-        int blockStateMeta = state.getValue(ORE_TYPE).getMetaData();
-        if (EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, heldItem) == 0 && (blockStateMeta == OreType.SULFUR.getMetaData() || blockStateMeta == OreType.SALTPETER.getMetaData()))
+        Random random = world instanceof World ? ((World)world).rand : new Random();
+        if (this.getItemDropped(state, random, fortune) != Item.getItemFromBlock(this))
         {
-            List<ItemStack> dropList = new ArrayList<>();
-            int fortune = EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, heldItem);
-            if (blockStateMeta == OreType.SULFUR.getMetaData())
+            int xp = 0;
+            if (state.getValue(ORE_TYPE).getMetaData() == OreType.SULFUR.getMetaData() || state.getValue(ORE_TYPE).getMetaData() == OreType.SALTPETER.getMetaData())
             {
-                dropList = getNonSilkTouchDrops(ModItems.ITEM_DUST, 10, 5, fortune, worldIn.rand);
+                xp = MathHelper.getInt(random, state.getValue(ORE_TYPE).getMinXP(), state.getValue(ORE_TYPE).getMaxXP());
             }
-            else if (blockStateMeta == OreType.SALTPETER.getMetaData())
+            else if (Config.GFL_CHUNK_MODE)
             {
-                dropList = getNonSilkTouchDrops(ModItems.ITEM_DUST, 11, 2, fortune, worldIn.rand);
+                xp = MathHelper.getInt(random, state.getValue(ORE_TYPE).getMinXP(), state.getValue(ORE_TYPE).getMaxXP());
             }
-
-            for (ItemStack itemStack : dropList)
-            {
-                spawnAsEntity(worldIn, pos, itemStack);
-            }
+            //LogHelper.info(state.getBlock().getLocalizedName() + "- XP: " + xp); //TODO remove
+            return xp;
         }
         else
         {
-            super.harvestBlock(worldIn, player, pos, state, te, heldItem);
+            return 0;
         }
+    }
+
+    @Override
+    public int quantityDropped(IBlockState state, int fortune, Random random)
+    {
+        int amount = 1;
+        if (state.getValue(ORE_TYPE).getMetaData() == OreType.SULFUR.getMetaData())
+        {
+            amount = getNormalQuantityWithFortune(5, fortune, random);
+        }
+        else if (state.getValue(ORE_TYPE).getMetaData() == OreType.SALTPETER.getMetaData())
+        {
+            amount = getNormalQuantityWithFortune(2, fortune, random);
+        }
+        else if (Config.GFL_CHUNK_MODE)
+        {
+            amount = getChunkQuantityWithFortune(fortune, random);
+        }
+        //LogHelper.info(state.getBlock().getLocalizedName() + " - QuantityDropped: " + amount); //TODO remove
+        return amount;
+    }
+
+    private int getNormalQuantityWithFortune(int defaultAmount, int fortune, Random random)
+    {
+        if (fortune > 0)
+        {
+            int bonus = random.nextInt(fortune + 2) -1;
+            if (bonus < 0)
+            {
+                bonus = 0;
+            }
+            return defaultAmount * (bonus + 1);
+        }
+        else
+        {
+            return defaultAmount;
+        }
+    }
+
+    private int getChunkQuantityWithFortune(int fortune, Random random)
+    {
+        if (fortune > 0 && random.nextFloat() <= Config.GFL_DOUBLE_CHUNK_CHANCE)
+        {
+            return 2;
+        }
+        return 1;
+    }
+
+    @Override
+    public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player)
+    {
+        return true;
+    }
+
+    @Override
+    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player)
+    {
+        return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(ORE_TYPE).metaData);
     }
 
     @SideOnly(Side.CLIENT)
@@ -174,34 +226,55 @@ public class BlockOre extends BlockBase
 
     public enum OreType implements IStringSerializable
     {
-        COPPER(0, "copper"),
-        TIN(1, "tin"),
-        SILVER(2, "silver"),
-        LEAD(3, "lead"),
-        ALUMINUM(4, "aluminum"),
-        NICKEL(5, "nickel"),
-        PLATINUM(6, "platinum"),
-        URANIUM(7,"uranium"),
-        SULFUR(8, "sulfur"),
-        SALTPETER(9, "saltpeter"),
-        IRIDIUM(10, "iridium"),
-        MITHRIL(11, "mithril"),
-        NTH(12, "nth"),
-        URU(13, "uru");
+        COPPER(0, "copper", 0, 0, 2),
+        TIN(1, "tin", 1, 0, 2),
+        SILVER(2, "silver", 2, 1, 3),
+        LEAD(3, "lead", 3, 0, 2),
+        ALUMINUM(4, "aluminum", 4, 0, 2),
+        NICKEL(5, "nickel", 5, 2, 4),
+        PLATINUM(6, "platinum", 7, 2, 5),
+        URANIUM(7,"uranium", 6, 0, 2),
+        SULFUR(8, "sulfur", 10, 0, 2),
+        SALTPETER(9, "saltpeter", 11, 0, 2),
+        IRIDIUM(10, "iridium", 8, 3, 6),
+        MITHRIL(11, "mithril", 9, 3, 6),
+        NTH(12, "nth", 10, 0, 2),
+        URU(13, "uru", 11, 0, 2);
 
         private static final OreType[] META_LOOKUP = new OreType[values().length];
         private int metaData;
+        private int itemDropMeta;
+        private int minXP;
+        private int maxXP;
         private String name;
 
-        OreType(int metaData, String name)
+        OreType(int metaData, String name, int itemDropMeta, int minXP, int maxXP)
         {
             this.metaData = metaData;
             this.name = name;
+            this.itemDropMeta = itemDropMeta;
+            this.minXP = minXP;
+            this.maxXP = maxXP;
         }
 
         public int getMetaData()
         {
             return this.metaData;
+        }
+
+        public int getItemDropMeta()
+        {
+            return this.itemDropMeta;
+        }
+
+        public int getMinXP()
+        {
+            return this.minXP;
+        }
+
+        public int getMaxXP()
+        {
+            return this.maxXP;
         }
 
         @Override
