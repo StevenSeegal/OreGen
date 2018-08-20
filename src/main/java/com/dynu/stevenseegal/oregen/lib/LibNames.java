@@ -301,6 +301,14 @@ public class LibNames
                 public static final String DEFAULT = "DefaultRecipeList";
                 public static final String CUSTOM = "CustomRecipeList";
             }
+
+            public static final class GFLMode
+            {
+                public static final String CHUNK_MODE = "GFLChunkDropMode";
+                public static final String DOUBLE_CHUNK_CHANCE = "DoubleChance";
+                public static final String AUTO_CHANGE_CRUSHER_RECIPES = "AutoChangeCrusherRecipe";
+                public static final String CRUSHER_CHUNK_AMOUNT = "CrusherResultAmount";
+            }
         }
 
         public static final class Category
@@ -311,6 +319,7 @@ public class LibNames
             public static final String DEBUG = "Debug";
             public static final String HARVEST_LEVEL = "HarvestLevel";
             public static final String CRUSHER_RECIPES = "CrusherRecipes";
+            public static final String GFL_CHUNK_MODE = "GoForLaunch Chunk Drop Mode";
         }
 
         public static final class Comment
@@ -342,6 +351,12 @@ public class LibNames
                     + "The 'amount' is optional and can only be set for the output, if not set, 1 is default\n"
                     + "The input item can be an item from the ore dictionary, use it as 'oredict:name', leave 'meta' blank for an ore dictionary entry\n"
                     + "The 'crushtime' is the ammount is tick it takes to crush the item, one normal cycle is is 200\n";
+
+            public static final String GFL_CHUNK_MODE = "This enabled the 'ChunkDrop mode'. This mod's ore's and Minecraft's Iron and Gold ore now drops 'Dirty Chunks' instead of their normal ore.\n"
+                    + "Unless you use a pickaxe with silktouch!";
+            public static final String GFL_DOUBLE_CHUNK_CHANCE = "The chance players get to drop 2 'Dirty Chunks'. 0.00 = 0%, 1.0 = 100% and anything in between.";
+            public static final String GFL_AUTO_CHANGE_CRUSHER_RECIPES = "Automatically transform the Crusher recipe list to output 'Dirty Chunks' instead of 'Dusts' while crushing and ore.";
+            public static final String GFL_CRUSHER_CHUNK_AMOUNT = "The amount of 'Dirty Chunks' a player get while crushing an ore.";
         }
 
         public static final class NBT

@@ -20,7 +20,8 @@ public class Config
     public static boolean GENERATE_AIR = false;
     public static boolean PRINT_OREDICT = false;
 
-    public static boolean GFL_CHUNK_MODE = true;
+    public static boolean GFL_CHUNK_MODE = false;
+    public static float GFL_DOUBLE_CHUNK_CHANCE = 0.1F;
     public static boolean GFL_AUTO_CHANGE_CRUSHER_RECIPES = true;
     public static int GFL_CRUSHER_CHUNK_AMOUNT = 1;
 
@@ -91,6 +92,11 @@ public class Config
 
         DEFAULT_CRUSHER_RECIPES = cfg.getStringList(LibNames.Config.Key.CrusherRecipes.DEFAULT, LibNames.Config.Category.CRUSHER_RECIPES, LibCrusherRecipes.defaultRecipes, LibNames.Config.Comment.DEFAULT_CRUSHER_RECIPES);
         CUSTOM_CRUSHER_RECIPES = cfg.getStringList(LibNames.Config.Key.CrusherRecipes.CUSTOM, LibNames.Config.Category.CRUSHER_RECIPES, LibCrusherRecipes.customRecipes, LibNames.Config.Comment.CUSTOM_CRUShER_RECIPES);
+
+        GFL_CHUNK_MODE = cfg.getBoolean(LibNames.Config.Key.GFLMode.CHUNK_MODE, LibNames.Config.Category.GFL_CHUNK_MODE, GFL_CHUNK_MODE, LibNames.Config.Comment.GFL_CHUNK_MODE);
+        GFL_DOUBLE_CHUNK_CHANCE = cfg.getFloat(LibNames.Config.Key.GFLMode.DOUBLE_CHUNK_CHANCE, LibNames.Config.Category.GFL_CHUNK_MODE, GFL_DOUBLE_CHUNK_CHANCE, 0, 1, LibNames.Config.Comment.GFL_DOUBLE_CHUNK_CHANCE);
+        GFL_AUTO_CHANGE_CRUSHER_RECIPES = cfg.getBoolean(LibNames.Config.Key.GFLMode.AUTO_CHANGE_CRUSHER_RECIPES, LibNames.Config.Category.GFL_CHUNK_MODE, GFL_AUTO_CHANGE_CRUSHER_RECIPES, LibNames.Config.Comment.GFL_AUTO_CHANGE_CRUSHER_RECIPES);
+        GFL_CRUSHER_CHUNK_AMOUNT = cfg.getInt(LibNames.Config.Key.GFLMode.CRUSHER_CHUNK_AMOUNT, LibNames.Config.Category.GFL_CHUNK_MODE, GFL_CRUSHER_CHUNK_AMOUNT, 1, 64, LibNames.Config.Comment.GFL_CRUSHER_CHUNK_AMOUNT);
 
         for (OreConfigHolder holder : ORE_CONFIG)
         {
