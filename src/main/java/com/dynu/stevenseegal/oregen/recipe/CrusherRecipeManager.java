@@ -9,8 +9,8 @@ import com.google.common.collect.Lists;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.oredict.OreIngredient;
-import scala.actors.threadpool.Arrays;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class CrusherRecipeManager
@@ -131,7 +131,7 @@ public class CrusherRecipeManager
                 if (oreIngredient.getMatchingStacks().length > 0)
                 {
                     crusherRecipeList.add(new CrusherRecipe(oreIngredient, (ItemStack) itemStackList.get(0), crushTime));
-                    LogHelper.info("Added CrusherRecipe <OreDict>: " + oreDictName + " -> " + ((ItemStack) itemStackList.get(0)).getCount() + " x " + ((ItemStack) itemStackList.get(0)).getDisplayName());
+                    LogHelper.debug("Added CrusherRecipe <OreDict>: " + oreDictName + " -> " + ((ItemStack) itemStackList.get(0)).getCount() + " x " + ((ItemStack) itemStackList.get(0)).getDisplayName());
                     injectedRecipes++;
                 }
                 else
@@ -143,7 +143,7 @@ public class CrusherRecipeManager
             else if (!oreDict && itemStackList.size() == 2 && crushTime > 0)
             {
                 crusherRecipeList.add(new CrusherRecipe((ItemStack) itemStackList.get(0), (ItemStack) itemStackList.get(1), crushTime));
-                LogHelper.info("Added CrusherRecipe <ItemStack>: " + ((ItemStack) itemStackList.get(0)).getDisplayName() + " -> " + ((ItemStack) itemStackList.get(1)).getCount() + " x " + ((ItemStack) itemStackList.get(1)).getDisplayName());
+                LogHelper.debug("Added CrusherRecipe <ItemStack>: " + ((ItemStack) itemStackList.get(0)).getDisplayName() + " -> " + ((ItemStack) itemStackList.get(1)).getCount() + " x " + ((ItemStack) itemStackList.get(1)).getDisplayName());
                 injectedRecipes++;
             }
         }

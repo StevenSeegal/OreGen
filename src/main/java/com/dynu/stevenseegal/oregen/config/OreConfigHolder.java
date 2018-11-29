@@ -40,7 +40,7 @@ public class OreConfigHolder
     {
         LogHelper.debug("ConfigHolder: " + name);
         this.enabled = cfg.getBoolean(name + "generate", LibNames.Config.Category.GENERATION, enabled, String.format(LibNames.Config.Comment.ORE, StringUtils.toUpperCase(name)));
-        String settings = cfg.getString(name + "settings", LibNames.Config.Category.GENERATION, getDefaultSettings(), LibNames.Config.Comment.SETTINGS); //TODO COMMENT
+        String settings = cfg.getString(name + "settings", LibNames.Config.Category.GENERATION, getDefaultSettings(), LibNames.Config.Comment.SETTINGS);
         LogHelper.debug(settings);
         applySettings(settings);
     }

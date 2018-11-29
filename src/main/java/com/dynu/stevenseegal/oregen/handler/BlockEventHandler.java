@@ -28,14 +28,12 @@ public class BlockEventHandler
             if (event.getState().getBlock() == Blocks.IRON_ORE)
             {
                 int amount = getChunkQuantityWithFortune(event.getFortuneLevel());
-                LogHelper.info(event.getState().getBlock().getLocalizedName() + " - QuantityDropped: " + amount); //TODO remove
                 event.getDrops().clear();
                 event.getDrops().add(new ItemStack(ModItems.ITEM_CHUNK_DIRTY, amount, 12));
             }
             else if (event.getState().getBlock() == Blocks.GOLD_ORE)
             {
                 int amount = getChunkQuantityWithFortune(event.getFortuneLevel());
-                LogHelper.info(event.getState().getBlock().getLocalizedName() + " - QuantityDropped: " + amount); //TODO remove
                 event.getDrops().clear();
                 event.getDrops().add(new ItemStack(ModItems.ITEM_CHUNK_DIRTY, amount, 13));
             }
@@ -50,7 +48,6 @@ public class BlockEventHandler
             if (event.getState().getBlock() == Blocks.IRON_ORE || event.getState().getBlock() == Blocks.GOLD_ORE)
             {
                 int xp = MathHelper.getInt(RANDOM, 0, 2);
-                LogHelper.info(event.getState().getBlock().getLocalizedName() + " - XP: " + xp); //TODO remove
                 event.setExpToDrop(xp);
             }
         }

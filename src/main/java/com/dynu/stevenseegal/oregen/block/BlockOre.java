@@ -3,7 +3,6 @@ package com.dynu.stevenseegal.oregen.block;
 import com.dynu.stevenseegal.oregen.config.Config;
 import com.dynu.stevenseegal.oregen.init.ModItems;
 import com.dynu.stevenseegal.oregen.lib.LibNames;
-import com.dynu.stevenseegal.oregen.util.LogHelper;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -108,7 +107,6 @@ public class BlockOre extends BlockBase
             {
                 xp = MathHelper.getInt(random, state.getValue(ORE_TYPE).getMinXP(), state.getValue(ORE_TYPE).getMaxXP());
             }
-            LogHelper.info(state.getValue(ORE_TYPE).getName() + " - XP: " + xp); //TODO remove
             return xp;
         }
         else
@@ -133,7 +131,6 @@ public class BlockOre extends BlockBase
         {
             amount = getChunkQuantityWithFortune(fortune, random);
         }
-        LogHelper.info(state.getValue(ORE_TYPE).getName() + " - QuantityDropped: " + amount); //TODO remove
         return amount;
     }
 
