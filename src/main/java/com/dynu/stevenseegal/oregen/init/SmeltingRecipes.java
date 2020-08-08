@@ -31,6 +31,7 @@ public class SmeltingRecipes
         GameRegistry.addSmelting(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.MITHRIL.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 11), XP);
         GameRegistry.addSmelting(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.NTH.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 12), XP);
         GameRegistry.addSmelting(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.URU.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 13), XP);
+        GameRegistry.addSmelting(new ItemStack(ModBlocks.BLOCK_ORE, 1, BlockOre.OreType.ZINC.getMetaData()), new ItemStack(ModItems.ITEM_INGOT, 1, 15), XP);
 
         GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_DUST, 1, 0), new ItemStack(ModItems.ITEM_INGOT, 1, 0), NONE);
         GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_DUST, 1, 1), new ItemStack(ModItems.ITEM_INGOT, 1, 1), NONE);
@@ -48,6 +49,7 @@ public class SmeltingRecipes
         GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_DUST, 1, 18), new ItemStack(ModItems.ITEM_INGOT, 1, 12), NONE);
         GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_DUST, 1, 19), new ItemStack(ModItems.ITEM_INGOT, 1, 13), NONE);
         GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_DUST, 1, 20), new ItemStack(ModItems.ITEM_INGOT, 1, 14), NONE);
+        GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_DUST, 1, 21), new ItemStack(ModItems.ITEM_INGOT, 1, 15), NONE);
 
         GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_DUST, 1, 13), new ItemStack(Items.IRON_INGOT, 1), NONE);
         GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_DUST, 1, 14), new ItemStack(Items.GOLD_INGOT, 1), NONE);
@@ -69,6 +71,7 @@ public class SmeltingRecipes
             GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_DIRTY, 1, 11), new ItemStack(ModItems.ITEM_INGOT, 1, 13), XP);
             GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_DIRTY, 1, 12), new ItemStack(Items.IRON_INGOT, 1), XP);
             GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_DIRTY, 1, 13), new ItemStack(Items.GOLD_INGOT, 1), XP);
+            GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_DIRTY, 1, 14), new ItemStack(ModItems.ITEM_INGOT, 1, 15), XP);
 
             GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_CLEAN, 1, 0), new ItemStack(ModItems.ITEM_INGOT, 1, 0), NONE);
             GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_CLEAN, 1, 1), new ItemStack(ModItems.ITEM_INGOT, 1, 1), NONE);
@@ -84,6 +87,7 @@ public class SmeltingRecipes
             GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_CLEAN, 1, 11), new ItemStack(ModItems.ITEM_INGOT, 1, 13), NONE);
             GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_CLEAN, 1, 12), new ItemStack(Items.IRON_INGOT, 1), NONE);
             GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_CLEAN, 1, 13), new ItemStack(Items.GOLD_INGOT, 1), NONE);
+            GameRegistry.addSmelting(new ItemStack(ModItems.ITEM_CHUNK_CLEAN, 1, 14), new ItemStack(ModItems.ITEM_INGOT, 1, 15), NONE);
         }
     }
 }

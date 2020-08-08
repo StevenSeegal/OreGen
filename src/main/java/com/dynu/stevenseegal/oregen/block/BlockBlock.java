@@ -89,6 +89,7 @@ public class BlockBlock extends BlockBase
         OreDictionary.registerOre(LibNames.OreDict.Blocks.NTH_BLOCK, new ItemStack(this, 1, BlockType.NTH.getMetaData()));
         OreDictionary.registerOre(LibNames.OreDict.Blocks.URU_BLOCK, new ItemStack(this, 1, BlockType.URU.getMetaData()));
         OreDictionary.registerOre(LibNames.OreDict.Blocks.THORIUM_BLOCK, new ItemStack(this, 1, BlockType.THORIUM.getMetaData()));
+        OreDictionary.registerOre(LibNames.OreDict.Blocks.ZINC_BLOCK, new ItemStack(this, 1, BlockType.ZINC.getMetaData()));
     }
 
     @Override
@@ -110,6 +111,7 @@ public class BlockBlock extends BlockBase
         setHarvestLevel("pickaxe", Config.HARVEST_NTH, getStateFromMeta(BlockType.NTH.getMetaData()));
         setHarvestLevel("pickaxe", Config.HARVEST_URU, getStateFromMeta(BlockType.URU.getMetaData()));
         setHarvestLevel("pickaxe", Config.HARVEST_THORIUM, getStateFromMeta(BlockType.THORIUM.getMetaData()));
+        setHarvestLevel("pickaxe", Config.HARVEST_ZINC, getStateFromMeta(BlockType.ZINC.getMetaData()));
     }
 
     public enum BlockType implements IStringSerializable
@@ -128,7 +130,8 @@ public class BlockBlock extends BlockBase
         MITHRIL(11, "mithril"),
         NTH(12, "nth"),
         URU(13, "uru"),
-        THORIUM(14, "thorium");
+        THORIUM(14, "thorium"),
+        ZINC(15, "zinc");
 
         private static final BlockType[] META_LOOKUP = new BlockType[values().length];
         private int metaData;

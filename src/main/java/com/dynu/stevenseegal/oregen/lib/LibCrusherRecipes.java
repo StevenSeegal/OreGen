@@ -18,6 +18,7 @@ public class LibCrusherRecipes
                     "oredict:oreMithril-oregen:dust:17#2-200",
                     "oredict:oreNth-oregen:dust:18#2-200",
                     "oredict:oreUru-oregen:dust:19#2-200", //400
+                    "oredict:oreZinc-oregen:dust:21#2-200",
 
                     "oredict:blockCopper-oregen:dust:0#9-1800",
                     "oredict:blockTin-oregen:dust:1#9-1800",
@@ -34,6 +35,7 @@ public class LibCrusherRecipes
                     "oredict:blockNth-oregen:dust:18#9-1800",
                     "oredict:blockUru-oregen:dust:19#9-1800",
                     "oredict:blockThorium-oregen:dust:20#9-1800",
+                    "oredict:blockZinc-oregen:dust:21#9-1800",
 
                     "oredict:ingotCopper-oregen:dust:0#1-200",
                     "oredict:ingotTin-oregen:dust:1#1-200",
@@ -50,6 +52,7 @@ public class LibCrusherRecipes
                     "oredict:ingotNth-oregen:dust:18#1-200",
                     "oredict:ingotUru-oregen:dust:19#1-200",
                     "oredict:ingotThorium-oregen:dust:20#1-200",
+                    "oredict:ingotZinc-oregen:dust:21#1-200",
 
                     "minecraft:coal_ore-minecraft:coal#4-200", //400
                     "minecraft:iron_ore-oregen:dust:13#2-200",

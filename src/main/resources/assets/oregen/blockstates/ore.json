@@ -20,6 +20,7 @@
     "inventory,type=mithril": [{"textures": {"all": "oregen:blocks/ore/mithril"}}],
     "inventory,type=nth": [{"textures": {"all": "oregen:blocks/ore/nth"}}],
     "inventory,type=uru": [{"textures": {"all": "oregen:blocks/ore/uru"}}],
+    "inventory,type=zinc": [{"textures": {"all": "oregen:blocks/ore/zinc"}}],
     "type": {
       "copper": {"textures": {"all": "oregen:blocks/ore/copper"}},
       "tin": {"textures": {"all": "oregen:blocks/ore/tin"}},
@@ -34,7 +35,8 @@
       "iridium": {"textures": {"all": "oregen:blocks/ore/iridium"}},
       "mithril": {"textures": {"all": "oregen:blocks/ore/mithril"}},
       "nth": {"textures": {"all": "oregen:blocks/ore/nth"}},
-      "uru": {"textures": {"all": "oregen:blocks/ore/uru"}}
+      "uru": {"textures": {"all": "oregen:blocks/ore/uru"}},
+      "zinc": {"textures": {"all": "oregen:blocks/ore/zinc"}}
     }
   }
 }

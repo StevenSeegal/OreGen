@@ -42,6 +42,7 @@ public class Config
     public static int HARVEST_NTH = 3;
     public static int HARVEST_URU = 3;
     public static int HARVEST_THORIUM = 3;
+    public static int HARVEST_ZINC = 1;
 
     public static String[] DEFAULT_CRUSHER_RECIPES;
     public static String[] CUSTOM_CRUSHER_RECIPES;
@@ -62,6 +63,7 @@ public class Config
         ORE_CONFIG.add(new OreConfigHolder(BlockOre.OreType.MITHRIL.getMetaData(),2,2,5,32,10, 0));
         ORE_CONFIG.add(new OreConfigHolder(BlockOre.OreType.NTH.getMetaData(), 4, 6, 16, 120, 50, -1));
         ORE_CONFIG.add(new OreConfigHolder(BlockOre.OreType.URU.getMetaData(), 3, 6, 1, 120,40, 1));
+        ORE_CONFIG.add(new OreConfigHolder(BlockOre.OreType.ZINC.getMetaData(),7,7,16,64,60, 0));
     }
 
     public static void loadConfiguration(Configuration cfg)
@@ -89,6 +91,7 @@ public class Config
         HARVEST_NTH = cfg.getInt(LibNames.Config.Key.Harvest.NTH, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_NTH, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.NTH));
         HARVEST_URU = cfg.getInt(LibNames.Config.Key.Harvest.URU, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_URU, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.URU));
         HARVEST_THORIUM = cfg.getInt(LibNames.Config.Key.Harvest.THORUIM, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_THORIUM, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.THORUIM));
+        HARVEST_ZINC = cfg.getInt(LibNames.Config.Key.Harvest.ZINC, LibNames.Config.Category.HARVEST_LEVEL, HARVEST_ZINC, 0, 3, String.format(LibNames.Config.Comment.HARVEST_LEVEL, LibNames.Config.Key.Harvest.ZINC));
 
         DEFAULT_CRUSHER_RECIPES = cfg.getStringList(LibNames.Config.Key.CrusherRecipes.DEFAULT, LibNames.Config.Category.CRUSHER_RECIPES, LibCrusherRecipes.defaultRecipes, LibNames.Config.Comment.DEFAULT_CRUSHER_RECIPES);
         CUSTOM_CRUSHER_RECIPES = cfg.getStringList(LibNames.Config.Key.CrusherRecipes.CUSTOM, LibNames.Config.Category.CRUSHER_RECIPES, LibCrusherRecipes.customRecipes, LibNames.Config.Comment.CUSTOM_CRUShER_RECIPES);

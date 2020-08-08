@@ -39,6 +39,7 @@ public class LibNames
                         "nth",
                         "uru",
                         "thorium",
+                        "zinc",
                 };
 
         public static final String[] DUSTS =
@@ -64,6 +65,7 @@ public class LibNames
                         "nth",
                         "uru",
                         "thorium",
+                        "zinc",
                 };
 
         public static final String[] NUGGETS =
@@ -83,6 +85,7 @@ public class LibNames
                         "nth",
                         "uru",
                         "thorium",
+                        "zinc",
                 };
 
         public static final String[] CHUNK_DIRTY =
@@ -101,6 +104,7 @@ public class LibNames
                         "uru",
                         "iron",
                         "gold",
+                        "zinc",
                 };
 
         public static final String[] CHUNK_CLEAN =
@@ -119,6 +123,7 @@ public class LibNames
                         "uru",
                         "iron",
                         "gold",
+                        "zinc",
                 };
 
         public static final String[] UPGRADES =
@@ -148,6 +153,7 @@ public class LibNames
             public static final String MITHRIL_ORE = "oreMithril";
             public static final String NTH_ORE = "oreNth";
             public static final String URU_ORE = "oreUru";
+            public static final String ZINC_ORE = "oreZinc";
 
             public static final String COPPER_BLOCK = "blockCopper";
             public static final String TIN_BLOCK = "blockTin";
@@ -164,6 +170,7 @@ public class LibNames
             public static final String NTH_BLOCK = "blockNth";
             public static final String URU_BLOCK = "blockUru";
             public static final String THORIUM_BLOCK = "blockThorium";
+            public static final String ZINC_BLOCK = "blockZinc";
         }
 
         public static final class Items
@@ -183,6 +190,7 @@ public class LibNames
             public static final String NTH_INGOT = "ingotNth";
             public static final String URU_INGOT = "ingotUru";
             public static final String THORIUM_INGOT = "ingotThorium";
+            public static final String ZINC_INGOT = "ingotZinc";
 
             public static final String COPPER_NUGGET = "nuggetCopper";
             public static final String TIN_NUGGET = "nuggetTin";
@@ -199,6 +207,7 @@ public class LibNames
             public static final String NTH_NUGGET = "nuggetNth";
             public static final String URU_NUGGET = "nuggetUru";
             public static final String THORIUM_NUGGET = "nuggetThorium";
+            public static final String ZINC_NUGGET = "nuggetZinc";
 
             public static final String COPPER_DUST = "dustCopper";
             public static final String TIN_DUST = "dustTin";
@@ -217,6 +226,7 @@ public class LibNames
             public static final String NTH_DUST = "dustNth";
             public static final String URU_DUST = "dustUru";
             public static final String THORIUM_DUST = "dustThorium";
+            public static final String ZINC_DUST = "dustZinc";
 
             public static final String COAL_DUST = "dustCoal";
             public static final String IRON_DUST = "dustIron";
@@ -294,6 +304,7 @@ public class LibNames
                 public static final String NTH = "Nth";
                 public static final String URU = "Uru";
                 public static final String THORUIM = "Thorium";
+                public static final String ZINC = "Zinc";
             }
 
             public static final class CrusherRecipes

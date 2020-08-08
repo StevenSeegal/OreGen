@@ -199,6 +199,7 @@ public class BlockOre extends BlockBase
         OreDictionary.registerOre(LibNames.OreDict.Blocks.MITHRIL_ORE, new ItemStack(this, 1, OreType.MITHRIL.getMetaData()));
         OreDictionary.registerOre(LibNames.OreDict.Blocks.NTH_ORE, new ItemStack(this, 1, OreType.NTH.getMetaData()));
         OreDictionary.registerOre(LibNames.OreDict.Blocks.URU_ORE, new ItemStack(this, 1, OreType.URU.getMetaData()));
+        OreDictionary.registerOre(LibNames.OreDict.Blocks.ZINC_ORE, new ItemStack(this, 1, OreType.ZINC.getMetaData()));
     }
 
     @Override
@@ -219,6 +220,7 @@ public class BlockOre extends BlockBase
         setHarvestLevel("pickaxe", Config.HARVEST_MITHRIL, getStateFromMeta(OreType.MITHRIL.getMetaData()));
         setHarvestLevel("pickaxe", Config.HARVEST_NTH, getStateFromMeta(OreType.NTH.getMetaData()));
         setHarvestLevel("pickaxe", Config.HARVEST_URU, getStateFromMeta(OreType.URU.getMetaData()));
+        setHarvestLevel("pickaxe", Config.HARVEST_ZINC, getStateFromMeta(OreType.ZINC.getMetaData()));
     }
 
     public enum OreType implements IStringSerializable
@@ -236,7 +238,8 @@ public class BlockOre extends BlockBase
         IRIDIUM(10, "iridium", 8, 3, 6),
         MITHRIL(11, "mithril", 9, 3, 6),
         NTH(12, "nth", 10, 0, 2),
-        URU(13, "uru", 11, 0, 2);
+        URU(13, "uru", 11, 0, 2),
+        ZINC(14, "zinc", 12, 0, 2);
 
         private static final OreType[] META_LOOKUP = new OreType[values().length];
         private int metaData;

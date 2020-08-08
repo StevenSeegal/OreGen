@@ -104,6 +104,13 @@
     },
     "name": "blockThorium"
   },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "blockZinc"
+    },
+    "name": "blockZinc"
+  },
 
   {
     "ingredient": {
@@ -209,6 +216,13 @@
       "ore": "ingotThorium"
     },
     "name": "ingotThorium"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotZinc"
+    },
+    "name": "ingotZinc"
   },
 
   {
@@ -316,6 +330,13 @@
     },
     "name": "nuggetThorium"
   },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetZinc"
+    },
+    "name": "nuggetZinc"
+  },
 
   {
     "ingredient": {
@@ -358,6 +379,13 @@
       "ore": "dustUru"
     },
     "name": "dustUru"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "dustZinc"
+    },
+    "name": "dustZinc"
   },
 
   {

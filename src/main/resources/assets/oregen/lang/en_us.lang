@@ -14,6 +14,7 @@ tile.oregen.ore.iridium.name=Iridium Ore
 tile.oregen.ore.mithril.name=Mithril Ore
 tile.oregen.ore.nth.name=Nth Ore
 tile.oregen.ore.uru.name=Uru Ore
+tile.oregen.ore.zinc.name=Zinc Ore
 
 tile.oregen.block.copper.name=Copper Block
 tile.oregen.block.tin.name=Tin Block
@@ -30,6 +31,7 @@ tile.oregen.block.mithril.name=Mithril Block
 tile.oregen.block.nth.name=Nth Block
 tile.oregen.block.uru.name=Uru Block
 tile.oregen.block.thorium.name=Thorium Block
+tile.oregen.block.zinc.name=Zinc Block
 
 tile.oregen.machineCrusher.name=Coal Powered Crusher
 
@@ -48,6 +50,7 @@ item.oregen.ingot.mithril.name=Mithril Ingot
 item.oregen.ingot.nth.name=Nth Ingot
 item.oregen.ingot.uru.name=Uru Ingot
 item.oregen.ingot.thorium.name=Thorium Ingot
+item.oregen.ingot.zinc.name=Zinc Ingot
 
 item.oregen.nugget.copper.name=Copper Nugget
 item.oregen.nugget.tin.name=Tin Nugget
@@ -64,6 +67,7 @@ item.oregen.nugget.mithril.name=Mithril Nugget
 item.oregen.nugget.nth.name=Nth Nugget
 item.oregen.nugget.uru.name=Uru Nugget
 item.oregen.nugget.thorium.name=Thorium Nugget
+item.oregen.nugget.zinc.name=Zinc Nugget
 
 item.oregen.dust.copper.name=Copper Dust
 item.oregen.dust.tin.name=Tin Dust
@@ -86,6 +90,7 @@ item.oregen.dust.mithril.name=Mithril Dust
 item.oregen.dust.nth.name=Nth Dust
 item.oregen.dust.uru.name=Uru Dust
 item.oregen.dust.thorium.name=Thorium Dust
+item.oregen.dust.zinc.name=Zinc Dust
 
 item.oregen.chunkdirty.copper.name=Dirty Copper Chunk
 item.oregen.chunkdirty.tin.name=Dirty Tin Chunk
@@ -104,6 +109,7 @@ item.oregen.chunkdirty.uru.name=Dirty Uru Chunk
 item.oregen.chunkdirty.thorium.name=Dirty Thorium Chunk
 item.oregen.chunkdirty.iron.name=Dirty Iron Chunk
 item.oregen.chunkdirty.gold.name=Dirty Gold Chunk
+item.oregen.chunkdirty.zinc.name=Dirty Zinc Chunk
 
 item.oregen.chunkclean.copper.name=Clean Copper Chunk
 item.oregen.chunkclean.tin.name=Clean Tin Chunk
@@ -122,6 +128,7 @@ item.oregen.chunkclean.uru.name=Clean Uru Chunk
 item.oregen.chunkclean.thorium.name=Clean Thorium Chunk
 item.oregen.chunkclean.iron.name=Clean Iron Chunk
 item.oregen.chunkclean.gold.name=Clean Gold Chunk
+item.oregen.chunkclean.zinc.name=Clean Zinc Chunk
 
 item.oregen.upgrade.blank.name=Blank Upgrade
 item.oregen.upgrade.isided.name=ISided Upgrade
