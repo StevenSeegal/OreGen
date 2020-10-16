@@ -23,20 +23,15 @@ compileJava {
 minecraft {
     version = "1.12.2-14.23.4.2705"
     runDir = "run"
-
+    
     replace '@VERSION@', project.version
     replace '@MC_VERSION@', version
 
-    mappings = "snapshot_20170624"
+    mappings = "snapshot_20171003"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
 repositories {
-//    maven {
-//        // location of the maven that hosts JEI files
-//        name = "Progwml6 maven"
-//        url = "http://dvs1.progwml6.com/files/maven"
-//    }
     maven {
         // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
@@ -45,12 +40,10 @@ repositories {
 }
 
 dependencies {
-
     def jei_mc_version = "1.12.2"
     def jei_version = "4.11.0.202"
 
     deobfProvided "mezz.jei:jei_${jei_mc_version}:${jei_version}:api"
-
 }
 
 processResources {
